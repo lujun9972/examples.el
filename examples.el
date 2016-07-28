@@ -1,5 +1,6 @@
 (require 'org)
 (require 'org-element)
+(require 'yasnippet)
 (defgroup examples nil
   "examples group"
   :prefix "examples-")
@@ -42,13 +43,17 @@
 (defun examples (&optional example-org-file)
   ""
   (interactive)
+  (unless (or yas-global-mode yas-minor-mode)
+    (yas-minor-mode 1))
   (let ((example-org-file (or example-org-file examples-default-org-file)))
     (let* ((headlines (with-temp-buffer
                         (insert-file-contents example-org-file)
                         (examples-get-headlines)))
            (headline (completing-read "example:" headlines))
            (headline (cdr (assoc-string headline headlines)))
-           (src-blocks (examples-get-src-blocks headline)))
-      (if (> (length src-blocks) 1)
-          (insert (completing-read "" src-blocks))
-        (insert (car src-blocks))))))
+           (src-blocks (examples-get-src-blocks headline))
+           (src-block (if (> (length src-blocks) 1)
+                          (completing-read "" src-blocks)
+                        (or (car src-blocks) ""))))
+      (yas-expand-snippet src-block))))
+

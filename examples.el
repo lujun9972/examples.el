@@ -10,8 +10,8 @@
   "Mapping the correspondence between `major-mode' and the src-block language."
   :group 'examples)
 
-(defcustom examples-default-org-file (concat (file-name-directory (buffer-file-name))
-                                             "examples.org")
+(defcustom examples-default-org-files (list (concat (file-name-directory (buffer-file-name))
+                                                    "examples.org"))
   ""
   :group 'examples)
 
@@ -40,14 +40,17 @@
               (buffer-substring-no-properties (point-min) (- (point-max) 1)) ;; minus 1 to trim the last <RET>
               )))))))
 
-(defun examples (&optional example-org-file)
+(defun examples (&rest example-org-files)
   ""
   (interactive)
-  (unless (or yas-global-mode yas-minor-mode)
+  (unless yas-minor-mode
     (yas-minor-mode 1))
-  (let ((example-org-file (or example-org-file examples-default-org-file)))
+  (let ((example-org-files (or example-org-files examples-default-org-files)))
     (let* ((headlines (with-temp-buffer
-                        (insert-file-contents example-org-file)
+                        (mapc (lambda (file)
+                                (insert-file-contents file)
+                                (newline))
+                              example-org-files) 
                         (examples-get-headlines)))
            (headline (completing-read "example:" headlines))
            (headline (cdr (assoc-string headline headlines)))

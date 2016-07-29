@@ -10,8 +10,10 @@
   "Mapping the correspondence between `major-mode' and the src-block language."
   :group 'examples)
 
-(defcustom examples-default-org-files (list (concat (file-name-directory (buffer-file-name))
-                                                    "examples.org"))
+(defcustom examples-default-org-files (let ((example-dir (concat (file-name-directory (buffer-file-name)) "examples")))
+                                        (unless (file-exists-p example-dir)
+                                          (make-directory example-dir t))
+                                        (directory-files example-dir t "org$"))
   ""
   :group 'examples)
 

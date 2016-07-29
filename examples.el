@@ -59,6 +59,12 @@
            (src-blocks (examples-get-src-blocks headline))
            (src-block (if (> (length src-blocks) 1)
                           (completing-read "" src-blocks)
-                        (or (car src-blocks) ""))))
-      (yas-expand-snippet src-block))))
+                        (or (car src-blocks) "")))
+           (idx 0))
+      (yas-expand-snippet (replace-regexp-in-string "{[^{}0-9][^{}]*}"
+                                                    (lambda (text)
+                                                      (let ((desc (substring text 1 (- (length text) 1))))
+                                                        (setq idx (+ 1 idx))
+                                                        (format "{%d:%s}" idx desc)))
+                                                    src-block)))))
 

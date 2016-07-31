@@ -1,8 +1,27 @@
 #+TITLE: README
-#+AUTHOR: Administrator
+#+AUTHOR: lujun9972
 #+CATEGORY: examples.el
 #+DATE: [2016-07-29 周五 16:21]
 #+OPTIONS: ^:{}
 
 * Do By Examples
 [[examples.gif]]
+
+* 理念
+有一些不常用的操作经常会忘掉用什么命令来写，我一般会将这些生癖的操作记录在org文件中。
+
+所以当我忘记一个操作怎么写时要经历下面几个步骤
+1. 找到记录这个操作的org文件
+2. 用Emacs打开这个文件，按照说明找出对应的src-block
+3. 将src-block中的代码复制出来，再根据实际境况进行修改
+
+然而，这个过程实在太麻烦了有没有？？？
+
+所以我就写了这个 =examples= package。
+
+其思路是将org文件中的headline看作为案例说明，将headline下的src-block作为代码模板。
+
+=examples= 会列出各个org文件中的案例给用户进行选择。
+用户选择案例后 =examples= 会搜索该headline下面的src-block. 
+若headline下只有一个src-block，则直接将该src-block作为模板（用yasnippet进行扩展）插入，否则让用户选择哪个src-block后再插入。
+

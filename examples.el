@@ -5,16 +5,19 @@
   "examples group"
   :prefix "examples-")
 
-(defcustom examples-mode-lang-alist '((eshell-mode . "sh"))
+(defcustom examples-mode-lang-alist '((eshell-mode "sh" "emacs-lisp" "elisp"))
 
-  "Mapping the correspondence between `major-mode' and the src-block language."
+  "Mapping the correspondence between `major-mode' and the src-block language.
+
+The car of element is the major-mode.
+The cdr of element is the src-block language list"
   :group 'examples)
 
 (defcustom examples-default-org-files (let ((example-dir (concat (file-name-directory (buffer-file-name)) "examples")))
                                         (unless (file-exists-p example-dir)
                                           (make-directory example-dir t))
                                         (directory-files example-dir t "org$"))
-  ""
+  "Default example files"
   :group 'examples)
 
 (defun examples-get-headlines ()
@@ -24,17 +27,17 @@
       (cons (org-element-property :raw-value ele)
             ele))))
 
-(defun examples-get-src-blocks (&optional element language)
+(defun examples-get-src-blocks (&optional element languages)
   (let ((element (or element (org-element-parse-buffer)))
-        (language (or language
+        (languages (or languages
                       (if (assoc major-mode examples-mode-lang-alist)
                           (cdr (assoc major-mode examples-mode-lang-alist))
-                        (replace-regexp-in-string "-mode$" "" (symbol-name major-mode))))))
+                        (list (replace-regexp-in-string "-mode$" "" (symbol-name major-mode)))))))
     (org-element-map element 'src-block
       (lambda (src-block)
         (let ((src-language (org-element-property :language src-block))
               (src-preserve-indent (org-element-property :preserve-indent src-block)))
-          (when (string= src-language language)
+          (when (member src-language languages)
             (with-temp-buffer
               (insert (org-element-property :value src-block))
               (unless src-preserve-indent

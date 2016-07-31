@@ -1,0 +1,9 @@
+* 列出文件
+#+BEGIN_SRC sh
+  ls
+#+END_SRC
+* 删除文件
+#+BEGIN_SRC sh
+  rm $0
+#+END_SRC
+

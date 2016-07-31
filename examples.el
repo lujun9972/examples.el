@@ -1,3 +1,4 @@
+(require 'cl-lib)
 (require 'org)
 (require 'org-element)
 (require 'yasnippet)
@@ -7,7 +8,7 @@
 
 (defcustom examples-mode-lang-alist '((eshell-mode "sh" "emacs-lisp" "elisp"))
 
-  "Mapping the correspondence between `major-mode' and the src-block language.
+  "Mapping the correspondence between `major-mode' and the src-block languages.
 
 The car of element is the major-mode.
 The cdr of element is the src-block language list"
@@ -20,46 +21,50 @@ The cdr of element is the src-block language list"
   "Default example files"
   :group 'examples)
 
-(defun examples-get-headlines ()
-  ""
-  (org-element-map (org-element-parse-buffer) 'headline
-    (lambda (ele)
-      (cons (org-element-property :raw-value ele)
-            ele))))
+(defun examples-get-response-languages-by-major-mode (major-mode)
+  (if (assoc major-mode examples-mode-lang-alist)
+      (cdr (assoc major-mode examples-mode-lang-alist))
+    (list (replace-regexp-in-string "-mode$" "" (symbol-name major-mode)))))
 
-(defun examples-get-src-blocks (&optional element languages)
-  (let ((element (or element (org-element-parse-buffer)))
-        (languages (or languages
-                      (if (assoc major-mode examples-mode-lang-alist)
-                          (cdr (assoc major-mode examples-mode-lang-alist))
-                        (list (replace-regexp-in-string "-mode$" "" (symbol-name major-mode)))))))
-    (org-element-map element 'src-block
-      (lambda (src-block)
-        (let ((src-language (org-element-property :language src-block))
-              (src-preserve-indent (org-element-property :preserve-indent src-block)))
-          (when (member src-language languages)
-            (with-temp-buffer
-              (insert (org-element-property :value src-block))
-              (unless src-preserve-indent
-                (org-do-remove-indentation))
-              (buffer-substring-no-properties (point-min) (- (point-max) 1)) ;; minus 1 to trim the last <RET>
-              )))))))
+(defun examples-get-headline-and-src-blocks (languages)
+  ""
+  (let ((headline-and-blocks (org-element-map (org-element-parse-buffer) 'headline
+                                (lambda (ele)
+                                  (cons (org-element-property :raw-value ele)
+                                        (examples-get-src-blocks ele languages))))))
+    (cl-delete-if (lambda (x)
+                    (null (cdr x)))
+                  headline-and-blocks)))
+
+(defun examples-get-src-blocks (element languages)
+  (org-element-map element 'src-block
+    (lambda (src-block)
+      (let ((src-language (org-element-property :language src-block))
+            (src-preserve-indent (org-element-property :preserve-indent src-block)))
+        (when (member src-language languages)
+          (with-temp-buffer
+            (insert (org-element-property :value src-block))
+            (unless src-preserve-indent
+              (org-do-remove-indentation))
+            (buffer-substring-no-properties (point-min) (- (point-max) 1)) ;; minus 1 to trim the last <RET>
+            ))))))
 
 (defun examples (&rest example-org-files)
   ""
   (interactive)
   (unless yas-minor-mode
     (yas-minor-mode 1))
-  (let ((example-org-files (or example-org-files examples-default-org-files)))
-    (let* ((headlines (with-temp-buffer
+  (let ((example-org-files (or example-org-files examples-default-org-files))
+        (languages (examples-get-response-languages-by-major-mode major-mode)))
+    (let* ((headline-and-blocks (with-temp-buffer
                         (mapc (lambda (file)
                                 (insert-file-contents file)
                                 (newline))
                               example-org-files) 
-                        (examples-get-headlines)))
+                        (examples-get-headline-and-src-blocks languages)))
+           (headlines (mapcar #'car headline-and-blocks))
            (headline (completing-read "example:" headlines))
-           (headline (cdr (assoc-string headline headlines)))
-           (src-blocks (examples-get-src-blocks headline))
+           (src-blocks (cdr (assoc-string headline headline-and-blocks)))
            (src-block (if (> (length src-blocks) 1)
                           (completing-read "" src-blocks)
                         (or (car src-blocks) "")))

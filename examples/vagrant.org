@@ -1,0 +1,33 @@
+* vagrant
+
+Manage lightweight, reproducible, and portable development environments.
+
+** Create Vagrantfile in current folder with the base Vagrant box:
+
+#+BEGIN_SRC sh
+  vagrant init
+#+END_SRC
+
+** Create Vagrantfile with the Ubuntu 14.04 (Trusty Tahr) box from HashiCorp Atlas:
+
+#+BEGIN_SRC sh
+  vagrant init ubuntu/trusty32
+#+END_SRC
+
+** Start and provision the vagrant environment:
+
+#+BEGIN_SRC sh
+  vagrant up
+#+END_SRC
+
+** Suspend the machine:
+
+#+BEGIN_SRC sh
+  vagrant suspend
+#+END_SRC
+
+** Connect to machine via SSH:
+
+#+BEGIN_SRC sh
+  vagrant ssh
+#+END_SRC

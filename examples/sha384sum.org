@@ -1,0 +1,21 @@
+* sha384sum
+
+Calculate SHA384 cryptographic checksums.
+
+** Calculate the SHA384 checksum for a file:
+
+#+BEGIN_SRC sh
+  sha384sum ${filename1}
+#+END_SRC
+
+** Calculate SHA384 checksums for multiple files:
+
+#+BEGIN_SRC sh
+  sha384sum ${filename1} ${filename2}
+#+END_SRC
+
+** Read a file of SHA384 sums and verify all files have matching checksums:
+
+#+BEGIN_SRC sh
+  sha384sum -c ${filename.sha384}
+#+END_SRC

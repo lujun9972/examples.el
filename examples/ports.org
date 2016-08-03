@@ -1,0 +1,21 @@
+* ports
+
+Update/list the ports tree on a CRUX system.
+
+** Update the ports tree:
+
+#+BEGIN_SRC sh
+  ports -u
+#+END_SRC
+
+** List the ports in the current tree:
+
+#+BEGIN_SRC sh
+  ports -l
+#+END_SRC
+
+** Check the differences between installed packages and the ports tree:
+
+#+BEGIN_SRC sh
+  ports -d
+#+END_SRC

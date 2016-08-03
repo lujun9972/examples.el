@@ -1,0 +1,45 @@
+* netstat
+
+Displays various networks related information such as open connections, open socket ports etc.
+
+** List all ports:
+
+#+BEGIN_SRC sh
+  netstat -a
+#+END_SRC
+
+** List all listening ports:
+
+#+BEGIN_SRC sh
+  netstat -l
+#+END_SRC
+
+** List listening TCP ports:
+
+#+BEGIN_SRC sh
+  netstat -t
+#+END_SRC
+
+** Display PID and program names:
+
+#+BEGIN_SRC sh
+  netstat -p
+#+END_SRC
+
+** List information continuously:
+
+#+BEGIN_SRC sh
+  netstat -c
+#+END_SRC
+
+** List routes and do not resolve IP to hostname:
+
+#+BEGIN_SRC sh
+  netstat -rn
+#+END_SRC
+
+** List listening TCP and UDP ports (+ user and process if you're root):
+
+#+BEGIN_SRC sh
+  netstat -lepunt
+#+END_SRC

@@ -1,0 +1,39 @@
+* docker
+
+Manage Docker containers and images.
+
+** List of running docker containers:
+
+#+BEGIN_SRC sh
+  docker ps
+#+END_SRC
+
+** List all docker containers (running and stopped):
+
+#+BEGIN_SRC sh
+  docker ps -a
+#+END_SRC
+
+** Start a container:
+
+#+BEGIN_SRC sh
+  docker start ${container}
+#+END_SRC
+
+** Stop a container:
+
+#+BEGIN_SRC sh
+  docker stop ${container}
+#+END_SRC
+
+** Start a container from an image and get a shell inside of it:
+
+#+BEGIN_SRC sh
+  docker run -it ${image} bash
+#+END_SRC
+
+** Run a command inside of an already running container:
+
+#+BEGIN_SRC sh
+  docker exec ${container} ${command}
+#+END_SRC

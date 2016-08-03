@@ -1,0 +1,40 @@
+* qemu
+
+Generic machine emulator and virtualizer.
+Supports a large variety of CPU architectures.
+
+** Create disk image with a specific size (in gigabytes):
+
+#+BEGIN_SRC sh
+  qemu-img create ${image_name.img} ${gigabites}G
+#+END_SRC
+
+** Boot from image emulating i386 architecture:
+
+#+BEGIN_SRC sh
+  qemu-system-i386 -hda ${image_name.img}
+#+END_SRC
+
+** Boot from image emulating x64 architecture:
+
+#+BEGIN_SRC sh
+  qemu-system-x86_64 -hda ${image_name.img}
+#+END_SRC
+
+** Boot QEMU instance with a live ISO image:
+
+#+BEGIN_SRC sh
+  qemu-system-i386 -hda ${image_name.img} -cdrom ${os-image.iso} -boot d
+#+END_SRC
+
+** Specify amount of RAM for instance:
+
+#+BEGIN_SRC sh
+  qemu-system-i386 -m 256 -hda image_name.img -cdrom os-image.iso -boot d
+#+END_SRC
+
+** Boot from physical device (e.g. from USB to test bootable medium):
+
+#+BEGIN_SRC sh
+  qemu-system-i386 -hda /dev/${storage_device}
+#+END_SRC

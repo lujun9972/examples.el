@@ -1,0 +1,22 @@
+* transcode
+
+Suite of command line utilities for transcoding video and audio codecs.
+And converting between formats.
+
+** Create stabilisation file to be able to remove camera shakes:
+
+#+BEGIN_SRC sh
+  transcode -J stabilize -i ${input_file}
+#+END_SRC
+
+** Remove camera shakes after creating stabilisation file, transform video using xvid:
+
+#+BEGIN_SRC sh
+  transcode -J transform -i ${input_file} -y xvid -o ${output_file}
+#+END_SRC
+
+** Resize the video to 640x480 pixels and convert to MPEG4 codec using xvid:
+
+#+BEGIN_SRC sh
+  transcode -Z 640x480 -i ${input_file} -y xvid -o ${output_file}
+#+END_SRC

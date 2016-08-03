@@ -1,0 +1,51 @@
+* ed
+
+The original Unix text editor.
+
+** Start ed, editing an empty document (which can be saved as a new file in the current directory):
+
+#+BEGIN_SRC sh
+  ed
+#+END_SRC
+
+** Start ed, editing an empty document, with `:` as a command prompt indicator:
+
+#+BEGIN_SRC sh
+  ed -p :
+#+END_SRC
+
+** Start ed editing an existing file (this shows the byte count of the loaded file):
+
+#+BEGIN_SRC sh
+  ed -p : ${path/to/file}
+#+END_SRC
+
+** Toggle the printing of error explanations. (By default, explanations are not printed and only a `?` appears):
+
+#+BEGIN_SRC sh
+  H
+#+END_SRC
+
+** Add text to the current document. Mark completion by entering a period by itself in a new line:
+
+#+BEGIN_SRC sh
+  a<Enter>${text_to_insert}<Enter>.
+#+END_SRC
+
+** Print the entire document (`,` is a shortcut to the range `1,$` which covers the start to the end of the document):
+
+#+BEGIN_SRC sh
+  ,p
+#+END_SRC
+
+** Write the current document to a new file (the filename can be omitted if `ed` was called with an existing file):
+
+#+BEGIN_SRC sh
+  w ${filename}
+#+END_SRC
+
+** Quit ed:
+
+#+BEGIN_SRC sh
+  q
+#+END_SRC

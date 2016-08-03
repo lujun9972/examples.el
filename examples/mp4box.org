@@ -1,0 +1,21 @@
+* MP4Box
+
+MPEG-4 Systems Toolbox - Muxes streams into MP4 container.
+
+** Display information about an existing MP4 file:
+
+#+BEGIN_SRC sh
+  MP4Box -info ${filename}
+#+END_SRC
+
+** Add an SRT subtitle file into an MP4 file:
+
+#+BEGIN_SRC sh
+  MP4Box -add ${input-subs.srt}:lang=eng -add ${input.mp4} ${output.mp4}
+#+END_SRC
+
+** Combine audio from one file and video from another:
+
+#+BEGIN_SRC sh
+  MP4Box -add ${input1.mp4}#audio -add ${input2.mp4}#video ${output.mp4}
+#+END_SRC

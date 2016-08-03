@@ -1,0 +1,28 @@
+* salt-key
+
+Manages salt minion keys on the salt master.
+Needs to be run on the salt master, likely as root or with sudo.
+
+** List all accepted, unaccepted and rejected minion keys:
+
+#+BEGIN_SRC sh
+  salt-key -L
+#+END_SRC
+
+** Accept a minion key by name:
+
+#+BEGIN_SRC sh
+  salt-key -a ${MINION_ID}
+#+END_SRC
+
+** Reject a minion key by name:
+
+#+BEGIN_SRC sh
+  salt-key -r ${MINION_ID}
+#+END_SRC
+
+** Print fingerprints of all public keys:
+
+#+BEGIN_SRC sh
+  salt-key -F
+#+END_SRC

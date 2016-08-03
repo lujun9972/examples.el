@@ -1,0 +1,27 @@
+* cd
+
+Change the current working directory.
+
+** Go to the given directory:
+
+#+BEGIN_SRC sh
+  cd ${/path/to/directory}
+#+END_SRC
+
+** Go to home directory of current user:
+
+#+BEGIN_SRC sh
+  cd
+#+END_SRC
+
+** Go up to the parent of the current directory:
+
+#+BEGIN_SRC sh
+  cd ..
+#+END_SRC
+
+** Go to the previously chosen directory:
+
+#+BEGIN_SRC sh
+  cd -
+#+END_SRC

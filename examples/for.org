@@ -1,0 +1,15 @@
+* for
+
+Shell loop over parameters.
+
+** Perform a command with different arguments:
+
+#+BEGIN_SRC sh
+  for argument in 1 2 3; do ${command $argument}; done
+#+END_SRC
+
+** Perform a command in every directory:
+
+#+BEGIN_SRC sh
+  for d in *; do (cd $d; ${command}); done
+#+END_SRC

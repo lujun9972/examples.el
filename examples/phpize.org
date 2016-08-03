@@ -1,0 +1,15 @@
+* phpize
+
+Prepare a PHP extension for compiling.
+
+** Prepare the PHP extension in the current directory for compiling:
+
+#+BEGIN_SRC sh
+  phpize
+#+END_SRC
+
+** Delete files previously created by phpize:
+
+#+BEGIN_SRC sh
+  phpize --clean
+#+END_SRC

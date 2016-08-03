@@ -1,0 +1,45 @@
+* zpool
+
+Manage ZFS pools.
+
+** Show the configuration and status of all ZFS zpools:
+
+#+BEGIN_SRC sh
+  zpool status
+#+END_SRC
+
+** Check a ZFS pool for errors (verifies the checksum of EVERY block). Very CPU and disk intensive:
+
+#+BEGIN_SRC sh
+  zpool scrub ${pool_name}
+#+END_SRC
+
+** List zpools available for import:
+
+#+BEGIN_SRC sh
+  zpool import
+#+END_SRC
+
+** Import a zpool:
+
+#+BEGIN_SRC sh
+  zpool import ${pool_name}
+#+END_SRC
+
+** Export a zpool (unmount all filesystems):
+
+#+BEGIN_SRC sh
+  zpool export ${pool_name}
+#+END_SRC
+
+** Show the history of all pool operations:
+
+#+BEGIN_SRC sh
+  zpool histrory ${pool_name}
+#+END_SRC
+
+** Create a mirrored pool:
+
+#+BEGIN_SRC sh
+  zpool create ${pool_name} mirror ${disk1} ${disk2} mirror ${disk3} ${disk4}
+#+END_SRC

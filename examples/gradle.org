@@ -1,0 +1,21 @@
+* Gradle
+
+Gradle is the official build system for Android Studio.
+
+** Compile a package:
+
+#+BEGIN_SRC sh
+  gradle build
+#+END_SRC
+
+** Clear the build folder:
+
+#+BEGIN_SRC sh
+  gradle clean
+#+END_SRC
+
+** Compile and Release package:
+
+#+BEGIN_SRC sh
+  gradle assembleRelease
+#+END_SRC

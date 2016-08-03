@@ -1,0 +1,33 @@
+* gem
+
+Interact with the package manager for the Ruby programming language.
+
+** Install latest version of a gem:
+
+#+BEGIN_SRC sh
+  gem install ${gemname}
+#+END_SRC
+
+** Install specific version of a gem:
+
+#+BEGIN_SRC sh
+  gem install ${gemname} -v ${1.0.0}
+#+END_SRC
+
+** Update a gem:
+
+#+BEGIN_SRC sh
+  gem update ${gemname}
+#+END_SRC
+
+** List all gems:
+
+#+BEGIN_SRC sh
+  gem list
+#+END_SRC
+
+** Uninstall a gem:
+
+#+BEGIN_SRC sh
+  gem uninstall ${gemname}
+#+END_SRC

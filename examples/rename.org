@@ -1,0 +1,33 @@
+* rename
+
+Renames multiple files.
+
+** Rename files using a Perl Common Regular Expression (substitute 'foo' with 'bar' wherever found):
+
+#+BEGIN_SRC sh
+  rename ${'s/foo/bar/'} ${\*}
+#+END_SRC
+
+** Dry-run - display which renames would occur without performing them:
+
+#+BEGIN_SRC sh
+  rename -n ${'s/foo/bar/'} ${\*}
+#+END_SRC
+
+** Force renaming even if the operation would overwrite existing files:
+
+#+BEGIN_SRC sh
+  rename -f ${'s/foo/bar/'} ${\*}
+#+END_SRC
+
+** Convert filenames to lower case (use `-f` in case-insensitive filesystems to prevent "already exists" errors):
+
+#+BEGIN_SRC sh
+  rename 'y/A-Z/a-z/' ${\*}
+#+END_SRC
+
+** Replace whitespace with underscores:
+
+#+BEGIN_SRC sh
+  rename 's/\s+/_/g' ${\*}
+#+END_SRC

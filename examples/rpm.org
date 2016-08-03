@@ -1,0 +1,39 @@
+* rpm
+
+RPM Package Manager.
+
+** Show version of httpd package:
+
+#+BEGIN_SRC sh
+  rpm -q ${httpd}
+#+END_SRC
+
+** List versions of all matching packages:
+
+#+BEGIN_SRC sh
+  rpm -qa '${mariadb*}'
+#+END_SRC
+
+** Identify owner of a file and show version of the package:
+
+#+BEGIN_SRC sh
+  rpm -qf ${/etc/postfix/main.cf}
+#+END_SRC
+
+** List package-owned files:
+
+#+BEGIN_SRC sh
+  rpm -ql ${kernel}
+#+END_SRC
+
+** Show scriptlets from an RPM file:
+
+#+BEGIN_SRC sh
+  rpm -qp --scripts ${some.rpm}
+#+END_SRC
+
+** Show changed, missing and/or incorrectly installed files of matching packages:
+
+#+BEGIN_SRC sh
+  rpm -Va '${php-*}'
+#+END_SRC

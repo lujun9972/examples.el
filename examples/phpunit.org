@@ -1,0 +1,27 @@
+* phpunit
+
+PHPUnit command-line test runner.
+
+** Run tests in the current direcotry. Note: Expects you to have a 'phpunit.xml':
+
+#+BEGIN_SRC sh
+  phpunit
+#+END_SRC
+
+** Run tests in a specific file:
+
+#+BEGIN_SRC sh
+  phpunit ${path/to/TestFile.php}
+#+END_SRC
+
+** Run tests annotated with the given group:
+
+#+BEGIN_SRC sh
+  phpunit --group ${name}
+#+END_SRC
+
+** Run tests and generate a coverage report in HTML:
+
+#+BEGIN_SRC sh
+  phpunit --coverage-html ${directory}
+#+END_SRC

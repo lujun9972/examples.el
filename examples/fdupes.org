@@ -1,0 +1,28 @@
+* fdupes
+
+Finds duplicate files in a given.
+Set of directories.
+
+** Search a single directory:
+
+#+BEGIN_SRC sh
+  fdupes ${directory}
+#+END_SRC
+
+** Search multiple directories:
+
+#+BEGIN_SRC sh
+  fdupes ${directory1} ${directory2}
+#+END_SRC
+
+** Search all directories recursively:
+
+#+BEGIN_SRC sh
+  fdupes -r ${directory}
+#+END_SRC
+
+** Search multiple directories, one recursively:
+
+#+BEGIN_SRC sh
+  fdupes ${directory1} -R ${directory2}
+#+END_SRC

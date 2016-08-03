@@ -1,0 +1,51 @@
+* pacman
+
+Arch Linux package manager utility.
+
+** Synchronize and update all packages:
+
+#+BEGIN_SRC sh
+  pacman -Syu
+#+END_SRC
+
+** Install a new package:
+
+#+BEGIN_SRC sh
+  pacman -S ${package_name}
+#+END_SRC
+
+** Remove a package and its dependencies:
+
+#+BEGIN_SRC sh
+  pacman -Rs ${package_name}
+#+END_SRC
+
+** Search the package database for a keyword:
+
+#+BEGIN_SRC sh
+  pacman -Ss icon theme
+#+END_SRC
+
+** List installed packages and versions:
+
+#+BEGIN_SRC sh
+  pacman -Q
+#+END_SRC
+
+** List only the explicitly installed packages and versions:
+
+#+BEGIN_SRC sh
+  pacman -Qe
+#+END_SRC
+
+** Find which package owns a certain file:
+
+#+BEGIN_SRC sh
+  pacman -Qo ${filename}
+#+END_SRC
+
+** Empty package cache to free up space:
+
+#+BEGIN_SRC sh
+  pacman -Scc
+#+END_SRC

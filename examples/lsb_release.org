@@ -1,0 +1,27 @@
+* lsb_release
+
+Provides certain LSB (Linux Standard Base) and distribution-specific information.
+
+** Print all available information:
+
+#+BEGIN_SRC sh
+  lsb_release -a
+#+END_SRC
+
+** Print a description (usually the full name) of the operating system:
+
+#+BEGIN_SRC sh
+  lsb_release -d
+#+END_SRC
+
+** Print only the operating system name (ID), suppressing the field name:
+
+#+BEGIN_SRC sh
+  lsb_release -i -s
+#+END_SRC
+
+** Print the release number and codename of the distribution, suppressing the field names:
+
+#+BEGIN_SRC sh
+  lsb_release -rcs
+#+END_SRC

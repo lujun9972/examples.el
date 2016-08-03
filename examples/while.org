@@ -1,0 +1,15 @@
+* while
+
+Simple shell loop.
+
+** Read stdin and perform an action on every line:
+
+#+BEGIN_SRC sh
+  while read line; do echo "$line"; done
+#+END_SRC
+
+** Execute a command forever once every second:
+
+#+BEGIN_SRC sh
+  while :; do ${command}; sleep 1; done
+#+END_SRC

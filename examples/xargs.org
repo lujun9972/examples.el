@@ -1,0 +1,27 @@
+* xargs
+
+Execute a command with piped arguments.
+
+** Main use:
+
+#+BEGIN_SRC sh
+  ${arguments} | xargs ${command}
+#+END_SRC
+
+** Specific example: delete all files that start with 'M':
+
+#+BEGIN_SRC sh
+  find . -name 'M*' | xargs rm
+#+END_SRC
+
+** Handle whitespace in arguments:
+
+#+BEGIN_SRC sh
+  ${arguments_null_terminated} | xargs -0 ${command}
+#+END_SRC
+
+** Insert arguments at chosen position, using '%' as the placeholder marker:
+
+#+BEGIN_SRC sh
+  ${arguments} | xargs -I '%' ${command} % ${extra_arguments}
+#+END_SRC

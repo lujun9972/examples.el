@@ -1,0 +1,21 @@
+* htop
+
+Display dynamic real-time information about running processes.  An enchanced version of `top`.
+
+** Start htop:
+
+#+BEGIN_SRC sh
+  htop
+#+END_SRC
+
+** Start htop displaying only processes owned by given user:
+
+#+BEGIN_SRC sh
+  htop -u ${user_name}
+#+END_SRC
+
+** Get help about interactive commands:
+
+#+BEGIN_SRC sh
+  ?
+#+END_SRC

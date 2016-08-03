@@ -1,0 +1,27 @@
+* who
+
+Display who is logged in and related data (processes, boot time).
+
+** Display the username, line, and time of all currently logged-in sessions:
+
+#+BEGIN_SRC sh
+  who
+#+END_SRC
+
+** Display information only for the current terminal session:
+
+#+BEGIN_SRC sh
+  who am i
+#+END_SRC
+
+** Display all available information:
+
+#+BEGIN_SRC sh
+  who -a
+#+END_SRC
+
+** Display all available information with table headers:
+
+#+BEGIN_SRC sh
+  who -a -H
+#+END_SRC

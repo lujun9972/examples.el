@@ -1,0 +1,33 @@
+* cal
+
+Prints calendar information.
+
+** Display a calendar for the current month:
+
+#+BEGIN_SRC sh
+  cal
+#+END_SRC
+
+** Display a calendar for a specific month:
+
+#+BEGIN_SRC sh
+  cal -m ${month_number}
+#+END_SRC
+
+** Display a 12 month calendar for the current year:
+
+#+BEGIN_SRC sh
+  cal -y
+#+END_SRC
+
+** Display a 12 month calendar for a specific year:
+
+#+BEGIN_SRC sh
+  cal 2016
+#+END_SRC
+
+** Display date of Easter (western churches):
+
+#+BEGIN_SRC sh
+  ncal -e ${year}
+#+END_SRC

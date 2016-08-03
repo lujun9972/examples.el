@@ -1,0 +1,27 @@
+* ping
+
+Send ICMP ECHO_REQUEST packets to network hosts.
+
+** Ping host:
+
+#+BEGIN_SRC sh
+  ping ${host}
+#+END_SRC
+
+** Ping a host only a specific number of times:
+
+#+BEGIN_SRC sh
+  ping -c ${count} ${host}
+#+END_SRC
+
+** Ping host, specifying the interval in seconds between requests (default is 1 second):
+
+#+BEGIN_SRC sh
+  ping -i ${seconds} ${host}
+#+END_SRC
+
+** Ping host without trying to lookup symbolic names for addresses:
+
+#+BEGIN_SRC sh
+  ping -n ${host}
+#+END_SRC

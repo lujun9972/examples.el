@@ -1,0 +1,39 @@
+* tabula
+
+Extract tables from PDF files.
+
+** Extract all tables from a PDF to a CSV file:
+
+#+BEGIN_SRC sh
+  tabula -o ${file.csv} ${file.pdf}
+#+END_SRC
+
+** Extract all tables from a PDF to a JSON file:
+
+#+BEGIN_SRC sh
+  tabula --format JSON -o ${file.json} ${file.pdf}
+#+END_SRC
+
+** Extract tables from pages 1, 2, 3, and 6 of a PDF:
+
+#+BEGIN_SRC sh
+  tabula --pages ${1-3,6} ${file.pdf}
+#+END_SRC
+
+** Extract tables from page 1 of a PDF, guessing which portion of the page to examine:
+
+#+BEGIN_SRC sh
+  tabula --guess --pages ${1} ${file.pdf}
+#+END_SRC
+
+** Extract all tables from a PDF, using ruling lines to determine cell boundaries:
+
+#+BEGIN_SRC sh
+  tabula --spreadsheet ${file.pdf}
+#+END_SRC
+
+** Extract all tables from a PDF, using blank space to determine cell boundaries:
+
+#+BEGIN_SRC sh
+  tabula --no-spreadsheet ${file.pdf}
+#+END_SRC

@@ -1,0 +1,33 @@
+* diff
+
+Compare files and directories.
+
+** Compare files:
+
+#+BEGIN_SRC sh
+  diff ${file1} ${file2}
+#+END_SRC
+
+** Compare files, ignoring white spaces:
+
+#+BEGIN_SRC sh
+  diff -w ${file1} ${file2}
+#+END_SRC
+
+** Compare files, showing differences side by side:
+
+#+BEGIN_SRC sh
+  diff -y ${file1} ${file2}
+#+END_SRC
+
+** Compare directories recursively:
+
+#+BEGIN_SRC sh
+  diff -r ${directory1} ${directory2}
+#+END_SRC
+
+** Compare directories, only showing the names of files that differ:
+
+#+BEGIN_SRC sh
+  diff -rq ${directory1} ${directory2}
+#+END_SRC

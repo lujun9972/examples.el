@@ -1,0 +1,33 @@
+* git add
+
+Adds changed files to the index.
+
+** Add a file to the index:
+
+#+BEGIN_SRC sh
+  git add ${path/to/file}
+#+END_SRC
+
+** Add all files (tracked and untracked):
+
+#+BEGIN_SRC sh
+  git add .
+#+END_SRC
+
+** Only add already tracked files:
+
+#+BEGIN_SRC sh
+  git add -u
+#+END_SRC
+
+** Also add ignored files:
+
+#+BEGIN_SRC sh
+  git add -f
+#+END_SRC
+
+** Add parts of a file interactively:
+
+#+BEGIN_SRC sh
+  git add -p ${path/to/file}
+#+END_SRC

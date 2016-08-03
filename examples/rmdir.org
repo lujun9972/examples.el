@@ -1,0 +1,15 @@
+* rmdir
+
+Removes a directory.
+
+** Remove directory, provided it is empty. Use `rm` to remove not empty directories:
+
+#+BEGIN_SRC sh
+  rmdir ${path/to/directory}
+#+END_SRC
+
+** Remove directories recursively (useful for nested dirs):
+
+#+BEGIN_SRC sh
+  rmdir -p ${path/to/directory}
+#+END_SRC

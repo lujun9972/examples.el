@@ -1,0 +1,15 @@
+* vimtutor
+
+Vim tutor, teaching the basic vim commands.
+
+** Launch the vim tutor using the given language (en, fr, de, ...):
+
+#+BEGIN_SRC sh
+  vimtutor ${language}
+#+END_SRC
+
+** Exit the tutor:
+
+#+BEGIN_SRC sh
+  [Esc] (to switch to normal mode), then :q
+#+END_SRC

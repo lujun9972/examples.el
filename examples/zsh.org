@@ -1,0 +1,28 @@
+* zsh
+
+Z SHell.
+`bash` and `sh`-compatible command line interpreter.
+
+** Start interactive command line interpreter:
+
+#+BEGIN_SRC sh
+  zsh
+#+END_SRC
+
+** Execute command passed as parameter:
+
+#+BEGIN_SRC sh
+  zsh -c ${command}
+#+END_SRC
+
+** Run commands from file (script):
+
+#+BEGIN_SRC sh
+  zsh ${file}
+#+END_SRC
+
+** Run commands from file and print them as they are executed:
+
+#+BEGIN_SRC sh
+  zsh -x ${file}
+#+END_SRC

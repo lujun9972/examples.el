@@ -1,0 +1,21 @@
+* cloc
+
+Count, and compute differences of, lines of source code and comments.
+
+** Count all the lines of code in a directory:
+
+#+BEGIN_SRC sh
+  cloc ${/path/to/directory}
+#+END_SRC
+
+** Count all the lines of code in a directory, displaying a progress bar during the counting process:
+
+#+BEGIN_SRC sh
+  cloc --progress=1 ${/path/to/directory}
+#+END_SRC
+
+** Compare 2 directory sturctures and count the differences between them:
+
+#+BEGIN_SRC sh
+  cloc --diff ${/directory/one} ${/directory/two}
+#+END_SRC

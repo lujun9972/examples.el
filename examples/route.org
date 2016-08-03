@@ -1,0 +1,21 @@
+* route 
+
+Use route cmd to set the route table .
+
+** Display the information of route table:
+
+#+BEGIN_SRC sh
+  route -n
+#+END_SRC
+
+** Add route rule:
+
+#+BEGIN_SRC sh
+  sudo route add -net ${ip_address} netmask ${netmask_address} gw ${gw_address}
+#+END_SRC
+
+** Delete route rule:
+
+#+BEGIN_SRC sh
+  sudo route del -net ${ip_address} netmask ${netmask_address} dev ${gw_address}
+#+END_SRC

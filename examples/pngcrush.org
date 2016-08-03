@@ -1,0 +1,21 @@
+* pngcrush
+
+PNG image compression utility.
+
+** Compress a PNG file:
+
+#+BEGIN_SRC sh
+  pngcrush ${in.png} ${out.png}
+#+END_SRC
+
+** Compress all PNGs and output to directory:
+
+#+BEGIN_SRC sh
+  pngcrush -d ${path/to/output} *.png
+#+END_SRC
+
+** Compress PNG file with all 114 available algorithms and pick the best result:
+
+#+BEGIN_SRC sh
+  pngcrush -rem allb -brute -reduce ${in.png} ${out.png}
+#+END_SRC

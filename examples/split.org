@@ -1,0 +1,21 @@
+* split
+
+Split a file into pieces.
+
+** Split a file, each split having 10 lines (except the last split):
+
+#+BEGIN_SRC sh
+  split -l 10 ${filename}
+#+END_SRC
+
+** Split a file into 5 files. File is split such that each split has same size (except the last split):
+
+#+BEGIN_SRC sh
+  split -n 5 ${filename}
+#+END_SRC
+
+** Split a file with at most 512 bytes of lines in each split:
+
+#+BEGIN_SRC sh
+  split -C 512 ${filename}
+#+END_SRC

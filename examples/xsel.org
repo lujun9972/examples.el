@@ -1,0 +1,39 @@
+* xsel
+
+X11 selection and clipboard manipulation tool.
+
+** Use a command's output as input of the clip[b]oard (equivalent to Ctrl+C):
+
+#+BEGIN_SRC sh
+  echo 123 | xsel -ib
+#+END_SRC
+
+** Use the contents of a file as input of the clipboard:
+
+#+BEGIN_SRC sh
+  cat ${file} | xsel -ib
+#+END_SRC
+
+** Output the clipboard's contents into the terminal (equivalent to Ctrl+V):
+
+#+BEGIN_SRC sh
+  xsel -ob
+#+END_SRC
+
+** Output the clipboard's contents into a file:
+
+#+BEGIN_SRC sh
+  xsel -ob > ${file}
+#+END_SRC
+
+** Clear the clipboard:
+
+#+BEGIN_SRC sh
+  xsel -cb
+#+END_SRC
+
+** Output the X11 primary selection's contents into the terminal (equivalent to a mouse middle-click):
+
+#+BEGIN_SRC sh
+  xsel -op
+#+END_SRC

@@ -1,0 +1,33 @@
+* pigz
+
+Multithreaded zlib compression utility.
+
+** Compress a file with default options:
+
+#+BEGIN_SRC sh
+  pigz ${filename}
+#+END_SRC
+
+** Compress a file using the best compression method:
+
+#+BEGIN_SRC sh
+  pigz -9 ${filename}
+#+END_SRC
+
+** Compress a file using no compression and 4 processors:
+
+#+BEGIN_SRC sh
+  pigz -0 -p${4} ${filename}
+#+END_SRC
+
+** Decompress a file:
+
+#+BEGIN_SRC sh
+  pigz -d ${archive.gz}
+#+END_SRC
+
+** List the contents of an archive:
+
+#+BEGIN_SRC sh
+  pigz -l ${archive.tar.gz}
+#+END_SRC

@@ -1,0 +1,27 @@
+* mysql
+
+The MySQL command-line tool.
+
+** Connect to a database:
+
+#+BEGIN_SRC sh
+  mysql ${database_name}
+#+END_SRC
+
+** Connect to a database, user will be prompted for a password:
+
+#+BEGIN_SRC sh
+  mysql -u ${user} --password ${database_name}
+#+END_SRC
+
+** Connect to a database on another host:
+
+#+BEGIN_SRC sh
+  mysql -h ${database_host} ${database_name}
+#+END_SRC
+
+** Execute SQL statements in a script file (batch file):
+
+#+BEGIN_SRC sh
+  mysql ${database_name} < ${script.sql}
+#+END_SRC

@@ -1,0 +1,33 @@
+* redis-cli
+
+Opens a connection to a Redis server.
+
+** Connect to the local server:
+
+#+BEGIN_SRC sh
+  redis-cli
+#+END_SRC
+
+** Connect to a remote server on the default port (6379):
+
+#+BEGIN_SRC sh
+  redis-cli -h ${host}
+#+END_SRC
+
+** Connect to a remote server specifying a port number:
+
+#+BEGIN_SRC sh
+  redis-cli -h ${host} -p ${port}
+#+END_SRC
+
+** Specify a password:
+
+#+BEGIN_SRC sh
+  redis-cli -a ${password}
+#+END_SRC
+
+** Execute Redis command:
+
+#+BEGIN_SRC sh
+  redis-cli ${redis_command}
+#+END_SRC

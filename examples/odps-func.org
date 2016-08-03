@@ -1,0 +1,27 @@
+* odps func
+
+Manage functions in ODPS (Open Data Processing Service).
+
+** Show functions in the current project:
+
+#+BEGIN_SRC sh
+  list functions;
+#+END_SRC
+
+** Create a Java function using a .jar resource:
+
+#+BEGIN_SRC sh
+  create function ${func_name} as ${path.to.package.Func} using '${package.jar}';
+#+END_SRC
+
+** Create a Python function using a .py resource:
+
+#+BEGIN_SRC sh
+  create function ${func_name} as ${script.Func} using '${script.py}';
+#+END_SRC
+
+** Delete a function:
+
+#+BEGIN_SRC sh
+  drop function ${func_name};
+#+END_SRC

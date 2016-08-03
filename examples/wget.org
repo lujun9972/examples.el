@@ -1,0 +1,40 @@
+* wget
+
+Download files from the Web.
+Supports HTTP, HTTPS, and FTP.
+
+** Download a URL to a file:
+
+#+BEGIN_SRC sh
+  wget -O filename "${url}"
+#+END_SRC
+
+** Limit download speed:
+
+#+BEGIN_SRC sh
+  wget --limit-rate=${200k} ${url}
+#+END_SRC
+
+** Continue an incomplete download:
+
+#+BEGIN_SRC sh
+  wget -c ${url}
+#+END_SRC
+
+** Download a full website:
+
+#+BEGIN_SRC sh
+  wget --mirror -p --convert-links -P ${target_folder} ${url}
+#+END_SRC
+
+** FTP download with username and password:
+
+#+BEGIN_SRC sh
+  wget --ftp-user=${username} --ftp-password=${password} ${url}
+#+END_SRC
+
+** Retry a given number of times if the download doesn't succeed at first:
+
+#+BEGIN_SRC sh
+  wget -t ${number_of_retries} ${url}
+#+END_SRC

@@ -1,0 +1,21 @@
+* xclip
+
+Copy STDIN to clipboard or print clipboard to STDOUT.
+
+** Copy output to clipboard:
+
+#+BEGIN_SRC sh
+  echo 123 | xclip -i
+#+END_SRC
+
+** Copy output to system clipboard:
+
+#+BEGIN_SRC sh
+  echo 123 | xclip -sel clip
+#+END_SRC
+
+** Paste clipboard:
+
+#+BEGIN_SRC sh
+  xclip -o > file.txt
+#+END_SRC

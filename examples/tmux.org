@@ -1,0 +1,45 @@
+* tmux
+
+Multiplex several virtual consoles.
+
+** Start a new tmux session:
+
+#+BEGIN_SRC sh
+  tmux
+#+END_SRC
+
+** Start a new named tmux session:
+
+#+BEGIN_SRC sh
+  tmux new -s ${name}
+#+END_SRC
+
+** List sessions:
+
+#+BEGIN_SRC sh
+  tmux ls
+#+END_SRC
+
+** Attach to a session:
+
+#+BEGIN_SRC sh
+  tmux a
+#+END_SRC
+
+** Attach to a named session:
+
+#+BEGIN_SRC sh
+  tmux a -t ${name}
+#+END_SRC
+
+** Detach from session:
+
+#+BEGIN_SRC sh
+  ctrl+b d
+#+END_SRC
+
+** Kill session:
+
+#+BEGIN_SRC sh
+  tmux kill-session -t ${name}
+#+END_SRC

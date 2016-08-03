@@ -1,0 +1,33 @@
+* yum
+
+Package management utility for RHEL, Feodra, and CentOS (for older versions).
+
+** Synchronize list of packages and versions available. This should be run first, before running subsequent yum commands:
+
+#+BEGIN_SRC sh
+  yum update
+#+END_SRC
+
+** Install a new package:
+
+#+BEGIN_SRC sh
+  yum install ${package}
+#+END_SRC
+
+** Install a new package and assume yes to all questions (also works with update, great for automated updates):
+
+#+BEGIN_SRC sh
+  yum -y install ${package}
+#+END_SRC
+
+** Remove a package:
+
+#+BEGIN_SRC sh
+  yum remove ${package}
+#+END_SRC
+
+** Upgrade installed packages to newest available versions:
+
+#+BEGIN_SRC sh
+  yum upgrade
+#+END_SRC

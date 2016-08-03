@@ -1,0 +1,21 @@
+* git rm
+
+Remove files from repository index and local filesystem.
+
+** Remove file from repository index and filesystem:
+
+#+BEGIN_SRC sh
+  git rm ${file}
+#+END_SRC
+
+** Remove directory:
+
+#+BEGIN_SRC sh
+  git rm -r ${directory}
+#+END_SRC
+
+** Remove file from repository index but keep it untouched locally:
+
+#+BEGIN_SRC sh
+  git rm --cached ${file}
+#+END_SRC

@@ -1,0 +1,15 @@
+* pwd
+
+Print name of current/working directory.
+
+** Print the current directory:
+
+#+BEGIN_SRC sh
+  pwd
+#+END_SRC
+
+** Print the current directory, and resolve all symlinks (i.e. show the "physical" path):
+
+#+BEGIN_SRC sh
+  pwd -P
+#+END_SRC

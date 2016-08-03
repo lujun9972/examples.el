@@ -1,0 +1,39 @@
+* git stash
+
+Stash local Git changes in a temporary area.
+
+** Stash current changes (except new files):
+
+#+BEGIN_SRC sh
+  git stash save ${optional_stash_name}
+#+END_SRC
+
+** Include new files in the stash (leaves the index completely clean):
+
+#+BEGIN_SRC sh
+  git stash save -u ${optional_stash_name}
+#+END_SRC
+
+** List all stashes:
+
+#+BEGIN_SRC sh
+  git stash list
+#+END_SRC
+
+** Re-apply the latest stash:
+
+#+BEGIN_SRC sh
+  git stash pop
+#+END_SRC
+
+** Re-apply a stash by name:
+
+#+BEGIN_SRC sh
+  git stash apply ${stash_name}
+#+END_SRC
+
+** Drop a stash by an index:
+
+#+BEGIN_SRC sh
+  git stash drop stash@{index}
+#+END_SRC

@@ -1,0 +1,21 @@
+* xinput
+
+List available input devices, query information about a device and change input device settings.
+
+** List all input devices:
+
+#+BEGIN_SRC sh
+  xinput list
+#+END_SRC
+
+** Disconnect an input from its master:
+
+#+BEGIN_SRC sh
+  xinput float ${id}
+#+END_SRC
+
+** Reattach an input as slave to a master:
+
+#+BEGIN_SRC sh
+  xinput reattach ${id} ${master_id}
+#+END_SRC

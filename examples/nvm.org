@@ -1,0 +1,40 @@
+* nvm
+
+Node.js version manager.
+Switch between NodeJS versions: system, node, 0.10, 0.12, 4.2 etc.
+
+** Install a specific version of NodeJS:
+
+#+BEGIN_SRC sh
+  nvm install ${node_version}
+#+END_SRC
+
+** Use a specific version NodeJS in the current shell:
+
+#+BEGIN_SRC sh
+  nvm use ${node_version}
+#+END_SRC
+
+** Set the default NodeJS version:
+
+#+BEGIN_SRC sh
+  nvm alias default ${node_version}
+#+END_SRC
+
+** List all available NodeJS versions and print the default one:
+
+#+BEGIN_SRC sh
+  nvm list
+#+END_SRC
+
+** Run a specific version NodeJS REPL:
+
+#+BEGIN_SRC sh
+  nvm run ${node_version} --version
+#+END_SRC
+
+** Run app in a specific version of NodeJS:
+
+#+BEGIN_SRC sh
+  nvm exec ${node_version} node ${app.js}
+#+END_SRC

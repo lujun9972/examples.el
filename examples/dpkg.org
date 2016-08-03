@@ -1,0 +1,27 @@
+* dpkg
+
+Debian package manager.
+
+** Install a package:
+
+#+BEGIN_SRC sh
+  dpkg -i ${/path/to/file}
+#+END_SRC
+
+** Remove a package:
+
+#+BEGIN_SRC sh
+  dpkg -r ${package_name}
+#+END_SRC
+
+** List installed packages:
+
+#+BEGIN_SRC sh
+  dpkg -l ${pattern}
+#+END_SRC
+
+** List package contents:
+
+#+BEGIN_SRC sh
+  dpkg -L ${package_name}
+#+END_SRC

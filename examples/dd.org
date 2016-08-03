@@ -1,0 +1,27 @@
+* dd
+
+Convert and copy a file.
+
+** Make a bootable usb drive from an isohybrid file (such like archlinux-xxx.iso) and show the progress:
+
+#+BEGIN_SRC sh
+  dd if=${file.iso} of=/dev/${usb_drive} status=progress
+#+END_SRC
+
+** Clone a drive to another drive with 4MB block, ignore error and show progress:
+
+#+BEGIN_SRC sh
+  dd if=/dev/${source_drive} of=/dev/${dest_drive} bs=4M conv=noerror status=progress
+#+END_SRC
+
+** Generate a file of 100 random bytes by using kernel random driver:
+
+#+BEGIN_SRC sh
+  dd if=/dev/urandom of=${random_file} bs=100 count=1
+#+END_SRC
+
+** Benchmark the write performance of a disk:
+
+#+BEGIN_SRC sh
+  dd if=/dev/zero of=${file_1GB} bs=1024 count=1000000
+#+END_SRC

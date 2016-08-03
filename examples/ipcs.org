@@ -1,0 +1,15 @@
+* ipcs
+
+Display information about ressources used in IPC (Inter-process Communication).
+
+** Specific information about the Message Queue which has the id 32768:
+
+#+BEGIN_SRC sh
+  ipcs -qi 32768
+#+END_SRC
+
+** General information about all the IPC:
+
+#+BEGIN_SRC sh
+  ipcs -a
+#+END_SRC

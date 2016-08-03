@@ -1,0 +1,33 @@
+* chown
+
+Change user and group ownership of files and folders.
+
+** Change the owner user of a file/folder:
+
+#+BEGIN_SRC sh
+  chown ${user} ${path/to/file}
+#+END_SRC
+
+** Change the owner user and group of a file/folder:
+
+#+BEGIN_SRC sh
+  chown ${user}:${group} ${path/to/file}
+#+END_SRC
+
+** Recursively change the owner of a folder and its contents:
+
+#+BEGIN_SRC sh
+  chown -R ${user} ${path/to/folder}
+#+END_SRC
+
+** Change the owner of a symbolic link:
+
+#+BEGIN_SRC sh
+  chown -h ${user} ${path/to/symlink}
+#+END_SRC
+
+** Change the owner of a file/folder to match a reference file:
+
+#+BEGIN_SRC sh
+  chown --reference=${path/to/reference_file} ${path/to/file}
+#+END_SRC

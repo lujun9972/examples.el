@@ -1,0 +1,27 @@
+* espeak
+
+Uses text-to-speech to speak through the default sound device.
+
+** Speak a phrase aloud:
+
+#+BEGIN_SRC sh
+  espeak "I like to ride my bike."
+#+END_SRC
+
+** Speak a file aloud:
+
+#+BEGIN_SRC sh
+  espeak -f ${filename}
+#+END_SRC
+
+** Save output to a WAV audio file, rather than speaking it directly:
+
+#+BEGIN_SRC sh
+  espeak -w ${filename.wav} "It's GNU plus Linux"
+#+END_SRC
+
+** Use a different voice:
+
+#+BEGIN_SRC sh
+  espeak -v ${voice}
+#+END_SRC

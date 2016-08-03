@@ -1,0 +1,15 @@
+* git blame
+
+Show commit hash and last author on each line of a file.
+
+** Print file with author name and commit hash on each line:
+
+#+BEGIN_SRC sh
+  git blame ${file}
+#+END_SRC
+
+** Print file with author email and commit hash on each line:
+
+#+BEGIN_SRC sh
+  git blame -e ${file}
+#+END_SRC

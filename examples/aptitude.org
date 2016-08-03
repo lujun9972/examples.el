@@ -1,0 +1,45 @@
+* aptitude
+
+Debian and Ubuntu package management utility.
+
+** Synchronize list of packages and versions available. This should be run first, before running subsequent aptitude commands:
+
+#+BEGIN_SRC sh
+  aptitude update
+#+END_SRC
+
+** Install a new package and its dependencies:
+
+#+BEGIN_SRC sh
+  aptitude install ${package}
+#+END_SRC
+
+** Search for a package:
+
+#+BEGIN_SRC sh
+  aptitude search ${package}
+#+END_SRC
+
+** Remove a package and all packages depending on it:
+
+#+BEGIN_SRC sh
+  aptitude remove ${package}
+#+END_SRC
+
+** Do an `aptitude remove ${package}` and remove all config files:
+
+#+BEGIN_SRC sh
+  aptitude purge ${package}
+#+END_SRC
+
+** Upgrade installed packages to newest available versions:
+
+#+BEGIN_SRC sh
+  aptitude upgrade
+#+END_SRC
+
+** Upgrade installed packages (like `aptitude upgrade`) including removing obsolete packages and installing additional packages to meet new package dependencies:
+
+#+BEGIN_SRC sh
+  aptitude full-upgrade
+#+END_SRC

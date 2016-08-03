@@ -1,0 +1,27 @@
+* passwd
+
+Passwd is a tool used to change a user's password.
+
+** Change the password of the current user:
+
+#+BEGIN_SRC sh
+  passwd ${new password}
+#+END_SRC
+
+** Change the password of the specified user:
+
+#+BEGIN_SRC sh
+  passwd ${username} ${new password}
+#+END_SRC
+
+** Get the current status of the user:
+
+#+BEGIN_SRC sh
+  passwd -S
+#+END_SRC
+
+** Make the password of the account blank (it will set the named account passwordless):
+
+#+BEGIN_SRC sh
+  passwd -d
+#+END_SRC

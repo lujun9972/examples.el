@@ -1,0 +1,33 @@
+* gzip
+
+Compress/uncompress files with gzip compression (LZ77).
+
+** Compress a file, replacing it with a gzipped compressed version:
+
+#+BEGIN_SRC sh
+  gzip ${file.ext}
+#+END_SRC
+
+** Decompress a file, replacing it with the original uncompressed version:
+
+#+BEGIN_SRC sh
+  gzip -d ${file.ext}.gz
+#+END_SRC
+
+** Compress a file specifying the output filename:
+
+#+BEGIN_SRC sh
+  gzip -c ${file.ext} > ${compressed_file.ext}.gz
+#+END_SRC
+
+** Uncompress a gzipped file specifying the output filename:
+
+#+BEGIN_SRC sh
+  gzip -c -d ${file.ext}.gz > ${uncompressed_file.ext}
+#+END_SRC
+
+** Specify the compression level. 1=Fastest (Worst), 9=Slowest (Best), Default level is 6:
+
+#+BEGIN_SRC sh
+  gzip -9 -c ${file.ext} > ${compressed_file.ext}.gz
+#+END_SRC

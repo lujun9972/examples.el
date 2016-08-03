@@ -1,0 +1,15 @@
+* mitmproxy
+
+An interactive man-in-the-middle HTTP proxy.
+
+** Start mitmproxy with default settings:
+
+#+BEGIN_SRC sh
+  mitmproxy
+#+END_SRC
+
+** Start mitmproxy bound to custom address and port:
+
+#+BEGIN_SRC sh
+  mitmproxy -b ${ip_address} -p ${port}
+#+END_SRC

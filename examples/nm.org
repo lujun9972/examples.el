@@ -1,0 +1,27 @@
+* nm
+
+List symbol names in object files.
+
+** List global (extern) functions in a file (prefixed with T):
+
+#+BEGIN_SRC sh
+  nm -g ${file.o}
+#+END_SRC
+
+** Demangle C++ symbols (make them readable):
+
+#+BEGIN_SRC sh
+  nm --demangle ${file.o}
+#+END_SRC
+
+** List only undefined symbols in a file:
+
+#+BEGIN_SRC sh
+  nm -u ${file.o}
+#+END_SRC
+
+** List all symbols, even debugging symbols:
+
+#+BEGIN_SRC sh
+  nm -a ${file.o}
+#+END_SRC

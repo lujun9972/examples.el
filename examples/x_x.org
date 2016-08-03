@@ -1,0 +1,21 @@
+* x_x
+
+View Excel and CSV files from the command-line.
+
+** View an XLSX or CSV file:
+
+#+BEGIN_SRC sh
+  x_x ${file.xlsx|file.csv}
+#+END_SRC
+
+** View an XLSX or CSV file, using the first row as table headers:
+
+#+BEGIN_SRC sh
+  x_x -h ${0} ${file.xlsx|file.csv}
+#+END_SRC
+
+** View a CSV file with unconventional delimiters:
+
+#+BEGIN_SRC sh
+  x_x --delimiter=${';'} --quotechar=${'|'} ${file.csv}
+#+END_SRC

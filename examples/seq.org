@@ -1,0 +1,21 @@
+* seq
+
+Output a sequence of numbers to stdout.
+
+** Sequence from 1 to 10:
+
+#+BEGIN_SRC sh
+  seq 10
+#+END_SRC
+
+** Every 3rd number from 5 to 20:
+
+#+BEGIN_SRC sh
+  seq 5 3 20
+#+END_SRC
+
+** Separate the output with a space instead of a newline:
+
+#+BEGIN_SRC sh
+  seq -s " " 5 3 20
+#+END_SRC

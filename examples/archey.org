@@ -1,0 +1,9 @@
+* archey
+
+Simple tool for stylishly displaying system information.
+
+** Show system information:
+
+#+BEGIN_SRC sh
+  archey
+#+END_SRC

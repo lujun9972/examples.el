@@ -1,0 +1,27 @@
+* haxelib
+
+Haxe Library Manager.
+
+** Search for a Haxe library:
+
+#+BEGIN_SRC sh
+  haxelib search ${keyword}
+#+END_SRC
+
+** Install a Haxe library:
+
+#+BEGIN_SRC sh
+  haxelib install ${libname}
+#+END_SRC
+
+** Upgrade all installed Haxe libraries:
+
+#+BEGIN_SRC sh
+  haxelib upgrade
+#+END_SRC
+
+** Install the development version of a library from a Git repository:
+
+#+BEGIN_SRC sh
+  haxelib git ${libname} ${git_url}
+#+END_SRC

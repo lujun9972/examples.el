@@ -1,0 +1,21 @@
+* su
+
+Switch shell to another user.
+
+** Switch to user ${username} (password required):
+
+#+BEGIN_SRC sh
+  su ${username}
+#+END_SRC
+
+** Switch to superuser (admin password required):
+
+#+BEGIN_SRC sh
+  su
+#+END_SRC
+
+** Switch to user ${username} and simulate a full login shell:
+
+#+BEGIN_SRC sh
+  su - ${username}
+#+END_SRC

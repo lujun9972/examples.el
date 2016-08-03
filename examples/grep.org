@@ -1,0 +1,64 @@
+* grep
+
+Matches patterns in input text.
+Supports simple patterns and regular expressions.
+
+** Search for an exact string:
+
+#+BEGIN_SRC sh
+  grep ${search_string} ${path/to/file}
+#+END_SRC
+
+** Search in case-insensitive mode:
+
+#+BEGIN_SRC sh
+  grep -i ${search_string} ${path/to/file}
+#+END_SRC
+
+** Search recursively (ignoring non-text files) in current directory for an exact string:
+
+#+BEGIN_SRC sh
+  grep -rI ${search_string} .
+#+END_SRC
+
+** Use extended regular expressions (supporting `?`, `+`, `{}`, `()` and `|`):
+
+#+BEGIN_SRC sh
+  grep -E ${^regex$} ${path/to/file}
+#+END_SRC
+
+** Print 3 lines of context around each match:
+
+#+BEGIN_SRC sh
+  grep -C 3 ${search_string} ${path/to/file}
+#+END_SRC
+
+** Print the count of matches instead of the matching text:
+
+#+BEGIN_SRC sh
+  grep -c ${search_string} ${path/to/file}
+#+END_SRC
+
+** Print line number for each match:
+
+#+BEGIN_SRC sh
+  grep -n ${search_string} ${path/to/file}
+#+END_SRC
+
+** Print file names with matches:
+
+#+BEGIN_SRC sh
+  grep -l ${search_string} ${path/to/file}
+#+END_SRC
+
+** Use the standard input instead of a file:
+
+#+BEGIN_SRC sh
+  cat ${path/to/file} | grep ${search_string}
+#+END_SRC
+
+** Invert match for excluding specific strings:
+
+#+BEGIN_SRC sh
+  grep -v ${search_string}
+#+END_SRC

@@ -1,0 +1,33 @@
+* git remote
+
+Manage set of tracked repositories ("remotes").
+
+** Show a list of existing remotes, their names and URL:
+
+#+BEGIN_SRC sh
+  git remote -v
+#+END_SRC
+
+** Add a remote:
+
+#+BEGIN_SRC sh
+  git remote add ${remote_name} ${remote_url}
+#+END_SRC
+
+** Change the URL of a remote:
+
+#+BEGIN_SRC sh
+  git remote set-url ${remote_name} ${new_url}
+#+END_SRC
+
+** Remove a remote:
+
+#+BEGIN_SRC sh
+  git remote remove ${remote_name}
+#+END_SRC
+
+** Rename a remote:
+
+#+BEGIN_SRC sh
+  git remote rename ${old_name} ${new_name}
+#+END_SRC

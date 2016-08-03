@@ -1,0 +1,27 @@
+* mmv
+
+Move and rename files in bulk.
+
+** Rename all files with a certain extension to a different extension:
+
+#+BEGIN_SRC sh
+  mmv "*${.old_extension}" "#1${.new_extension}"
+#+END_SRC
+
+** Copy report6part4.txt to ./french/rapport6partie4.txt along with all similarly named files:
+
+#+BEGIN_SRC sh
+  mmv -c ${"report*part*.txt"} ${"./french/rapport#1partie#2.txt"}
+#+END_SRC
+
+** Append all .txt files into one file:
+
+#+BEGIN_SRC sh
+  mmv -a ${"*.txt"} ${"all.txt"}
+#+END_SRC
+
+** Convert dates in filenames from "M-D-Y" format to "D-M-Y" format:
+
+#+BEGIN_SRC sh
+  mmv ${"[0-1][0-9]-[0-3][0-9]-[0-9][0-9][0-9][0-9].txt"} ${"#3#4-#1#2-#5#6#7#8.txt"}
+#+END_SRC

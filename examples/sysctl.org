@@ -1,0 +1,33 @@
+* sysctl
+
+List and change kernel runtime variables.
+
+** Show all available variables and their values:
+
+#+BEGIN_SRC sh
+  sysctl -a
+#+END_SRC
+
+** Set a changeable kernel state variable:
+
+#+BEGIN_SRC sh
+  sysctl -w ${section.tunable}=${value}
+#+END_SRC
+
+** Get currently open file handlers:
+
+#+BEGIN_SRC sh
+  sysctl fs.file-nr
+#+END_SRC
+
+** Get limit for simultaneous open files:
+
+#+BEGIN_SRC sh
+  sysctl fs.file-max
+#+END_SRC
+
+** Apply changes from /etc/sysctl.conf:
+
+#+BEGIN_SRC sh
+  sysctl -p
+#+END_SRC

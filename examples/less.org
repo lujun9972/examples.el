@@ -1,0 +1,47 @@
+* less
+
+Opens a file for reading.
+Allows movement and search.
+Doesn't read the entire file (suitable for logs).
+
+** Open a file:
+
+#+BEGIN_SRC sh
+  less ${source_file}
+#+END_SRC
+
+** Page up / down:
+
+#+BEGIN_SRC sh
+  d (next), D (previous)
+#+END_SRC
+
+** Go to start / end of file:
+
+#+BEGIN_SRC sh
+  g (start), G (end)
+#+END_SRC
+
+** Forward search for a string:
+
+#+BEGIN_SRC sh
+  /${something}   then   n (next), N (previous)
+#+END_SRC
+
+** Backward search for a string:
+
+#+BEGIN_SRC sh
+  ?${something}   then   n (next), N (previous)
+#+END_SRC
+
+** Enable output of ANSI colors:
+
+#+BEGIN_SRC sh
+  git diff --color | less -R
+#+END_SRC
+
+** Exit:
+
+#+BEGIN_SRC sh
+  q
+#+END_SRC

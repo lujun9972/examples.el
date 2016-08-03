@@ -1,0 +1,40 @@
+* cabal
+
+Command line interface to the Haskell package infrastructure (Cabal).
+Manage Haskell projects and Cabal packages from the Hackage package repository.
+
+** Search and list packages from Hackage:
+
+#+BEGIN_SRC sh
+  cabal list ${search_string}
+#+END_SRC
+
+** Show information about a package:
+
+#+BEGIN_SRC sh
+  cabal info ${package_name}
+#+END_SRC
+
+** Download and install a package:
+
+#+BEGIN_SRC sh
+  cabal install ${package_name}
+#+END_SRC
+
+** Create a new Haskell project in the current directory:
+
+#+BEGIN_SRC sh
+  cabal init
+#+END_SRC
+
+** Build the project in the current directory:
+
+#+BEGIN_SRC sh
+  cabal build
+#+END_SRC
+
+** Run tests of the project in the current directory:
+
+#+BEGIN_SRC sh
+  cabal test
+#+END_SRC

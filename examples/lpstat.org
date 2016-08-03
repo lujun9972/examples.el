@@ -1,0 +1,27 @@
+* lpstat
+
+Show status information about printers.
+
+** List printers present on the machine and whether they are enabled for printing:
+
+#+BEGIN_SRC sh
+  lpstat -p
+#+END_SRC
+
+** Show the default printer:
+
+#+BEGIN_SRC sh
+  lpstat -d
+#+END_SRC
+
+** Display all available status information:
+
+#+BEGIN_SRC sh
+  lpstat -t
+#+END_SRC
+
+** Show a list of print jobs queued by the specified user:
+
+#+BEGIN_SRC sh
+  lpstat -u ${user}
+#+END_SRC

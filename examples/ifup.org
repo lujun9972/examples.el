@@ -1,0 +1,15 @@
+* ifup
+
+Tool used to enable network interfaces.
+
+** Enable interface eth0:
+
+#+BEGIN_SRC sh
+  ifup ${eth0}
+#+END_SRC
+
+** Enable all the interfaces defined with "auto" in /etc/network/interfaces:
+
+#+BEGIN_SRC sh
+  ifup -a
+#+END_SRC

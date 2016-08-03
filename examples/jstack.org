@@ -1,0 +1,21 @@
+* jstack
+
+Java Stack Trace Tool.
+
+** Print java stack traces for all threads in a java process:
+
+#+BEGIN_SRC sh
+  jstack ${java_pid}
+#+END_SRC
+
+** Print mixed mode (java/c++) stack traces for all threads in a java process:
+
+#+BEGIN_SRC sh
+  jstack -m ${java_pid}
+#+END_SRC
+
+** Print stack traces from java core dump:
+
+#+BEGIN_SRC sh
+  jstack ${/usr/bin/java} ${file.core}
+#+END_SRC

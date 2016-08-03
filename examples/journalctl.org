@@ -1,0 +1,39 @@
+* journalctl
+
+Query the systemd journal.
+
+** Show all messages from this boot:
+
+#+BEGIN_SRC sh
+  journalctl -b
+#+END_SRC
+
+** Show all messages from last boot:
+
+#+BEGIN_SRC sh
+  journalctl -b -1
+#+END_SRC
+
+** Follow new messages (like `tail -f` for traditional syslog):
+
+#+BEGIN_SRC sh
+  journalctl -f
+#+END_SRC
+
+** Show all messages by a specific unit:
+
+#+BEGIN_SRC sh
+  journalctl -u ${unit}
+#+END_SRC
+
+** Show all messages by a specific process:
+
+#+BEGIN_SRC sh
+  journalctl _PID=${pid}
+#+END_SRC
+
+** Show all messages by a specific executable:
+
+#+BEGIN_SRC sh
+  journalctl ${/path/to/executable}
+#+END_SRC

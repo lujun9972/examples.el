@@ -1,0 +1,21 @@
+* gifsicle
+
+Create gifs.
+
+** Make a GIF animation with gifsicle:
+
+#+BEGIN_SRC sh
+  gifsicle --delay=${10} --loop *.gif > ${anim.gif}
+#+END_SRC
+
+** Extract frames from an animation:
+
+#+BEGIN_SRC sh
+  gifsicle ${anim.gif} '#0' > ${firstframe.gif}
+#+END_SRC
+
+** You can also edit animations by replacing, deleting, or inserting frames:
+
+#+BEGIN_SRC sh
+  gifsicle -b ${anim.gif} --replace '#0' ${new.gif}
+#+END_SRC

@@ -1,0 +1,15 @@
+* git status
+
+Show the index (changed files).
+
+** Show changed files which are not yet added for commit:
+
+#+BEGIN_SRC sh
+  git status
+#+END_SRC
+
+** Give output in short format:
+
+#+BEGIN_SRC sh
+  git status -s
+#+END_SRC

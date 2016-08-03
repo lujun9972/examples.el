@@ -1,0 +1,39 @@
+* ss
+
+Utility to investigate sockets.
+
+** Show all TCP/UDP/RAW/UNIX sockets:
+
+#+BEGIN_SRC sh
+  ss -a ${-t|-u|-w|-x}
+#+END_SRC
+
+** Filter TCP sockets by states, only/exclude:
+
+#+BEGIN_SRC sh
+  ss ${state/exclude} ${bucket/big/connected/synchronized/...}
+#+END_SRC
+
+** Show all TCP sockets connected to the local HTTPS port (443):
+
+#+BEGIN_SRC sh
+  ss -t src :${443}
+#+END_SRC
+
+** Show all TCP sockets along with processes connected to a remote ssh port:
+
+#+BEGIN_SRC sh
+  ss -pt dst :${ssh}
+#+END_SRC
+
+** Show all UDP sockets connected on specific source and destination ports:
+
+#+BEGIN_SRC sh
+  ss -u 'sport == :${source_port} and dport == :${destination_port}'
+#+END_SRC
+
+** Show all TCP IPv4 sockets locally connected on the subnet 192.168.0.0/16:
+
+#+BEGIN_SRC sh
+  ss -4t src ${192.168/16}
+#+END_SRC

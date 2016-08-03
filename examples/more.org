@@ -1,0 +1,29 @@
+* more
+
+Opens a file for reading.
+Allows movement and search in forward direction only.
+Doesn't read the entire file (suitable for logs).
+
+** Open a file:
+
+#+BEGIN_SRC sh
+  more ${source_file}
+#+END_SRC
+
+** Page down:
+
+#+BEGIN_SRC sh
+  d (next)
+#+END_SRC
+
+** Search for a string:
+
+#+BEGIN_SRC sh
+  /${something}   then   n (next)
+#+END_SRC
+
+** Exit:
+
+#+BEGIN_SRC sh
+  q
+#+END_SRC

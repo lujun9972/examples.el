@@ -1,0 +1,15 @@
+* reboot
+
+Reboot the system.
+
+** Reboot immediately:
+
+#+BEGIN_SRC sh
+  reboot
+#+END_SRC
+
+** Reboot immediately without gracefully shutdown:
+
+#+BEGIN_SRC sh
+  reboot -f
+#+END_SRC

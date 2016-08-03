@@ -1,0 +1,33 @@
+* odps inst
+
+Manage instances in ODPS (Open Data Processing Service).
+
+** Show instances created by current user:
+
+#+BEGIN_SRC sh
+  show instances;
+#+END_SRC
+
+** Describe the details of an instance:
+
+#+BEGIN_SRC sh
+  desc instance ${instance_id};
+#+END_SRC
+
+** Check the status of an instance:
+
+#+BEGIN_SRC sh
+  status ${instance_id};
+#+END_SRC
+
+** Wait on the termination of an instance, printing log and progress information until then:
+
+#+BEGIN_SRC sh
+  wait ${instance_id};
+#+END_SRC
+
+** Kill an instance:
+
+#+BEGIN_SRC sh
+  kill ${instance_id};
+#+END_SRC

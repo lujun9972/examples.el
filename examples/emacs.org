@@ -1,0 +1,21 @@
+* emacs
+
+The extensible, customizable, self-documenting, real-time display editor.
+
+** Open emacs in console mode (without X window):
+
+#+BEGIN_SRC sh
+  emacs -nw
+#+END_SRC
+
+** Open a file in emacs:
+
+#+BEGIN_SRC sh
+  emacs ${filename}
+#+END_SRC
+
+** Exit emacs:
+
+#+BEGIN_SRC sh
+  C-x C-c
+#+END_SRC

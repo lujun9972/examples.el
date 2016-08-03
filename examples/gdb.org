@@ -1,0 +1,27 @@
+* gdb
+
+The GNU Debugger.
+
+** Debug an executable:
+
+#+BEGIN_SRC sh
+  gdb ${executable}
+#+END_SRC
+
+** Attach a process to gdb:
+
+#+BEGIN_SRC sh
+  gdb -p ${procID}
+#+END_SRC
+
+** Execute given GDB commands upon start:
+
+#+BEGIN_SRC sh
+  gdb -ex "${commands}" ${executable}
+#+END_SRC
+
+** Start gdb and pass arguments:
+
+#+BEGIN_SRC sh
+  gdb --args ${executable} ${argument1} ${argument2}
+#+END_SRC

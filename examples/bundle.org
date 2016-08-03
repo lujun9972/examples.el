@@ -1,0 +1,27 @@
+* bundle
+
+Dependency manager for the Ruby programming language.
+
+** Install all gems defined in the gemfile expected in the working directory:
+
+#+BEGIN_SRC sh
+  bundle install
+#+END_SRC
+
+** Update all gems by the rules defined in the gemfile and regenerate gemfile.lock:
+
+#+BEGIN_SRC sh
+  bundle update
+#+END_SRC
+
+** Update one specific gem defined in the gemfile:
+
+#+BEGIN_SRC sh
+  bundle update --source ${gemname}
+#+END_SRC
+
+** Create a new gem skeleton:
+
+#+BEGIN_SRC sh
+  bundle gem ${gemname}
+#+END_SRC

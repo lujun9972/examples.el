@@ -1,0 +1,15 @@
+* fg
+
+Run jobs in foreground.
+
+** Bring most recently suspended background job to foreground:
+
+#+BEGIN_SRC sh
+  fg
+#+END_SRC
+
+** Bring a specific job to foreground:
+
+#+BEGIN_SRC sh
+  fg ${job_id}
+#+END_SRC

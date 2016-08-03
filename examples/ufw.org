@@ -1,0 +1,34 @@
+* ufw
+
+Uncomplicated Firewall.
+Frontend for iptables aiming to make configuration of a firewall easier.
+
+** Enable ufw:
+
+#+BEGIN_SRC sh
+  ufw enable
+#+END_SRC
+
+** Disable ufw:
+
+#+BEGIN_SRC sh
+  ufw disable
+#+END_SRC
+
+** Add ufw allow rule:
+
+#+BEGIN_SRC sh
+  ufw allow ${port} ${service_name}
+#+END_SRC
+
+** Add ufw deny rule:
+
+#+BEGIN_SRC sh
+  ufw deny ${port} ${service_name}
+#+END_SRC
+
+** Show ufw rules:
+
+#+BEGIN_SRC sh
+  ufw status
+#+END_SRC

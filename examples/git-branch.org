@@ -1,0 +1,33 @@
+* git branch
+
+Main command for working with branches.
+
+** List local branches. The current branch is highlighted by `*`:
+
+#+BEGIN_SRC sh
+  git branch
+#+END_SRC
+
+** List all local and remote branches:
+
+#+BEGIN_SRC sh
+  git branch -a
+#+END_SRC
+
+** Create new branch based on current branch:
+
+#+BEGIN_SRC sh
+  git branch ${BRANCH-NAME}
+#+END_SRC
+
+** Delete a local branch:
+
+#+BEGIN_SRC sh
+  git branch -d ${BRANCH-NAME}
+#+END_SRC
+
+** Move/Rename a branch:
+
+#+BEGIN_SRC sh
+  git branch -m
+#+END_SRC

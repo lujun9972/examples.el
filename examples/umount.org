@@ -1,0 +1,22 @@
+* umount
+
+Revokes access to an entire filesystem mounted to a directory.
+A filesystem cannot be unmounted when it is busy.
+
+** Unmount a filesystem:
+
+#+BEGIN_SRC sh
+  umount ${path/to/device_file}
+#+END_SRC
+
+** OR:
+
+#+BEGIN_SRC sh
+  umount ${path/to/mounted_directory}
+#+END_SRC
+
+** Unmount all mounted filesystems (dangerous!):
+
+#+BEGIN_SRC sh
+  umount -a
+#+END_SRC

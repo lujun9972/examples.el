@@ -1,0 +1,33 @@
+* lsattr
+
+List file attributes on a Linux file system.
+
+** Display the attributes of the files in the current directory:
+
+#+BEGIN_SRC sh
+  lsattr
+#+END_SRC
+
+** List the attributes of files in a particular path:
+
+#+BEGIN_SRC sh
+  lsattr ${path}
+#+END_SRC
+
+** List file attributes recursively in the current and subsequent directories:
+
+#+BEGIN_SRC sh
+  lsattr -R
+#+END_SRC
+
+** Show attributes of all the files in the current directory, including hidden ones:
+
+#+BEGIN_SRC sh
+  lsattr -a
+#+END_SRC
+
+** Display attributes of directories in the current directory:
+
+#+BEGIN_SRC sh
+  lsattr -d
+#+END_SRC

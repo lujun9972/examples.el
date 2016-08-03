@@ -1,0 +1,27 @@
+* telnet
+
+Telnet is used to connect to a specified port of a host.
+
+** Telnet to a certain port:
+
+#+BEGIN_SRC sh
+  telnet  ${ip_address} ${port}
+#+END_SRC
+
+** To exit a telnet session:
+
+#+BEGIN_SRC sh
+  quit
+#+END_SRC
+
+** Default escape character:
+
+#+BEGIN_SRC SH
+  CTRL + ]
+#+END_SRC
+
+** Specify an escape character (x is the escape character):
+
+#+BEGIN_SRC sh
+  telnet -e x ${ip_address} ${port}
+#+END_SRC

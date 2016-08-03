@@ -1,0 +1,16 @@
+* kill
+
+Sends a signal to a process.
+Mostly used for stopping processes.
+
+** Kill the process:
+
+#+BEGIN_SRC sh
+  kill ${process_id}
+#+END_SRC
+
+** List signal names:
+
+#+BEGIN_SRC sh
+  kill -l
+#+END_SRC

@@ -1,0 +1,33 @@
+* getent  
+
+Get entries from Name Service Switch libraries.
+
+** Get list of all groups:
+
+#+BEGIN_SRC sh
+  getent group
+#+END_SRC
+
+** See the members of a group:
+
+#+BEGIN_SRC sh
+  getenet group ${group_name}
+#+END_SRC
+
+** Get list of all services:
+
+#+BEGIN_SRC sh
+  getent services
+#+END_SRC
+
+** Find a username by UID:
+
+#+BEGIN_SRC sh
+  getent passwd 1000
+#+END_SRC
+
+** Perform a reverse DNS lookup:
+
+#+BEGIN_SRC sh
+  getent hosts ${host}
+#+END_SRC

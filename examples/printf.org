@@ -1,0 +1,33 @@
+* printf
+
+Format and print text.
+
+** Print a text message:
+
+#+BEGIN_SRC sh
+  printf ${"%s\n"} ${"Hello world"}
+#+END_SRC
+
+** Print an integer in bold blue:
+
+#+BEGIN_SRC sh
+  printf ${"\e[1;34m%.3d\e[0m\n"} ${42}
+#+END_SRC
+
+** Print a float number with the unicode Euro sign:
+
+#+BEGIN_SRC sh
+  printf ${"\u20AC %.2f\n"} ${123.4}
+#+END_SRC
+
+** Print a text message composed with environment variables:
+
+#+BEGIN_SRC sh
+  printf ${"var1: %s\tvar2: %s\n"} ${"$VAR1"} ${"$VAR2"}
+#+END_SRC
+
+** Store a formatted message in a variable (does not work on zsh):
+
+#+BEGIN_SRC sh
+  printf -v ${myvar} ${"This is %s = %d\n" "a year" 2016}
+#+END_SRC

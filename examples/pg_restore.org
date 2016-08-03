@@ -1,0 +1,33 @@
+* pg_restore
+
+Restore a PostgreSQL database from an archive file created by pg_dump.
+
+** Restore an archive into an existing database:
+
+#+BEGIN_SRC sh
+  pg_restore -d ${db_name} ${archive_file.dump}
+#+END_SRC
+
+** Same as above, customize username:
+
+#+BEGIN_SRC sh
+  pg_restore -U ${username} -d ${db_name} ${archive_file.dump}
+#+END_SRC
+
+** Same as above, customize host and port:
+
+#+BEGIN_SRC sh
+  pg_restore -h ${host} -p ${port} -d ${db_name} ${archive_file.dump}
+#+END_SRC
+
+** Clean database objects before creating them:
+
+#+BEGIN_SRC sh
+  pg_restore --clean -d ${db_name} ${archive_file.dump}
+#+END_SRC
+
+** Use multiple jobs to do the restoring:
+
+#+BEGIN_SRC sh
+  pg_restore -j ${2} -d ${db_name} ${archive_file.dump}
+#+END_SRC

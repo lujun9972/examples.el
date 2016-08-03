@@ -1,0 +1,34 @@
+* calibredb
+
+Tool to manipulate the your ebook database.
+Part of the Calibre ebook library.
+
+** List ebooks in the library with additional information:
+
+#+BEGIN_SRC sh
+  calibredb list
+#+END_SRC
+
+** Search for ebooks displaying additional information:
+
+#+BEGIN_SRC sh
+  calibredb list --search ${search-term}
+#+END_SRC
+
+** Search for just ids of ebooks:
+
+#+BEGIN_SRC sh
+  calibredb search ${search term}
+#+END_SRC
+
+** Add one or more ebooks to the library:
+
+#+BEGIN_SRC sh
+  calibredb add ${file1 file2 …}
+#+END_SRC
+
+** Remove one or more ebooks from the library. You need ebook-ids (see above):
+
+#+BEGIN_SRC sh
+  calibredb remove ${id1 id2 …}
+#+END_SRC

@@ -1,0 +1,15 @@
+* pkgadd
+
+Add a package to a CRUX system.
+
+** Install a local software package:
+
+#+BEGIN_SRC sh
+  pkgadd ${package_name}
+#+END_SRC
+
+** Update an already installed package from a local package:
+
+#+BEGIN_SRC sh
+  pkgadd -u ${package_name}
+#+END_SRC

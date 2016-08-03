@@ -1,0 +1,21 @@
+* bzip2
+
+A block-sorting file compressor.
+
+** Compress file:
+
+#+BEGIN_SRC sh
+  bzip2 ${path/to/file_to_compress}
+#+END_SRC
+
+** Decompress file:
+
+#+BEGIN_SRC sh
+  bzip2 -d ${path/to/compressed_file.bz2}
+#+END_SRC
+
+** Decompress to console:
+
+#+BEGIN_SRC sh
+  bzip2 -dc ${path/to/compressed_file.bz2}
+#+END_SRC

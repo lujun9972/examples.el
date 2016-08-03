@@ -1,0 +1,33 @@
+* mount
+
+Provides access to an entire filesystem in one directory.
+
+** Show all mounted filesystems:
+
+#+BEGIN_SRC sh
+  mount
+#+END_SRC
+
+** Mount a device to a directory:
+
+#+BEGIN_SRC sh
+  mount -t ${filesystem_type} ${path/to/device_file} ${path/to/target_directory}
+#+END_SRC
+
+** Mount a CD-ROM device (with the filetype ISO9660) to /cdrom (readonly):
+
+#+BEGIN_SRC sh
+  mount -t ${iso9660} -o ro ${/dev/cdrom} ${/cdrom}
+#+END_SRC
+
+** Mount all the filesystem defined in /etc/fstab:
+
+#+BEGIN_SRC sh
+  mount -a
+#+END_SRC
+
+** Mount a specific filesystem described in /etc/fstab (e.g. "/dev/sda1 /my_drive ext2 defaults 0 2"):
+
+#+BEGIN_SRC sh
+  mount ${/my_drive}
+#+END_SRC

@@ -1,0 +1,21 @@
+* md5sum
+
+Calculate MD5 cryptographic checksums.
+
+** Calculate the MD5 checksum for a file:
+
+#+BEGIN_SRC sh
+  md5sum ${filename1}
+#+END_SRC
+
+** Calculate MD5 checksums for multiple files:
+
+#+BEGIN_SRC sh
+  md5sum ${filename1} ${filename2}
+#+END_SRC
+
+** Read a file of MD5SUMs and verify all files have matching checksums:
+
+#+BEGIN_SRC sh
+  md5sum -c ${filename.md5}
+#+END_SRC

@@ -1,0 +1,57 @@
+* nc
+
+Reads and writes tcp or udp data.
+
+** Listen on a specified port:
+
+#+BEGIN_SRC sh
+  nc  -l ${port}
+#+END_SRC
+
+** Connect to a certain port (you can then write to this port):
+
+#+BEGIN_SRC sh
+  nc ${ip_address} ${port}
+#+END_SRC
+
+** Set a timeout:
+
+#+BEGIN_SRC sh
+  nc -w ${timeout_in_seconds} ${ipaddress} ${port}
+#+END_SRC
+
+** Serve a file:
+
+#+BEGIN_SRC sh
+  nc -l ${port} < ${file}
+#+END_SRC
+
+** Receive a file:
+
+#+BEGIN_SRC sh
+  nc ${ip_address} ${port} > ${file}
+#+END_SRC
+
+** Server stay up after client detach:
+
+#+BEGIN_SRC sh
+  nc -k -l ${port}
+#+END_SRC
+
+** Client stay up after EOF:
+
+#+BEGIN_SRC sh
+  nc -q ${timeout} ${ip_address}
+#+END_SRC
+
+** Port scanning:
+
+#+BEGIN_SRC sh
+  nc -v -z ${ip_address} ${port}
+#+END_SRC
+
+** Proxy and port forwarding:
+
+#+BEGIN_SRC sh
+  nc -l ${port} | nc ${hostname} ${port}
+#+END_SRC

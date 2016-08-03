@@ -1,0 +1,21 @@
+* ps
+
+Information about running processes.
+
+** List all running processes:
+
+#+BEGIN_SRC sh
+  ps aux
+#+END_SRC
+
+** List all running processes including the full command string:
+
+#+BEGIN_SRC sh
+  ps auxww
+#+END_SRC
+
+** Search for a process that matches a string:
+
+#+BEGIN_SRC sh
+  ps aux | grep ${string}
+#+END_SRC

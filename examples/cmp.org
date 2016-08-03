@@ -1,0 +1,15 @@
+* cmp
+
+Compare two files.
+
+** Find the byte number and line number of the first difference between the files:
+
+#+BEGIN_SRC sh
+  cmp ${file1} ${file2}
+#+END_SRC
+
+** Find the byte number and differing bytes of every difference:
+
+#+BEGIN_SRC sh
+  cmp -l ${file1} ${file2}
+#+END_SRC

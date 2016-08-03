@@ -1,0 +1,9 @@
+* jar
+
+Java Applications/Libraries Packager.
+
+** Unzip .jar/.war file to the current directory:
+
+#+BEGIN_SRC sh
+  jar -xvf *.jar
+#+END_SRC

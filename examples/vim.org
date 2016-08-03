@@ -1,0 +1,27 @@
+* vim
+
+Vi IMproved, a programmer's text editor.
+
+** Open a file with cursor at the given line number:
+
+#+BEGIN_SRC sh
+  vim ${file} +${linenumber}
+#+END_SRC
+
+** Open multiple files at once, each file in its own tab page:
+
+#+BEGIN_SRC sh
+  vim -p ${file1} ${file2} ${file3}
+#+END_SRC
+
+** Open a file in read-only mode:
+
+#+BEGIN_SRC sh
+  view ${file}
+#+END_SRC
+
+** Exit vim:
+
+#+BEGIN_SRC sh
+  [Esc] (to switch to normal mode), then :q
+#+END_SRC

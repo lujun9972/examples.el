@@ -1,0 +1,9 @@
+* nohup
+
+Allows for a process to live when the terminal gets killed.
+
+** Run process that can live beyond the terminal:
+
+#+BEGIN_SRC sh
+  nohup ${command options}
+#+END_SRC

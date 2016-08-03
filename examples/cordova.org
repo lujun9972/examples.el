@@ -1,0 +1,39 @@
+* cordova
+
+Mobile apps with HTML, CSS & JS.
+
+** Create a cordova project:
+
+#+BEGIN_SRC sh
+  cordova create ${path} ${package.name} ${project.name}
+#+END_SRC
+
+** Display the current workspace status:
+
+#+BEGIN_SRC sh
+  cordova info
+#+END_SRC
+
+** Add a cordova platform:
+
+#+BEGIN_SRC sh
+  cordova platform add ${platform}
+#+END_SRC
+
+** Remove a cordova platform:
+
+#+BEGIN_SRC sh
+  cordova platform remove ${platform}
+#+END_SRC
+
+** Add a cordova plugin:
+
+#+BEGIN_SRC sh
+  cordova plugin add ${pluginid}
+#+END_SRC
+
+** Remove a cordova plugin:
+
+#+BEGIN_SRC sh
+  cordova plugin remove ${pluginid}
+#+END_SRC

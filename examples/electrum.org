@@ -1,0 +1,45 @@
+* electrum
+
+Ergonomic Bitcoin wallet and private key management.
+
+** Create a new wallet:
+
+#+BEGIN_SRC sh
+  electrum -w ${new_wallet.dat} create
+#+END_SRC
+
+** Restore an existing wallet from seed offline:
+
+#+BEGIN_SRC sh
+  electrum -w ${recovery_wallet.dat} restore -o
+#+END_SRC
+
+** Create a signed transaction offline:
+
+#+BEGIN_SRC sh
+  electrum mktx ${recipient} ${amount} -f 0.0000001 -F ${from} -o
+#+END_SRC
+
+** Display all wallet receiving addresses:
+
+#+BEGIN_SRC sh
+  electrum listaddresses -a
+#+END_SRC
+
+** Sign a message:
+
+#+BEGIN_SRC sh
+  electrum signmessage ${address} ${message}
+#+END_SRC
+
+** Verify a message:
+
+#+BEGIN_SRC sh
+  electrum verifymessage ${address} ${signature} ${message}
+#+END_SRC
+
+** Connect only to a specific electrum-server instance:
+
+#+BEGIN_SRC sh
+  electrum -p socks5:${127.0.0.1}:9050 -s ${56ckl5obj37gypcu.onion}:50001:t -1
+#+END_SRC

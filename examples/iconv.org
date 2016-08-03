@@ -1,0 +1,21 @@
+* iconv
+
+Converts text from one encoding to another.
+
+** Convert file to a specific encoding, and print to stdout:
+
+#+BEGIN_SRC sh
+  iconv -f ${from_encoding} -t ${to_encoding} ${input_file}
+#+END_SRC
+
+** Convert file to the current locale's encoding, and output to a file:
+
+#+BEGIN_SRC sh
+  iconv -f ${from_encoding} ${input_file} > ${output_file}
+#+END_SRC
+
+** List supported encodings:
+
+#+BEGIN_SRC sh
+  iconv -l
+#+END_SRC

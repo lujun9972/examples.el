@@ -1,0 +1,9 @@
+* pkgrm
+
+Remove a package from a CRUX system.
+
+** Remove an installed package:
+
+#+BEGIN_SRC sh
+  pkgrm ${package_name}
+#+END_SRC

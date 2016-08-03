@@ -1,0 +1,39 @@
+* tr
+
+Translate characters - run replacements based on single characters and character sets.
+
+** Replace all occurrences of a character in a file, and print the result:
+
+#+BEGIN_SRC sh
+  tr ${find_characters} ${replace_characters} < ${filename}
+#+END_SRC
+
+** Map each character of the first set to the corresponding character of the second set:
+
+#+BEGIN_SRC sh
+  tr 'abcd' 'jkmn' < ${filename}
+#+END_SRC
+
+** Delete all occurances of the specified set of characters from the input:
+
+#+BEGIN_SRC sh
+  tr -d '${input_characters}'
+#+END_SRC
+
+** Compress a series of identical characters to a single character:
+
+#+BEGIN_SRC sh
+  tr -s '\n'
+#+END_SRC
+
+** Translate the contents of the file to upper-case and print result:
+
+#+BEGIN_SRC sh
+  tr "[:lower:]" "[:upper:]" < ${filename}
+#+END_SRC
+
+** Strip out non-printable characters from the file and print result:
+
+#+BEGIN_SRC sh
+  tr -cd "[:print:]" < ${filename}
+#+END_SRC

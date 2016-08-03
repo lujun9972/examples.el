@@ -1,0 +1,15 @@
+* visudo 
+
+Safely edit the sudoers file.
+
+** Edit sudoers file:
+
+#+BEGIN_SRC sh
+  sudo visudo
+#+END_SRC
+
+** Check sudoers file for errors:
+
+#+BEGIN_SRC sh
+  sudo visudo -c
+#+END_SRC

@@ -1,0 +1,15 @@
+* pdflatex
+
+Compile a pdf document from LaTeX source files.
+
+** Compile a pdf document:
+
+#+BEGIN_SRC sh
+  pdflatex ${source.tex}
+#+END_SRC
+
+** Compile a pdf document, halting on each error:
+
+#+BEGIN_SRC sh
+  pdflatex -halt-on-error ${source.tex}
+#+END_SRC

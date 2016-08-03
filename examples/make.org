@@ -1,0 +1,28 @@
+* make
+
+Task runner for rules described in Makefile.
+Mostly used to control the compilation of an executable from source code.
+
+** Call the all rule:
+
+#+BEGIN_SRC sh
+  make
+#+END_SRC
+
+** Call a specific rule:
+
+#+BEGIN_SRC sh
+  make ${rule}
+#+END_SRC
+
+** Use specific Makefile:
+
+#+BEGIN_SRC sh
+  make -f ${file}
+#+END_SRC
+
+** Execute make from another directory:
+
+#+BEGIN_SRC sh
+  make -C ${directory}
+#+END_SRC

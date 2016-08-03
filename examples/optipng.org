@@ -1,0 +1,33 @@
+* optipng
+
+PNG image file optimization utility.
+
+** Compress a PNG with default settings:
+
+#+BEGIN_SRC sh
+  optipng ${file.png}
+#+END_SRC
+
+** Compress a PNG with best compression:
+
+#+BEGIN_SRC sh
+  optipng -o${7} ${file.png}
+#+END_SRC
+
+** Compress a PNG with fastest compression:
+
+#+BEGIN_SRC sh
+  optipng -o${0} ${file.png}
+#+END_SRC
+
+** Compress a PNG and add interlacing:
+
+#+BEGIN_SRC sh
+  optipng -i ${1} ${file.png}
+#+END_SRC
+
+** Compress a PNG and remove all metadata:
+
+#+BEGIN_SRC sh
+  optipng -strip all ${file.png}
+#+END_SRC

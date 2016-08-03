@@ -1,0 +1,28 @@
+* sh
+
+Bourne shell.
+The standard command language interpreter.
+
+** Start interactive shell:
+
+#+BEGIN_SRC sh
+  sh
+#+END_SRC
+
+** Execute a command:
+
+#+BEGIN_SRC sh
+  sh -c ${command}
+#+END_SRC
+
+** Run commands from a file:
+
+#+BEGIN_SRC sh
+  sh ${file.sh}
+#+END_SRC
+
+** Run commands from STDIN:
+
+#+BEGIN_SRC sh
+  sh -s
+#+END_SRC

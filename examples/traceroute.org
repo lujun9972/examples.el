@@ -1,0 +1,27 @@
+* traceroute
+
+Print the route packets trace to network host.
+
+** Traceroute to a host:
+
+#+BEGIN_SRC sh
+  traceroute ${host}
+#+END_SRC
+
+** Disable IP address and host name mapping:
+
+#+BEGIN_SRC sh
+  traceroute -n ${host}
+#+END_SRC
+
+** Specify wait time for response:
+
+#+BEGIN_SRC sh
+  traceroute -w 0.5 ${host}
+#+END_SRC
+
+** Specify number of queries per hop:
+
+#+BEGIN_SRC sh
+  traceroute -q 5 ${host}
+#+END_SRC

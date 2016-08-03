@@ -1,0 +1,27 @@
+* pkginfo
+
+Query the package database on a CRUX system.
+
+** List installed packages and their versions:
+
+#+BEGIN_SRC sh
+  pkginfo -i
+#+END_SRC
+
+** List files owned by a package:
+
+#+BEGIN_SRC sh
+  pkginfo -l ${package_name}
+#+END_SRC
+
+** List the owner(s) of files matching a pattern:
+
+#+BEGIN_SRC sh
+  pkginfo -o ${pattern}
+#+END_SRC
+
+** Print the footprint of a file:
+
+#+BEGIN_SRC sh
+  pkginfo -f ${file}
+#+END_SRC

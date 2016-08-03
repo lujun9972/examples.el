@@ -1,0 +1,15 @@
+* git init
+
+Initializes a new local Git repository.
+
+** Initialize a new local repository:
+
+#+BEGIN_SRC sh
+  git init
+#+END_SRC
+
+** Initialize a barebones repository, suitable for use as a remote over ssh:
+
+#+BEGIN_SRC sh
+  git init --bare
+#+END_SRC

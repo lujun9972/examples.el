@@ -1,0 +1,33 @@
+* redshift
+
+Adjust the color temperature of your screen according to your surroundings.
+
+** Turn on Redshift with 5700K temperature during day and 3600K at night:
+
+#+BEGIN_SRC sh
+  redshift -t ${5700}:${3600}
+#+END_SRC
+
+** Turn on Redshift with a manually-specified custom location:
+
+#+BEGIN_SRC sh
+  redshift -l ${latitude}:${longitude}
+#+END_SRC
+
+** Turn on Redshift with 70% screen brightness during day and 40% brightness at night:
+
+#+BEGIN_SRC sh
+  redshift -b ${0.7}:${0.4}
+#+END_SRC
+
+** Turn on Redshift with custom gamma levels (between 0 and 1):
+
+#+BEGIN_SRC sh
+  redshift -g ${red}:${green}:${blue}
+#+END_SRC
+
+** Turn on Redshift with a constant unchanging color temperature:
+
+#+BEGIN_SRC sh
+  redshift -O ${temperature}
+#+END_SRC

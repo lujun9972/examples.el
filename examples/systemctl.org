@@ -1,0 +1,39 @@
+* systemctl
+
+Control the systemd system and service manager.
+
+** List failed units:
+
+#+BEGIN_SRC sh
+  systemctl --failed
+#+END_SRC
+
+** Start/Stop/Restart/Reload a service:
+
+#+BEGIN_SRC sh
+  systemctl start/stop/restart/reload ${unit}
+#+END_SRC
+
+** Show the status of a unit:
+
+#+BEGIN_SRC sh
+  systemctl status ${unit}
+#+END_SRC
+
+** Enable/Disable a unit to be started on bootup:
+
+#+BEGIN_SRC sh
+  systemctl enable/disable ${unit}
+#+END_SRC
+
+** Mask/Unmask a unit, prevent it to be started on bootup:
+
+#+BEGIN_SRC sh
+  systemctl mask/unmask ${unit}
+#+END_SRC
+
+** Reload systemd, scanning for new or changed units:
+
+#+BEGIN_SRC sh
+  systemctl daemon-reload
+#+END_SRC

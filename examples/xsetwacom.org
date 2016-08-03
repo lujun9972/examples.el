@@ -1,0 +1,33 @@
+* xsetwacom
+
+Command line tool to change settings for Wacom pen tablets at runtime.
+
+** List all the available wacom devices. The device name is in the first column:
+
+#+BEGIN_SRC sh
+  xsetwacom list
+#+END_SRC
+
+** Set Wacom area to specific screen. Get name of the screen with `xrandr`:
+
+#+BEGIN_SRC sh
+  xsetwacom set "${device name}" MapToOutput ${screen}
+#+END_SRC
+
+** Set mode to relative (like a mouse) or absolute (like a pen) mode:
+
+#+BEGIN_SRC sh
+  xsetwacom set "${device name}" Mode "${Relative|Absolute}"
+#+END_SRC
+
+** Rotate the input (useful for tablet-PC when rotating screen) by 0|90|180|270 degrees from "natural" rotation:
+
+#+BEGIN_SRC sh
+  xsetwacom set "${device name}" Rotate ${none|half|cw|ccw}
+#+END_SRC
+
+** Set button to only work when the tip of the pen is touching the tablet:
+
+#+BEGIN_SRC sh
+  xsetwacom set "${device name}" TabletPCButton "on"
+#+END_SRC

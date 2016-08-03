@@ -1,0 +1,27 @@
+* umask
+
+Manage the read/write/execute permissions that are masked out (i.e. restricted) for newly created files by the user.
+
+** Display the current mask in octal notation:
+
+#+BEGIN_SRC sh
+  umask
+#+END_SRC
+
+** Display the current mask in symbolic (human-readable) mode:
+
+#+BEGIN_SRC sh
+  umask -S
+#+END_SRC
+
+** Change the mask symbolically to allow read permission for all users (the rest of the mask bits are unchanged):
+
+#+BEGIN_SRC sh
+  umask ${a+r}
+#+END_SRC
+
+** Set the mask (using octal) to restrict no permissions for the file's owner, and restrict all permissions for everyone else:
+
+#+BEGIN_SRC sh
+  umask ${077}
+#+END_SRC

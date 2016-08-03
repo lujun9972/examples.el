@@ -1,0 +1,27 @@
+* dpkg-query
+
+A tool that shows information about installed packages.
+
+** List all installed packages:
+
+#+BEGIN_SRC sh
+  dpkg-query -l
+#+END_SRC
+
+** List installed packages matching a pattern:
+
+#+BEGIN_SRC sh
+  dpkg-query -l '${pattern}'
+#+END_SRC
+
+** List all files installed by a package:
+
+#+BEGIN_SRC sh
+  dpkg-query -L ${package_name}
+#+END_SRC
+
+** Show information about a package:
+
+#+BEGIN_SRC sh
+  dpkg-query -s ${package_name}
+#+END_SRC

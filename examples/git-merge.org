@@ -1,0 +1,15 @@
+* git merge
+
+Merge branches.
+
+** Merge a branch with your current branch:
+
+#+BEGIN_SRC sh
+  git merge ${BRANCH-NAME}
+#+END_SRC
+
+** Edit the merge message:
+
+#+BEGIN_SRC sh
+  git merge -e ${BRANCH-NAME}
+#+END_SRC

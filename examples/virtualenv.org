@@ -1,0 +1,21 @@
+* virtualenv
+
+Create virtual isolated Python environments.
+
+** Create a new environment:
+
+#+BEGIN_SRC sh
+  virtualenv ${path/to/venv}
+#+END_SRC
+
+** Start (select) the environment:
+
+#+BEGIN_SRC sh
+  source ${path/to/venv}/bin/activate
+#+END_SRC
+
+** Stop the environment:
+
+#+BEGIN_SRC sh
+  deactivate
+#+END_SRC

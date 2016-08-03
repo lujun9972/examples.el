@@ -1,0 +1,33 @@
+* expand
+
+Convert tabs to spaces.
+
+** Convert tabs in each file to spaces, writing to standard output:
+
+#+BEGIN_SRC sh
+  expand ${file}
+#+END_SRC
+
+** Convert tabs to spaces, reading from standard input:
+
+#+BEGIN_SRC sh
+  expand
+#+END_SRC
+
+** Do not convert tabs after non blanks:
+
+#+BEGIN_SRC sh
+  expand -i ${file}
+#+END_SRC
+
+** Have tabs a certain number of characters apart, not 8:
+
+#+BEGIN_SRC sh
+  expand -t=${number} ${file}
+#+END_SRC
+
+** Use comma separated list of explicit tab positions:
+
+#+BEGIN_SRC sh
+  expand -t=${list}
+#+END_SRC

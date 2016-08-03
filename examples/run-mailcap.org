@@ -1,0 +1,34 @@
+* run-mailcap
+
+Run MailCap Programs.
+Run mailcap view,  see,  edit,  compose, print - execute programs via entries in the mailcap file (or any of its  aliases)  will  use  the  given  action  to process  each  mime-type/file.
+
+** Individual actions/programs on run-mailcap can be invoked with action flag:
+
+#+BEGIN_SRC sh
+  run-mailcap --action=ACTION [--option[=value]]
+#+END_SRC
+
+** In simple language:
+
+#+BEGIN_SRC sh
+  run-mailcap --action=ACTION ${filename}
+#+END_SRC
+
+** Turn on extra information:
+
+#+BEGIN_SRC sh
+  run-mailcap  --action=ACTION --debug ${filename}
+#+END_SRC
+
+** Ignore any "copiousoutput" directive and forward output to STD‐OUT:
+
+#+BEGIN_SRC sh
+  run-mailcap --action=ACTION --nopager ${filename}
+#+END_SRC
+
+** Display the found command without actually executing it:
+
+#+BEGIN_SRC sh
+  run-mailcap --action=ACTION --norun ${filename}
+#+END_SRC

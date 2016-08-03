@@ -1,0 +1,34 @@
+* axel
+
+Download accelerator.
+Supports HTTP, HTTPS, and FTP.
+
+** Download a URL to a file:
+
+#+BEGIN_SRC sh
+  axel ${url}
+#+END_SRC
+
+** Download and specify filename:
+
+#+BEGIN_SRC sh
+  axel ${url} -o ${filename}
+#+END_SRC
+
+** Download with multiple connections:
+
+#+BEGIN_SRC sh
+  axel -n ${connections_num} ${url}
+#+END_SRC
+
+** Search for mirrors:
+
+#+BEGIN_SRC sh
+  axel -S ${mirrors_num} ${url}
+#+END_SRC
+
+** Limit download speed (bytes per second):
+
+#+BEGIN_SRC sh
+  axel -s ${speed} ${url}
+#+END_SRC

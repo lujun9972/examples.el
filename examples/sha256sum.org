@@ -1,0 +1,21 @@
+* sha256sum
+
+Calculate SHA256 cryptographic checksums.
+
+** Calculate the SHA256 checksum for a file:
+
+#+BEGIN_SRC sh
+  sha256sum ${filename1}
+#+END_SRC
+
+** Calculate SHA224 checksums for multiple files:
+
+#+BEGIN_SRC sh
+  sha256sum ${filename1} ${filename2}
+#+END_SRC
+
+** Read a file of SHA256 sums and verify all files have matching checksums:
+
+#+BEGIN_SRC sh
+  sha256sum -c ${filename.sha256}
+#+END_SRC

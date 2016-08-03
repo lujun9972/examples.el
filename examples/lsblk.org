@@ -1,0 +1,39 @@
+* lsblk
+
+Lists information about devices.
+
+** List all storage devices in a tree-like format:
+
+#+BEGIN_SRC sh
+  lsblk
+#+END_SRC
+
+** Also list empty devices:
+
+#+BEGIN_SRC sh
+  lsblk -a
+#+END_SRC
+
+** Print the SIZE column in bytes rather than in a human-readable format:
+
+#+BEGIN_SRC sh
+  lsblk -b
+#+END_SRC
+
+** Output info about filesystems:
+
+#+BEGIN_SRC sh
+  lsblk -f
+#+END_SRC
+
+** Use ASCII characters for tree formatting:
+
+#+BEGIN_SRC sh
+  lsblk -i
+#+END_SRC
+
+** Output info about block-device topology:
+
+#+BEGIN_SRC sh
+  lsblk -t
+#+END_SRC

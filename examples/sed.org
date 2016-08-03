@@ -1,0 +1,39 @@
+* sed
+
+Run replacements based on regular expressions.
+
+** Replace the first occurrence of a string in a file, and print the result:
+
+#+BEGIN_SRC sh
+  sed 's/${find}/${replace}/' ${filename}
+#+END_SRC
+
+** Replace all occurrences of an extended regular expression in a file:
+
+#+BEGIN_SRC sh
+  sed -r 's/${regex}/${replace}/g' ${filename}
+#+END_SRC
+
+** Replace all occurrences of a string in a file, overwriting the file (i.e. in-place):
+
+#+BEGIN_SRC sh
+  sed -i 's/${find}/${replace}/g' ${filename}
+#+END_SRC
+
+** Replace only on lines matching the line pattern:
+
+#+BEGIN_SRC sh
+  sed '/${line_pattern}/s/${find}/${replace}/'
+#+END_SRC
+
+** Apply multiple find-replace expressions to a file:
+
+#+BEGIN_SRC sh
+  sed -e 's/${find}/${replace}/' -e 's/${find}/${replace}/' ${filename}
+#+END_SRC
+
+** Replace separator / by any other character not used in the find or replace patterns, e.g., #:
+
+#+BEGIN_SRC sh
+  sed 's#${find}#${replace}#' ${filename}
+#+END_SRC

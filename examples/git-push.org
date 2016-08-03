@@ -1,0 +1,33 @@
+* git push
+
+Push commits to a remote repository.
+
+** Publish local changes on a remote branch:
+
+#+BEGIN_SRC sh
+  git push ${REMOTE-NAME} ${LOCAL-BRANCH}
+#+END_SRC
+
+** Publish local changes on a remote branch of different name:
+
+#+BEGIN_SRC sh
+  git push ${REMOTE-NAME} ${LOCAL-BRANCH}:${REMOTE-BRANCH}
+#+END_SRC
+
+** Remove remote branch:
+
+#+BEGIN_SRC sh
+  git push ${REMOTE-NAME} :${REMOTE-BRANCH}
+#+END_SRC
+
+** Remove remote branches which don't exist locally:
+
+#+BEGIN_SRC sh
+  git push --prune ${REMOTE-NAME}
+#+END_SRC
+
+** Publish tags:
+
+#+BEGIN_SRC sh
+  git push --tags
+#+END_SRC

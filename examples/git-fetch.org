@@ -1,0 +1,15 @@
+* git fetch
+
+Download objects and refs from a remote repository.
+
+** Fetch new branches and update remote-tracking branches:
+
+#+BEGIN_SRC sh
+  git fetch ${remote_name}
+#+END_SRC
+
+** Fetch the latest changes from all remote git servers:
+
+#+BEGIN_SRC sh
+  git fetch --all
+#+END_SRC

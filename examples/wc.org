@@ -1,0 +1,27 @@
+* wc
+
+Count words, bytes, or lines.
+
+** Count lines in file:
+
+#+BEGIN_SRC sh
+  wc -l ${file}
+#+END_SRC
+
+** Count words in file:
+
+#+BEGIN_SRC sh
+  wc -w ${file}
+#+END_SRC
+
+** Count characters (bytes) in file:
+
+#+BEGIN_SRC sh
+  wc -c ${file}
+#+END_SRC
+
+** Count characters in file (taking multi-byte character sets into account):
+
+#+BEGIN_SRC sh
+  wc -m ${file}
+#+END_SRC

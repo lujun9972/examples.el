@@ -1,0 +1,21 @@
+* chattr
+
+Change attributes of files or folders.
+
+** Make a file or folder immutable to changes and deletion, even by superuser:
+
+#+BEGIN_SRC sh
+  chattr +i ${path}
+#+END_SRC
+
+** Make a file or folder mutable:
+
+#+BEGIN_SRC sh
+  chattr -i ${path}
+#+END_SRC
+
+** Recursively make an entire folder and contents immutable:
+
+#+BEGIN_SRC sh
+  chattr -R +i ${folder}
+#+END_SRC

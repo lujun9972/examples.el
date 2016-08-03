@@ -1,0 +1,39 @@
+* nix-env
+
+Manipulate or query Nix user environments.
+
+** Show available package with name or without name:
+
+#+BEGIN_SRC sh
+  nix-env -qa ${pkg_name}
+#+END_SRC
+
+** Show the status of available packages:
+
+#+BEGIN_SRC sh
+  nix-env -qas
+#+END_SRC
+
+** Install package:
+
+#+BEGIN_SRC sh
+  nix-env -i ${pkg_name}
+#+END_SRC
+
+** Uninstall package:
+
+#+BEGIN_SRC sh
+  nix-env -e ${pkg_name}
+#+END_SRC
+
+** Upgrade one package:
+
+#+BEGIN_SRC sh
+  nix-env -u ${pkg_name}
+#+END_SRC
+
+** Upgrade all packages:
+
+#+BEGIN_SRC sh
+  nix-env -u
+#+END_SRC

@@ -1,0 +1,9 @@
+* mkfifo
+
+Makes FIFOs (named pipes).
+
+** Create a named pipe at a given path:
+
+#+BEGIN_SRC sh
+  mkfifo ${path/to/pipe}
+#+END_SRC

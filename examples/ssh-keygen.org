@@ -1,0 +1,45 @@
+* ssh-keygen
+
+Generate ssh keys user for authentication, password-less logins, and other things.
+
+** Generate a key interactively:
+
+#+BEGIN_SRC sh
+  ssh-keygen
+#+END_SRC
+
+** Specify file in which to save the key:
+
+#+BEGIN_SRC sh
+  ssh-keygen -f ~/.ssh/${filename}
+#+END_SRC
+
+** Generate a DSA 2048 bit (default) key:
+
+#+BEGIN_SRC sh
+  ssh-keygen -t dsa
+#+END_SRC
+
+** Generate an RSA 4096 bit key with your email as a comment:
+
+#+BEGIN_SRC sh
+  ssh-keygen -t rsa -b 4096 -C "${email}"
+#+END_SRC
+
+** Retrieve the key fingerprint from a host (useful for confirming the authenticity of the host when first connecting to it via SSH):
+
+#+BEGIN_SRC sh
+  ssh-keygen -l -F ${remote_host}
+#+END_SRC
+
+** Retrieve the fingerprint of a key in MD5 Hex:
+
+#+BEGIN_SRC sh
+  ssh-keygen -l -E md5 -f ~/.ssh/${filename}
+#+END_SRC
+
+** Change the password of a key:
+
+#+BEGIN_SRC sh
+  ssh-keygen -p -f ~/.ssh/${filename}
+#+END_SRC

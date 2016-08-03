@@ -1,0 +1,15 @@
+* mysqldump
+
+Backups mysql databases.
+
+** Create a backup, user will be prompted for a password:
+
+#+BEGIN_SRC sh
+  mysqldump -u ${user} --password ${database_name} > ${filename.sql}
+#+END_SRC
+
+** Restore a backup, user will be prompted for a password:
+
+#+BEGIN_SRC sh
+  mysql -u ${user} --password ${database_name} < ${filename.sql}
+#+END_SRC

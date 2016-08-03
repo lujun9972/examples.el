@@ -1,0 +1,27 @@
+* license
+
+Create license files for open-source projects.
+
+** Create a license:
+
+#+BEGIN_SRC sh
+  license ${license_name}
+#+END_SRC
+
+** Create a license with custom filename:
+
+#+BEGIN_SRC sh
+  license -o ${filename} ${license_name}
+#+END_SRC
+
+** List all locally available licenses:
+
+#+BEGIN_SRC sh
+  license ls
+#+END_SRC
+
+** Create a license with explicitly-set name and year:
+
+#+BEGIN_SRC sh
+  license --name ${author} --year ${release_year} ${license_name}
+#+END_SRC

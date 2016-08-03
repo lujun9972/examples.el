@@ -1,0 +1,27 @@
+* jmap
+
+Java Memory Map Tool.
+
+** Print shared object mappings for a java process (output like pmap):
+
+#+BEGIN_SRC sh
+  jmap ${java_pid}
+#+END_SRC
+
+** Print heap summary information:
+
+#+BEGIN_SRC sh
+  jmap -heap ${filename.jar} ${java_pid}
+#+END_SRC
+
+** Print histogram of heap usage by type:
+
+#+BEGIN_SRC sh
+  jmap -histo ${java_pid}
+#+END_SRC
+
+** Dump contents of the heap into a binary file for analysis with jhat:
+
+#+BEGIN_SRC sh
+  jmap -dump:format=b,file=${filename} ${java_pid}
+#+END_SRC

@@ -1,0 +1,45 @@
+* odps auth
+
+User authorities in ODPS (Open Data Processing Service).
+
+** Add a user to the current project:
+
+#+BEGIN_SRC sh
+  add user ${user_name};
+#+END_SRC
+
+** Grant a set of authorities to a user:
+
+#+BEGIN_SRC sh
+  grant ${action_list} on ${object_type} ${object_name} to user ${user_name};
+#+END_SRC
+
+** Show authorities of a user:
+
+#+BEGIN_SRC sh
+  show grants for ${user_name};
+#+END_SRC
+
+** Create a user role:
+
+#+BEGIN_SRC sh
+  create role ${role_name};
+#+END_SRC
+
+** Grant a set of authorities to a role:
+
+#+BEGIN_SRC sh
+  grant ${action_list} on ${object_type} ${object_name} to role ${role_name};
+#+END_SRC
+
+** Describe authorities of a role:
+
+#+BEGIN_SRC sh
+  desc role ${role_name};
+#+END_SRC
+
+** Grant a role to a user:
+
+#+BEGIN_SRC sh
+  grant ${role_name} to ${user_name};
+#+END_SRC

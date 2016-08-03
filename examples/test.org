@@ -1,0 +1,34 @@
+* test
+
+Evaluate condition.
+If it is true, returns 0 exit status, otherwise returns 1.
+
+** Test if given variable is equal to given string:
+
+#+BEGIN_SRC sh
+  test $MY_VAR == '/bin/zsh'
+#+END_SRC
+
+** Test if given variable is empty:
+
+#+BEGIN_SRC sh
+  test -z $GIT_BRANCH
+#+END_SRC
+
+** Test if file exists:
+
+#+BEGIN_SRC sh
+  test -e ${filename}
+#+END_SRC
+
+** Test if directory not exists:
+
+#+BEGIN_SRC sh
+  test ! -d ${path/to/directory}
+#+END_SRC
+
+** If-else statement:
+
+#+BEGIN_SRC sh
+  test ${condition} && echo "true" || echo "false"
+#+END_SRC

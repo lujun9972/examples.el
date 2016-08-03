@@ -1,0 +1,39 @@
+* pv
+
+Monitor the progress of data through a pipe.
+
+** Print the contents of the file and display a progress bar:
+
+#+BEGIN_SRC sh
+  pv ${file}
+#+END_SRC
+
+** Measure the speed and amount of data flow between pipes (`-s` is optional):
+
+#+BEGIN_SRC sh
+  command1 | pv -s ${expected_amount_of_data_for_eta} | command2
+#+END_SRC
+
+** Filter a file, see both progress and amount of output data:
+
+#+BEGIN_SRC sh
+  pv -cN in ${big_text_file} | grep ${pattern} | pv -cN out > ${filtered_file}
+#+END_SRC
+
+** Attach to an already running process and see its file reading progress:
+
+#+BEGIN_SRC sh
+  pv -d ${PID}
+#+END_SRC
+
+** Read an erroneous file, skip errors as `dd conv=sync,noerror` would:
+
+#+BEGIN_SRC sh
+  pv -EE ${path/to/faulty_media} > image.img
+#+END_SRC
+
+** Stop reading after reading specified amount of data, rate limit to 1K/s:
+
+#+BEGIN_SRC sh
+  pv -L 1K -S ${maximum_file_size_to_be_read}
+#+END_SRC

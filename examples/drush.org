@@ -1,0 +1,39 @@
+* drush
+
+A command-line shell and scripting interface for Drupal.
+
+** Download module "foo":
+
+#+BEGIN_SRC sh
+  drush dl ${foo}
+#+END_SRC
+
+** Download version 7.x-2.1-beta1 of module "foo":
+
+#+BEGIN_SRC sh
+  drush dl ${foo}-7.x-2.1-beta1
+#+END_SRC
+
+** Enable module "foo":
+
+#+BEGIN_SRC sh
+  drush en ${foo}
+#+END_SRC
+
+** Disable module "foo":
+
+#+BEGIN_SRC sh
+  drush dis ${foo}
+#+END_SRC
+
+** Clear all caches:
+
+#+BEGIN_SRC sh
+  drush cc all
+#+END_SRC
+
+** Clear CSS and JavaScript caches:
+
+#+BEGIN_SRC sh
+  drush cc css-js
+#+END_SRC

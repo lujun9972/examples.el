@@ -1,0 +1,21 @@
+* touch
+
+Change a file access and modification times (atime, mtime).
+
+** Create a new empty file(s) or change the times for existing file(s) to current time:
+
+#+BEGIN_SRC sh
+  touch ${filename}
+#+END_SRC
+
+** Set the times on a file to a specific date and time:
+
+#+BEGIN_SRC sh
+  touch -t ${YYYYMMDDHHMM.SS} ${filename}
+#+END_SRC
+
+** Use the times from a file to set the times on a second file:
+
+#+BEGIN_SRC sh
+  touch -r ${filename} ${filename2}
+#+END_SRC

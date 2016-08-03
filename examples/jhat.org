@@ -1,0 +1,21 @@
+* jhat
+
+Java Heap Analysis Tool.
+
+** Analyze a heap dump (from jmap), view via http on port 7000:
+
+#+BEGIN_SRC sh
+  jhat ${dump_file.bin}
+#+END_SRC
+
+** Analyze a heap dump, specifying an alternate port for the http server:
+
+#+BEGIN_SRC sh
+  jhat -p ${port} ${dump_file.bin}
+#+END_SRC
+
+** Analyze a dump letting jhat use up to 8GB RAM (2-4x dump size recommended):
+
+#+BEGIN_SRC sh
+  jhat -J-mx8G ${dump_file.bin}
+#+END_SRC

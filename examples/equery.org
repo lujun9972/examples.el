@@ -1,0 +1,33 @@
+* equery
+
+View information about Portage packages.
+
+** List all installed packages:
+
+#+BEGIN_SRC sh
+  equery list '*'
+#+END_SRC
+
+** Search for installed packages in the Portage tree and in overlays:
+
+#+BEGIN_SRC sh
+  equery list -po ${package_name}
+#+END_SRC
+
+** List all packages that depend on a given package:
+
+#+BEGIN_SRC sh
+  equery depends ${package_name}
+#+END_SRC
+
+** List all packages that a given package depends on:
+
+#+BEGIN_SRC sh
+  equery depgraph ${package_name}
+#+END_SRC
+
+** List all files installed by a package:
+
+#+BEGIN_SRC sh
+  equery files --tree ${package_name}
+#+END_SRC

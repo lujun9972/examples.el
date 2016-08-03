@@ -1,0 +1,21 @@
+* git mv
+
+Move or rename files and update the git index.
+
+** Move file inside the repo and add the movement to the next commit:
+
+#+BEGIN_SRC sh
+  git mv ${path/to/file} ${new/path/to/file}
+#+END_SRC
+
+** Rename file and add renaming to the next commit:
+
+#+BEGIN_SRC sh
+  git mv ${filename} ${new_filename}
+#+END_SRC
+
+** Overwrite the file in the target path if it exists:
+
+#+BEGIN_SRC sh
+  git mv --force ${file} ${target}
+#+END_SRC

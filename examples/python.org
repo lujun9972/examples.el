@@ -1,0 +1,27 @@
+* Python
+
+Python language interpreter.
+
+** Call a Python interactive shell (REPL):
+
+#+BEGIN_SRC sh
+  python
+#+END_SRC
+
+** Execute script in a given Python file:
+
+#+BEGIN_SRC sh
+  python ${script.py}
+#+END_SRC
+
+** Execute Python language single command:
+
+#+BEGIN_SRC sh
+  python -c ${command}
+#+END_SRC
+
+** Run library module as a script (terminates option list):
+
+#+BEGIN_SRC sh
+  python -m ${module} ${arguments}
+#+END_SRC

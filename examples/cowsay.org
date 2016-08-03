@@ -1,0 +1,21 @@
+* cowsay
+
+Generate an ASCII character like a cow or sheep saying or thinking something.
+
+** Print an ASCII cow saying "Hello world!":
+
+#+BEGIN_SRC sh
+  cowsay "Hello world!"
+#+END_SRC
+
+** Print an ASCII dragon saying "Hello!":
+
+#+BEGIN_SRC sh
+  echo "Hello!" | cowsay -f dragon
+#+END_SRC
+
+** Print a stoned thinking ASCII cow:
+
+#+BEGIN_SRC sh
+  cowthink -s "I'm just a cow, not a great thinker ..."
+#+END_SRC

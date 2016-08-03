@@ -1,0 +1,45 @@
+* http
+
+HTTPie: HTTP client, a user-friendly cURL replacement.
+
+** Download a URL to a file:
+
+#+BEGIN_SRC sh
+  http -d ${example.org}
+#+END_SRC
+
+** Send form-encoded data:
+
+#+BEGIN_SRC sh
+  http -f ${example.org} ${name='bob'} ${profile_picture@'bob.png'}
+#+END_SRC
+
+** Send JSON object:
+
+#+BEGIN_SRC sh
+  http ${example.org} ${name='bob'}
+#+END_SRC
+
+** Specify an HTTP method:
+
+#+BEGIN_SRC sh
+  http ${HEAD} ${example.org}
+#+END_SRC
+
+** Include an extra header:
+
+#+BEGIN_SRC sh
+  http ${example.org} ${X-MyHeader:123}
+#+END_SRC
+
+** Pass a user name and password for server authentication:
+
+#+BEGIN_SRC sh
+  http -a ${username:password} ${example.org}
+#+END_SRC
+
+** Specify raw request body via stdin:
+
+#+BEGIN_SRC sh
+  cat data.txt | http PUT example.org
+#+END_SRC

@@ -1,0 +1,21 @@
+* node
+
+Server-side JavaScript platform (Node.js).
+
+** Run a JavaScript file:
+
+#+BEGIN_SRC sh
+  node ${file}.js
+#+END_SRC
+
+** Start a REPL (interactive shell):
+
+#+BEGIN_SRC sh
+  node
+#+END_SRC
+
+** Evaluate JavaScript by passing it in the command:
+
+#+BEGIN_SRC sh
+  node -e "${code}"
+#+END_SRC

@@ -1,0 +1,27 @@
+* SSHFS
+
+Filesystem client based on ssh.
+
+** Mount remote directory:
+
+#+BEGIN_SRC sh
+  sshfs ${username}@${remote_host}:${remote_directory} ${mountpoint}
+#+END_SRC
+
+** Unmount remote directory:
+
+#+BEGIN_SRC sh
+  fusermount -u ${mountpoint}
+#+END_SRC
+
+** Mount remote directory from server with specific port:
+
+#+BEGIN_SRC sh
+  sshfs ${username}@${remote_host}:${remote_directory} -p ${2222}
+#+END_SRC
+
+** Use compression:
+
+#+BEGIN_SRC sh
+  sshfs ${username}@${remote_host}:${remote_directory} -C
+#+END_SRC

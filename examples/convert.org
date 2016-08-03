@@ -1,0 +1,27 @@
+* convert
+
+Imagemagick image conversion tool.
+
+** Convert an image from JPG to PNG:
+
+#+BEGIN_SRC sh
+  convert ${image.jpg} ${image.png}
+#+END_SRC
+
+** Scale an image 50% it's original size:
+
+#+BEGIN_SRC sh
+  convert ${image.png} -resize 50% ${image2.png}
+#+END_SRC
+
+** Scale an image keeping the original aspect ratio to a maximum dimension of 640x480:
+
+#+BEGIN_SRC sh
+  convert ${image.png} -resize 640x480 ${image2.png}
+#+END_SRC
+
+** Horizontally append images:
+
+#+BEGIN_SRC sh
+  convert ${image1.png} ${image2.png} ${image3.png} +append ${image123.png}
+#+END_SRC

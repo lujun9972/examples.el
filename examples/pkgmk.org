@@ -1,0 +1,39 @@
+* pkgmk
+
+Make a binary package for use with pkgadd on CRUX.
+
+** Make and download a package:
+
+#+BEGIN_SRC sh
+  pkgmk -d
+#+END_SRC
+
+** Install the package after making it:
+
+#+BEGIN_SRC sh
+  pkgmk -d -i
+#+END_SRC
+
+** Upgrade the package after making it:
+
+#+BEGIN_SRC sh
+  pkgmk -d -u
+#+END_SRC
+
+** Ignore the footprint when making a package:
+
+#+BEGIN_SRC sh
+  pkgmk -d -if
+#+END_SRC
+
+** Ignore the MD5 sum when making a package:
+
+#+BEGIN_SRC sh
+  pkgmk -d -im
+#+END_SRC
+
+** Update the package's footprint:
+
+#+BEGIN_SRC sh
+  pkgmk -uf
+#+END_SRC

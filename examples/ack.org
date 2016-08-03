@@ -1,0 +1,27 @@
+* ack
+
+A search tool like grep, optimized for programmers.
+
+** Find files containing "foo":
+
+#+BEGIN_SRC sh
+  ack ${foo}
+#+END_SRC
+
+** Find files in a specific language:
+
+#+BEGIN_SRC sh
+  ack --ruby ${each_with_object}
+#+END_SRC
+
+** Count the total number of matches for the term "foo":
+
+#+BEGIN_SRC sh
+  ack -ch ${foo}
+#+END_SRC
+
+** Show the file names containing "foo" and number of matches in each file:
+
+#+BEGIN_SRC sh
+  ack -cl ${foo}
+#+END_SRC

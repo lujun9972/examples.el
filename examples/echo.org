@@ -1,0 +1,27 @@
+* echo
+
+Print given arguments.
+
+** Print a text message. Note: quotes are optional:
+
+#+BEGIN_SRC sh
+  echo ${"Hello World"}
+#+END_SRC
+
+** Print a message with environment variables:
+
+#+BEGIN_SRC sh
+  echo ${"My path is $PATH"}
+#+END_SRC
+
+** Print a message without the trailing newline:
+
+#+BEGIN_SRC sh
+  echo -n ${"Hello World"}
+#+END_SRC
+
+** Enable interpretation of backslash escapes (special characters):
+
+#+BEGIN_SRC sh
+  echo -e ${"Column 1\tColumn 2"}
+#+END_SRC

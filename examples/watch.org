@@ -1,0 +1,21 @@
+* watch
+
+Execute a command repeatedly, and monitor the output in full-screen mode.
+
+** Monitor files in the current folder:
+
+#+BEGIN_SRC sh
+  watch ${ls}
+#+END_SRC
+
+** Monitor disk space and highlight the changes:
+
+#+BEGIN_SRC sh
+  watch -d ${df}
+#+END_SRC
+
+** Monitor "node" processes, refreshing every 3 seconds:
+
+#+BEGIN_SRC sh
+  watch -n ${3} "${ps aux | grep node}"
+#+END_SRC

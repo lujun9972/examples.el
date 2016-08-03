@@ -1,0 +1,27 @@
+* hn
+
+Command-line interface for Hacker News.
+
+** View stories on Hacker News:
+
+#+BEGIN_SRC sh
+  hn
+#+END_SRC
+
+** View _number_ of stories on Hacker News:
+
+#+BEGIN_SRC sh
+  hn --limit ${number}
+#+END_SRC
+
+** View stories on Hacker News, and keep the list open after selecting a link:
+
+#+BEGIN_SRC sh
+  hn --keep-open
+#+END_SRC
+
+** View stories on Hacker News sorted by submission date:
+
+#+BEGIN_SRC sh
+  hn --latest
+#+END_SRC

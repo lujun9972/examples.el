@@ -1,0 +1,33 @@
+* apt-cache
+
+Debian and Ubuntu package query tool.
+
+** Search for a package in your current sources:
+
+#+BEGIN_SRC sh
+  apt-cache search ${query}
+#+END_SRC
+
+** Show information about a package:
+
+#+BEGIN_SRC sh
+  apt-cache show ${package}
+#+END_SRC
+
+** Show whether a package is installed and up to date:
+
+#+BEGIN_SRC sh
+  apt-cache policy ${package}
+#+END_SRC
+
+** Show dependencies for a package:
+
+#+BEGIN_SRC sh
+  apt-cache depends ${package}
+#+END_SRC
+
+** Show packages that depend on a particular package:
+
+#+BEGIN_SRC sh
+  apt-cache rdepends ${package}
+#+END_SRC

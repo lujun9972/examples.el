@@ -1,0 +1,21 @@
+* history
+
+Command Line history.
+
+** Display the commands history list with line numbers:
+
+#+BEGIN_SRC sh
+  history
+#+END_SRC
+
+** Clear the commands history list (only for current `bash` shell):
+
+#+BEGIN_SRC sh
+  history -c
+#+END_SRC
+
+** Overwrite history file with history of current `bash` shell (often combined with `history -c` to purge history):
+
+#+BEGIN_SRC sh
+  history -w
+#+END_SRC

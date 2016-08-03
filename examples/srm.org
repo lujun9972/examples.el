@@ -1,0 +1,28 @@
+* srm
+
+Securely remove files or directories.
+Overwrites the existing data one or multiple times. Drop in replacement for rm.
+
+** Remove a file after a single-pass overwriting with random data:
+
+#+BEGIN_SRC sh
+  srm -s ${/path/to/file}
+#+END_SRC
+
+** Remove a file after seven passes of overwriting with random data:
+
+#+BEGIN_SRC sh
+  srm -m ${/path/to/file}
+#+END_SRC
+
+** Recursively remove a directory and its contents overwriting each file with a single-pass of random data:
+
+#+BEGIN_SRC sh
+  srm -r -s ${/path/to/folder}
+#+END_SRC
+
+** Prompt before every removal:
+
+#+BEGIN_SRC sh
+  srm -i ${\*}
+#+END_SRC

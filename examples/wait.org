@@ -1,0 +1,15 @@
+* wait
+
+Wait for a process to complete before proceeding.
+
+** Wait for given process id (pid) to finish and return its exit status:
+
+#+BEGIN_SRC sh
+  wait ${pid}
+#+END_SRC
+
+** Wait for all processes known to the invoking shell to finish:
+
+#+BEGIN_SRC sh
+  wait
+#+END_SRC

@@ -1,0 +1,39 @@
+* fzf
+
+Command line fuzzy finder.
+
+** Start finder on all files from arbitrary locations:
+
+#+BEGIN_SRC sh
+  find ${path/to/search} -type f | fzf
+#+END_SRC
+
+** Start finder on running processes:
+
+#+BEGIN_SRC sh
+  ps axu | fzf
+#+END_SRC
+
+** Select mutliple files with `Shift-TAB` and write to a file:
+
+#+BEGIN_SRC sh
+  find ${path/to/search_files} -type f | fzf -m > ${filename}
+#+END_SRC
+
+** Start finder with a given query:
+
+#+BEGIN_SRC sh
+  fzf -q "${query}"
+#+END_SRC
+
+** Start finder on entries that start with core and end with either go, rb, or py:
+
+#+BEGIN_SRC sh
+  fzf -q "^core go$ | rb$ | py$"
+#+END_SRC
+
+** Start finder on entries that not match pyc and match exactly travis:
+
+#+BEGIN_SRC sh
+  fzf -q "!pyc 'travis"
+#+END_SRC

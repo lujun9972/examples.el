@@ -1,0 +1,33 @@
+* tput
+
+View and modify terminal settings and capabilities.
+
+** Move the cursor to a screen location:
+
+#+BEGIN_SRC sh
+  tput cup ${y_coordinate} ${x_coordinate}
+#+END_SRC
+
+** Set foreground (af) or background (ab) color:
+
+#+BEGIN_SRC sh
+  tput ${setaf|setab} ${ansi_color_code}
+#+END_SRC
+
+** Show number of columns, lines, or colors:
+
+#+BEGIN_SRC sh
+  tput ${cols|lines|colors}
+#+END_SRC
+
+** Ring the terminal bell:
+
+#+BEGIN_SRC sh
+  tput bel
+#+END_SRC
+
+** Reset all terminal attributes:
+
+#+BEGIN_SRC sh
+  tput sgr0
+#+END_SRC

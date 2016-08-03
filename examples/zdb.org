@@ -1,0 +1,21 @@
+* zdb
+
+ZFS debugger.
+
+** Show detailed configuration of all mounted ZFS zpools:
+
+#+BEGIN_SRC sh
+  zdb
+#+END_SRC
+
+** Show detailed configuration for a specific ZFS pool:
+
+#+BEGIN_SRC sh
+  zdb -C ${poolname}
+#+END_SRC
+
+** Show statistics about number, size and deduplication of blocks:
+
+#+BEGIN_SRC sh
+  zdb -b ${poolname}
+#+END_SRC

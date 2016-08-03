@@ -1,0 +1,28 @@
+* git tag
+
+Create, list, delete or verify tags.
+Tag is reference to specific commit.
+
+** List all tags:
+
+#+BEGIN_SRC sh
+  git tag
+#+END_SRC
+
+** Create a tag with the given name pointing to the current commit:
+
+#+BEGIN_SRC sh
+  git tag ${tag_name}
+#+END_SRC
+
+** Create an annotated tag with the given message:
+
+#+BEGIN_SRC sh
+  git tag ${tag_name} -m ${tag_message}
+#+END_SRC
+
+** Delete the tag with the given name:
+
+#+BEGIN_SRC sh
+  git tag -d ${tag_name}
+#+END_SRC

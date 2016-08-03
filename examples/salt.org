@@ -1,0 +1,27 @@
+* salt
+
+Execute commands and assert state on remote salt minions.
+
+** List connected minions:
+
+#+BEGIN_SRC sh
+  salt '*' test.ping
+#+END_SRC
+
+** Execute a highstate on all connected minions:
+
+#+BEGIN_SRC sh
+  salt '*' state.highstate
+#+END_SRC
+
+** Upgrade packages using the OS package manager (apt, yum, brew) on a subset of minions:
+
+#+BEGIN_SRC sh
+  salt '*.domain.com' pkg.upgrade
+#+END_SRC
+
+** Execute an arbitrary command on a particular minion:
+
+#+BEGIN_SRC sh
+  salt '${minion_id}' cmd.run "ls "
+#+END_SRC

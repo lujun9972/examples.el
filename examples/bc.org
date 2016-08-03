@@ -1,0 +1,27 @@
+* bc
+
+Calculator.
+
+** Run calculator in interactive mode:
+
+#+BEGIN_SRC sh
+  bc -i
+#+END_SRC
+
+** Calculate the result of an expression:
+
+#+BEGIN_SRC sh
+  bc <<< "(1 + 2) * 2 ^ 2"
+#+END_SRC
+
+** Calculate with the given precision:
+
+#+BEGIN_SRC sh
+  bc <<< "scale=10; 5 / 3"
+#+END_SRC
+
+** Calculate expression with sine and cosine using mathlib:
+
+#+BEGIN_SRC sh
+  bc -l <<< "s(1) + c(1)"
+#+END_SRC

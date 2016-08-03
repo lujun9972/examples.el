@@ -1,0 +1,27 @@
+* git clone
+
+Clone an existing repository.
+
+** Clone an existing repository:
+
+#+BEGIN_SRC sh
+  git clone ${REMOTE-REPOSITORY-LOCATION}
+#+END_SRC
+
+** For cloning from the local machine:
+
+#+BEGIN_SRC sh
+  git clone -l
+#+END_SRC
+
+** Do it quietly:
+
+#+BEGIN_SRC sh
+  git clone -q
+#+END_SRC
+
+** Clone an existing repository, and truncate to the specified number of revisions, save your time mostly:
+
+#+BEGIN_SRC sh
+  git clone --depth 10 ${REMOTE-REPOSITORY-LOCATION}
+#+END_SRC

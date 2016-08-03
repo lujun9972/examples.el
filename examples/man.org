@@ -1,0 +1,27 @@
+* man
+
+Format and display manual pages.
+
+** Display man page for a command:
+
+#+BEGIN_SRC sh
+  man ${command}
+#+END_SRC
+
+** Display path searched for manpages:
+
+#+BEGIN_SRC sh
+  man --path
+#+END_SRC
+
+** Display location of a manpage rather than the manpage itself:
+
+#+BEGIN_SRC sh
+  man -w ${command}
+#+END_SRC
+
+** Do a keyword search for manpages containing a search string:
+
+#+BEGIN_SRC sh
+  man -k ${keyword}
+#+END_SRC

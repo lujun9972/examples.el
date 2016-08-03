@@ -1,0 +1,21 @@
+* socat
+
+Multipurpose relay (SOcket CAT).
+
+** Listen to a port, wait for an incoming connection and transfer data to STDIO:
+
+#+BEGIN_SRC sh
+  socat - TCP-LISTEN:8080,fork
+#+END_SRC
+
+** Create a connection to a host and port, transfer data in STDIO to connected host:
+
+#+BEGIN_SRC sh
+  socat - TCP4:www.domain.com:80
+#+END_SRC
+
+** Forward incoming data of a local port to another host and port:
+
+#+BEGIN_SRC sh
+  socat TCP-LISTEN:80,fork TCP4:www.domain.com:80
+#+END_SRC

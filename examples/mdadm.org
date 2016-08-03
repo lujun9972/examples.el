@@ -1,0 +1,39 @@
+* mdadm
+
+RAID management utility.
+
+** Create array:
+
+#+BEGIN_SRC sh
+  mdadm --create ${/path/to/raid_device_file} --level ${raid_level} --raid-devices ${number_of_disks} ${/path/to/disk_device_file}
+#+END_SRC
+
+** Stop array:
+
+#+BEGIN_SRC sh
+  mdadm -S ${/path/to/raid_device_file}
+#+END_SRC
+
+** Mark disk as failed:
+
+#+BEGIN_SRC sh
+  mdadm ${/path/to/raid_device_file} -f ${/path/to/disk_device_file}
+#+END_SRC
+
+** Remove disk:
+
+#+BEGIN_SRC sh
+  mdadm ${/path/to/raid_device_file} -r ${/path/to/disk_device_file}
+#+END_SRC
+
+** Add disk to array:
+
+#+BEGIN_SRC sh
+  mdadm ${/path/to/raid_device_file} -a ${/path/to/disk_device_file}
+#+END_SRC
+
+** Show RAID info:
+
+#+BEGIN_SRC sh
+  mdadm -D ${/path/to/raid_device_file}
+#+END_SRC

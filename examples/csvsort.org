@@ -1,0 +1,28 @@
+* csvsort
+
+Sorts CSV files.
+Included in csvkit.
+
+** Sort a CSV file by column 9:
+
+#+BEGIN_SRC sh
+  csvsort -c ${9} ${data.csv}
+#+END_SRC
+
+** Sort a CSV file by the "name" column in descending order:
+
+#+BEGIN_SRC sh
+  csvsort -r -c ${name} ${data.csv}
+#+END_SRC
+
+** Sort a CSV file by column 2, then by column 4:
+
+#+BEGIN_SRC sh
+  csvsort -c ${2,4} ${data.csv}
+#+END_SRC
+
+** Sort a CSV file without inferring data types:
+
+#+BEGIN_SRC sh
+  csvsort --no-inference -c ${columns} ${data.csv}
+#+END_SRC

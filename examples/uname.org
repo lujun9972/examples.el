@@ -1,0 +1,28 @@
+* uname
+
+Print details about the current machine and the operating system running on it.
+Note: If you're on Linux, try also the `lsb_release` command.
+
+** Print hardware-related information: machine and processor:
+
+#+BEGIN_SRC sh
+  uname -mp
+#+END_SRC
+
+** Print software-related information: operating system, release number, and version:
+
+#+BEGIN_SRC sh
+  uname -srv
+#+END_SRC
+
+** Print the nodename (hostname) of the system:
+
+#+BEGIN_SRC sh
+  uname -n
+#+END_SRC
+
+** Print all available system information (hardware, software, nodename):
+
+#+BEGIN_SRC sh
+  uname -a
+#+END_SRC

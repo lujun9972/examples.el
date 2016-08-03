@@ -1,0 +1,33 @@
+* hostname
+
+Show or set the system's host name.
+
+** Show current host name:
+
+#+BEGIN_SRC sh
+  hostname
+#+END_SRC
+
+** Show the network address of the host name:
+
+#+BEGIN_SRC sh
+  hostname -i
+#+END_SRC
+
+** Show all network addresses of the host:
+
+#+BEGIN_SRC sh
+  hostname -I
+#+END_SRC
+
+** Show the FQDN (Fully Qualified Domain Name):
+
+#+BEGIN_SRC sh
+  hostname --fqdn
+#+END_SRC
+
+** Set current host name:
+
+#+BEGIN_SRC sh
+  hostname ${new_hostname}
+#+END_SRC

@@ -1,0 +1,21 @@
+* git checkout
+
+Checkout a branch or paths to the working tree.
+
+** Switch to another branch:
+
+#+BEGIN_SRC sh
+  git checkout ${BRANCH-NAME}
+#+END_SRC
+
+** Create and switch to a new branch:
+
+#+BEGIN_SRC sh
+  git checkout -b ${BRANCH-NAME}
+#+END_SRC
+
+** Undo unstaged local modification:
+
+#+BEGIN_SRC sh
+  git checkout .
+#+END_SRC

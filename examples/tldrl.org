@@ -1,0 +1,21 @@
+* tldrl
+
+Lint and format TLDR pages.
+
+** Lint all pages:
+
+#+BEGIN_SRC sh
+  tldrl ${pages_directory}
+#+END_SRC
+
+** Format a specific page to stdout:
+
+#+BEGIN_SRC sh
+  tldrl -f ${page.md}
+#+END_SRC
+
+** Format all pages in place:
+
+#+BEGIN_SRC sh
+  tldrl -fi ${pages_directory}
+#+END_SRC

@@ -1,0 +1,40 @@
+* mpc
+
+Music Player Client.
+Program for controlling the Music Player Daemon (MPD).
+
+** Toggle play/pause:
+
+#+BEGIN_SRC sh
+  mpc toggle
+#+END_SRC
+
+** Stop playing:
+
+#+BEGIN_SRC sh
+  mpc stop
+#+END_SRC
+
+** Show information about the currently playing song:
+
+#+BEGIN_SRC sh
+  mpc status
+#+END_SRC
+
+** Play next song:
+
+#+BEGIN_SRC sh
+  mpc next
+#+END_SRC
+
+** Play previous song:
+
+#+BEGIN_SRC sh
+  mpc prev
+#+END_SRC
+
+** Forward or rewind the currently playing song:
+
+#+BEGIN_SRC sh
+  mpc [+-]${seconds}
+#+END_SRC

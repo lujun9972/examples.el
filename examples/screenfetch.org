@@ -1,0 +1,33 @@
+* screenfetch
+
+Display system information.
+
+** Start screenfetch:
+
+#+BEGIN_SRC sh
+  screenfetch
+#+END_SRC
+
+** Take a screenshot (requires 'scrot'):
+
+#+BEGIN_SRC sh
+  screenfetch -s
+#+END_SRC
+
+** Specify distribution logo:
+
+#+BEGIN_SRC sh
+  screenfetch -A '${distribution_name}'
+#+END_SRC
+
+** Specify distribution logo and text:
+
+#+BEGIN_SRC sh
+  screenfetch -D '${distribution_name}'
+#+END_SRC
+
+** Strip all color:
+
+#+BEGIN_SRC sh
+  screenfetch -N
+#+END_SRC

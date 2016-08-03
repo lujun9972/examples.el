@@ -1,0 +1,22 @@
+* wall
+
+Write a message on the terminals of users currently logged in.
+Only available to super-user.
+
+** Send a message:
+
+#+BEGIN_SRC sh
+  echo "${message}" | wall
+#+END_SRC
+
+** Send a message from a file:
+
+#+BEGIN_SRC sh
+  wall ${file}
+#+END_SRC
+
+** Send a message with timeout (default 300):
+
+#+BEGIN_SRC sh
+  wall -t ${seconds} ${file}
+#+END_SRC

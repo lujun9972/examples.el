@@ -1,0 +1,27 @@
+* arp
+
+Show and manipulate your system's ARP cache.
+
+** Show current arp table:
+
+#+BEGIN_SRC sh
+  arp -a
+#+END_SRC
+
+** Clear the entire cache:
+
+#+BEGIN_SRC sh
+  sudo arp -a -d
+#+END_SRC
+
+** Delete a specific entry:
+
+#+BEGIN_SRC sh
+  arp -d ${address}
+#+END_SRC
+
+** Create an entry:
+
+#+BEGIN_SRC sh
+  arp -s ${address} ${mac address}
+#+END_SRC

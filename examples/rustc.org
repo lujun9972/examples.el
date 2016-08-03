@@ -1,0 +1,22 @@
+* rustc
+
+The Rust compiler.
+Processes, compiles and links Rust language source files.
+
+** Compile a single file:
+
+#+BEGIN_SRC sh
+  rustc ${file.rs}
+#+END_SRC
+
+** Compile with high optimization:
+
+#+BEGIN_SRC sh
+  rustc -O ${file.rs}
+#+END_SRC
+
+** Compile with debugging information:
+
+#+BEGIN_SRC sh
+  rustc -g ${file.rs}
+#+END_SRC

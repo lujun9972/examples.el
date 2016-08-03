@@ -1,0 +1,15 @@
+* git commit
+
+Commit staged files to the repository.
+
+** Commit staged files to the repository with comment:
+
+#+BEGIN_SRC sh
+  git commit -m ${MESSAGE}
+#+END_SRC
+
+** Replace the last commit with currently staged changes:
+
+#+BEGIN_SRC sh
+  git commit --amend
+#+END_SRC

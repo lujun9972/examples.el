@@ -1,0 +1,21 @@
+* mkfs.ntfs
+
+Creates a NTFS filesystem inside a partition.
+
+** Create a NTFS filesystem inside partition 1 on device b (`sdb1`):
+
+#+BEGIN_SRC sh
+  mkfs.ntfs ${/dev/sdb1}
+#+END_SRC
+
+** Create filesystem with a volume-label:
+
+#+BEGIN_SRC sh
+  mkfs.ntfs -L ${volume_label} ${/dev/sdb1}
+#+END_SRC
+
+** Create filesystem with specific UUID:
+
+#+BEGIN_SRC sh
+  mkfs.ntfs -U ${UUID} ${/dev/sdb1}
+#+END_SRC

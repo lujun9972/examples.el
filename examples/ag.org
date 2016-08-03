@@ -1,0 +1,39 @@
+* ag
+
+The Silver Searcher. Like ack, but faster.
+
+** Find files containing "foo", and print the line matches in context:
+
+#+BEGIN_SRC sh
+  ag foo
+#+END_SRC
+
+** Find files containing "foo", but only list the filenames:
+
+#+BEGIN_SRC sh
+  ag -l foo
+#+END_SRC
+
+** Find files containing "FOO" case-insensitively, and print only the match, rather than the whole line:
+
+#+BEGIN_SRC sh
+  ag -i -o FOO
+#+END_SRC
+
+** Find "foo" in files with a name matching "bar":
+
+#+BEGIN_SRC sh
+  ag foo -G bar
+#+END_SRC
+
+** Find files whose contents match a regular expression:
+
+#+BEGIN_SRC sh
+  ag '^ba(r|z)$'
+#+END_SRC
+
+** Find files with a name matching "foo":
+
+#+BEGIN_SRC sh
+  ag -g foo
+#+END_SRC

@@ -1,0 +1,33 @@
+* mocha
+
+Execute Mocha JavaScript test runner.
+
+** Run tests with default configuration or as configured in `mocha.opts`:
+
+#+BEGIN_SRC sh
+  mocha
+#+END_SRC
+
+** Run tests contained at a specific location:
+
+#+BEGIN_SRC sh
+  mocha ${folder/with/tests}
+#+END_SRC
+
+** Run tests that match a specific grep pattern:
+
+#+BEGIN_SRC sh
+  mocha --grep ${^regex$}
+#+END_SRC
+
+** Run tests on changes to JavaScript files in the current directory and once initially:
+
+#+BEGIN_SRC sh
+  mocha --watch
+#+END_SRC
+
+** Run tests with a specific reporter:
+
+#+BEGIN_SRC sh
+  mocha --reporter ${reporter}
+#+END_SRC

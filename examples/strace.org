@@ -1,0 +1,27 @@
+* strace
+
+Troubleshooting tool for tracing system calls.
+
+** Start tracing a specific process by its PID:
+
+#+BEGIN_SRC sh
+  strace -p ${pid}
+#+END_SRC
+
+** Trace a process and filter output by system call:
+
+#+BEGIN_SRC sh
+  strace -p ${pid} -e ${system call name}
+#+END_SRC
+
+** Count time, calls, and errors for each system call and report a summary on program exit:
+
+#+BEGIN_SRC sh
+  strace -p ${pid} -c
+#+END_SRC
+
+** Show the time spent in every system call:
+
+#+BEGIN_SRC sh
+  strace -p ${pid} -T
+#+END_SRC

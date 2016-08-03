@@ -1,0 +1,15 @@
+* which
+
+Locate the a program in the user's path.
+
+** Search the PATH environment variable and display the location of any matching executables:
+
+#+BEGIN_SRC sh
+  which ${executable}
+#+END_SRC
+
+** If there are multiple executables which match, display all:
+
+#+BEGIN_SRC sh
+  which -a ${executable}
+#+END_SRC

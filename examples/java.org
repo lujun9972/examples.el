@@ -1,0 +1,21 @@
+* java
+
+Java Application Launcher.
+
+** Execute a java .class file that contains a main method by using just the class name:
+
+#+BEGIN_SRC sh
+  java ${filename}
+#+END_SRC
+
+** Execute a .jar program:
+
+#+BEGIN_SRC sh
+  java -jar ${filename.jar}
+#+END_SRC
+
+** Display JDK, JRE and HotSpot versions:
+
+#+BEGIN_SRC sh
+  java -version
+#+END_SRC

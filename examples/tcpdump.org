@@ -1,0 +1,39 @@
+* tcpdump
+
+Dump traffic on a network.
+
+** Capture the traffic of a specific interface:
+
+#+BEGIN_SRC sh
+  tcpdump -i ${eth0}
+#+END_SRC
+
+** Capture all TCP traffic showing contents (ASCII) in console:
+
+#+BEGIN_SRC sh
+  tcpdump -A tcp
+#+END_SRC
+
+** Capture the traffic from or to a host:
+
+#+BEGIN_SRC sh
+  tcpdump host ${www.example.com}
+#+END_SRC
+
+** Capture the traffic from a specific interface, source, destination and destination port:
+
+#+BEGIN_SRC sh
+  tcpdump -i ${eth0} src ${192.168.1.1} and dst ${192.168.1.2} and dst port 80
+#+END_SRC
+
+** Capture the traffic of a network:
+
+#+BEGIN_SRC sh
+  tcpdump net ${192.168.1.0/24}
+#+END_SRC
+
+** Capture all traffic except traffic over port 22 and save to a dump file:
+
+#+BEGIN_SRC sh
+  tcpdump -w dumpfile.pcap not port 22
+#+END_SRC

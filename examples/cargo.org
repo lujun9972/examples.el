@@ -1,0 +1,46 @@
+* cargo
+
+Rust package manager.
+Manage Rust projects and their module dependencies (crates).
+
+** Search for crates:
+
+#+BEGIN_SRC sh
+  cargo search ${search_string}
+#+END_SRC
+
+** Install a crate:
+
+#+BEGIN_SRC sh
+  cargo install ${crate_name}
+#+END_SRC
+
+** List installed crates:
+
+#+BEGIN_SRC sh
+  cargo install --list
+#+END_SRC
+
+** Create a new binary Rust project in the current directory:
+
+#+BEGIN_SRC sh
+  cargo init --bin
+#+END_SRC
+
+** Create a new library Rust project in the current directory:
+
+#+BEGIN_SRC sh
+  cargo init
+#+END_SRC
+
+** Build the Rust project in the current directory:
+
+#+BEGIN_SRC sh
+  cargo build
+#+END_SRC
+
+** Build with multiple parallel jobs:
+
+#+BEGIN_SRC sh
+  cargo build -j ${jobs}
+#+END_SRC

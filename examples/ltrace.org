@@ -1,0 +1,27 @@
+* ltrace
+
+Display dynamic library calls of a process.
+
+** Print (trace) library calls of a program binary:
+
+#+BEGIN_SRC sh
+  ltrace ./${program}
+#+END_SRC
+
+** Count library calls. Print a handy summary at the bottom:
+
+#+BEGIN_SRC sh
+  ltrace -c ${/path/to/program}
+#+END_SRC
+
+** Trace calls to malloc and free, omit those done by libc:
+
+#+BEGIN_SRC sh
+  ltrace -e malloc+free-@libc.so* ${/path/to/program}
+#+END_SRC
+
+** Write to file instead of terminal:
+
+#+BEGIN_SRC sh
+  ltrace -o ${file} ${/path/to/program}
+#+END_SRC

@@ -1,0 +1,27 @@
+* mv
+
+Move or rename files and directories.
+
+** Move files in arbitrary locations:
+
+#+BEGIN_SRC sh
+  mv ${source} ${target}
+#+END_SRC
+
+** Do not prompt for confirmation before overwriting existing files:
+
+#+BEGIN_SRC sh
+  mv -f ${source} ${target}
+#+END_SRC
+
+** Do not prompt for confirmation before overwriting existing files but write to standard error before overriding:
+
+#+BEGIN_SRC sh
+  mv -fi ${source} ${target}
+#+END_SRC
+
+** Move files in verbose mode, showing files after they are moved:
+
+#+BEGIN_SRC sh
+  mv -v ${source} ${target}
+#+END_SRC

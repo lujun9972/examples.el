@@ -1,0 +1,39 @@
+* odps
+
+Aliyun ODPS (Open Data Processing Service) command line tool.
+
+** Start the command line with a custom configuration file:
+
+#+BEGIN_SRC sh
+  odpscmd --config=${odps_config.ini}
+#+END_SRC
+
+** Switch current project:
+
+#+BEGIN_SRC sh
+  use ${project_name};
+#+END_SRC
+
+** Show tables in the current project:
+
+#+BEGIN_SRC sh
+  show tables;
+#+END_SRC
+
+** Describe a table:
+
+#+BEGIN_SRC sh
+  desc ${table_name};
+#+END_SRC
+
+** Show table partitions:
+
+#+BEGIN_SRC sh
+  show partitions ${table_name};
+#+END_SRC
+
+** Describe a partition:
+
+#+BEGIN_SRC sh
+  desc ${table_name} partition (${partition_spec});
+#+END_SRC

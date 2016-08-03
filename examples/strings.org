@@ -1,0 +1,27 @@
+* strings
+
+Find printable strings in an object file or binary.
+
+** Print all strings in a binary:
+
+#+BEGIN_SRC sh
+  strings ${file}
+#+END_SRC
+
+** Limit results to strings at least *length* characters long:
+
+#+BEGIN_SRC sh
+  strings -n ${length} ${file}
+#+END_SRC
+
+** Prefix each result with its offset within the file:
+
+#+BEGIN_SRC sh
+  strings -t d ${file}
+#+END_SRC
+
+** Prefix each result with its offset within the file in hexadecimal:
+
+#+BEGIN_SRC sh
+  strings -t x ${file}
+#+END_SRC

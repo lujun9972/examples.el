@@ -1,0 +1,28 @@
+* dirs
+
+Displays or manipulates the directory stack.
+The directory stack is a list of recently visited directories that can be manipulated with the `pushd` and `popd` commands.
+
+** Display the directory stack with a space between each entry:
+
+#+BEGIN_SRC sh
+  dirs
+#+END_SRC
+
+** Display the directory stack with one entry per line:
+
+#+BEGIN_SRC sh
+  dirs -p
+#+END_SRC
+
+** Display only the nth entry in the directory stack, starting at 0:
+
+#+BEGIN_SRC sh
+  dirs +${N}
+#+END_SRC
+
+** Clear the directory stack:
+
+#+BEGIN_SRC sh
+  dirs -c
+#+END_SRC

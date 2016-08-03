@@ -1,0 +1,21 @@
+* hwclock
+
+Used for reading or changing the hardware clock. Usually requires root.
+
+** Display the current time as reported by the hardware clock:
+
+#+BEGIN_SRC sh
+  hwclock
+#+END_SRC
+
+** Write the current software clock time to the hardware clock (sometimes used during system setup):
+
+#+BEGIN_SRC sh
+  hwclock --systohc
+#+END_SRC
+
+** Write the current hardware clock time to the software clock:
+
+#+BEGIN_SRC sh
+  hwclock --hctosys
+#+END_SRC

@@ -1,0 +1,33 @@
+* apt-get
+
+Debian and Ubuntu package management utility.
+
+** Synchronize list of packages and versions available. This should be run first, before running subsequent apt-get commands:
+
+#+BEGIN_SRC sh
+  apt-get update
+#+END_SRC
+
+** Install a new package:
+
+#+BEGIN_SRC sh
+  apt-get install ${package}
+#+END_SRC
+
+** Remove a package:
+
+#+BEGIN_SRC sh
+  apt-get remove ${package}
+#+END_SRC
+
+** Upgrade installed packages to newest available versions:
+
+#+BEGIN_SRC sh
+  apt-get upgrade
+#+END_SRC
+
+** Upgrade installed packages (like "upgrade"), but remove obsolete packages and install additional packages to meet new dependencies:
+
+#+BEGIN_SRC sh
+  apt-get dist-upgrade
+#+END_SRC

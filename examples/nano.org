@@ -1,0 +1,21 @@
+* nano
+
+Simple, easy to use editor. An enhanced, free Pico clone.
+
+** Start nano in terminal with {filename}:
+
+#+BEGIN_SRC sh
+  nano ${filename}
+#+END_SRC
+
+** Enable smooth scrolling:
+
+#+BEGIN_SRC sh
+  nano -S ${filename}
+#+END_SRC
+
+** Indent new lines to the previous lines' indentation:
+
+#+BEGIN_SRC sh
+  nano -i ${filename}
+#+END_SRC

@@ -1,0 +1,21 @@
+* sl
+
+Steam locomotive running through your terminal.
+
+** Let a steam locomotive run through your terminal:
+
+#+BEGIN_SRC sh
+  sl
+#+END_SRC
+
+** The train burns, people scream:
+
+#+BEGIN_SRC sh
+  sl -a
+#+END_SRC
+
+** Let the train fly:
+
+#+BEGIN_SRC sh
+  sl -F
+#+END_SRC

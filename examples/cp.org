@@ -1,0 +1,39 @@
+* cp
+
+Copy files.
+
+** Copy files in arbitrary locations:
+
+#+BEGIN_SRC sh
+  cp ${/path/to/original} ${/path/to/copy}
+#+END_SRC
+
+** Copy a file to a parent directory:
+
+#+BEGIN_SRC sh
+  cp ${/path/to/original} ../${path/to/copy}
+#+END_SRC
+
+** Copy directories recursive using the option -r:
+
+#+BEGIN_SRC sh
+  cp -r ${/path/to/original} ${/path/to/copy}
+#+END_SRC
+
+** Show files as they are copied:
+
+#+BEGIN_SRC sh
+  cp -vr ${/path/to/original} ${/path/to/copy}
+#+END_SRC
+
+** Make a copy of a file, adding an extension:
+
+#+BEGIN_SRC sh
+  cp ${file.html}{,.backup}
+#+END_SRC
+
+** Make a copy of a file, changing the extension:
+
+#+BEGIN_SRC sh
+  cp ${file.}{html,backup}
+#+END_SRC

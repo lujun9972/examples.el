@@ -1,0 +1,27 @@
+* shuf
+
+Generate random permutations.
+
+** Randomize the order of lines in a file and output the result:
+
+#+BEGIN_SRC sh
+  shuf ${filename}
+#+END_SRC
+
+** Only output the first n entries of the result:
+
+#+BEGIN_SRC sh
+  shuf -n ${n} ${filename}
+#+END_SRC
+
+** Write output to another file:
+
+#+BEGIN_SRC sh
+  shuf -o ${another_filename} ${filename}
+#+END_SRC
+
+** Generate random numbers in range:
+
+#+BEGIN_SRC sh
+  shuf -i ${low}-${high}
+#+END_SRC

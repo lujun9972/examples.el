@@ -1,0 +1,16 @@
+* atom
+
+A cross-platform pluggable text editor.
+Plugins are managed by `apm`.
+
+** Open a file or folder:
+
+#+BEGIN_SRC sh
+  atom ${path/to/file_or_folder}
+#+END_SRC
+
+** Open a file or folder in a new window:
+
+#+BEGIN_SRC sh
+  atom -n ${path/to/file_or_folder}
+#+END_SRC

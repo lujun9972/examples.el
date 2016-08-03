@@ -1,0 +1,45 @@
+* emerge
+
+Gentoo Linux package manager utility.
+
+** Synchronize all packages:
+
+#+BEGIN_SRC sh
+  emerge --sync
+#+END_SRC
+
+** Update all packages, including dependencies:
+
+#+BEGIN_SRC sh
+  emerge -uDNav @world
+#+END_SRC
+
+** Resume a failed updated, skipping the failing package:
+
+#+BEGIN_SRC sh
+  emerge --resume --skipfirst
+#+END_SRC
+
+** Install a new package, with confirmation:
+
+#+BEGIN_SRC sh
+  emerge -av ${package_name}
+#+END_SRC
+
+** Remove a package, with confirmation:
+
+#+BEGIN_SRC sh
+  emerge -Cav ${package_name}
+#+END_SRC
+
+** Remove orphaned packages (that were installed only as dependencies):
+
+#+BEGIN_SRC sh
+  emerge -avc
+#+END_SRC
+
+** Search the package database for a keyword:
+
+#+BEGIN_SRC sh
+  emerge -S ${keyword}
+#+END_SRC

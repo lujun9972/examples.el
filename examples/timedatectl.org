@@ -1,0 +1,33 @@
+* timedatectl
+
+Control the system time and date.
+
+** To check the current system clock time:
+
+#+BEGIN_SRC sh
+  timedatectl
+#+END_SRC
+
+** To set the local time of the system clock directly:
+
+#+BEGIN_SRC sh
+  timedatectl set-time ${"yyyy-MM-dd hh:mm:ss"}
+#+END_SRC
+
+** To list available timezones:
+
+#+BEGIN_SRC sh
+  timedatectl list-timezones
+#+END_SRC
+
+** To change timezones:
+
+#+BEGIN_SRC sh
+  timedatectl set-timezone ${timezone}
+#+END_SRC
+
+** To enable Network Time Protocol (NTP) syncing:
+
+#+BEGIN_SRC sh
+  timedatectl set-ntp on
+#+END_SRC

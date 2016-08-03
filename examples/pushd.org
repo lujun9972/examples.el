@@ -1,0 +1,21 @@
+* pushd
+
+Place a directory on a stack so it can be accessed later.
+
+** Switch to directory and push it on the stack:
+
+#+BEGIN_SRC sh
+  pushd < ${directory}
+#+END_SRC
+
+** Switch first and second directories on the stack:
+
+#+BEGIN_SRC sh
+  pushd
+#+END_SRC
+
+** Rotate stack by making the 5th element the top of the stack:
+
+#+BEGIN_SRC sh
+  pushd +4
+#+END_SRC

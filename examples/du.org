@@ -1,0 +1,33 @@
+* du
+
+Estimate file space usage.
+
+** Get a sum of the total size of a file/folder in human readable units:
+
+#+BEGIN_SRC sh
+  du -sh ${file_or_directory}
+#+END_SRC
+
+** List file sizes of a directory and any subdirectories in KB:
+
+#+BEGIN_SRC sh
+  du -k ${file_or_directory}
+#+END_SRC
+
+** List file sizes of a directory and any subdirectories in MB:
+
+#+BEGIN_SRC sh
+  du -m ${file_or_directory}
+#+END_SRC
+
+** Get recursively, individual file/folder sizes in human readable form:
+
+#+BEGIN_SRC sh
+  du -ah ${directory}
+#+END_SRC
+
+** List the KB sizes of directories for N levels below the specified directory:
+
+#+BEGIN_SRC sh
+  du --max-depth=N
+#+END_SRC

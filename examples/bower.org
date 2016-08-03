@@ -1,0 +1,46 @@
+* bower
+
+A package manager optimized for front-end web development.
+A package can be a GitHub user/repo shorthand, a Git endpoint, a URL or a registered package.
+
+** Install a project's dependencies, listed in its bower.json:
+
+#+BEGIN_SRC sh
+  bower install
+#+END_SRC
+
+** Install one or more packages to the bower_components directory:
+
+#+BEGIN_SRC sh
+  bower install ${package} ${package}
+#+END_SRC
+
+** Uninstall packages locally from the bower_components directory:
+
+#+BEGIN_SRC sh
+  bower uninstall ${package} ${package}
+#+END_SRC
+
+** List local packages and possible updates:
+
+#+BEGIN_SRC sh
+  bower list
+#+END_SRC
+
+** Display help information about a bower command:
+
+#+BEGIN_SRC sh
+  bower help ${command}
+#+END_SRC
+
+** Create a bower.json file for your package:
+
+#+BEGIN_SRC sh
+  bower init
+#+END_SRC
+
+** Install a specific dependency version, and add it to bower.json:
+
+#+BEGIN_SRC sh
+  bower install ${local_name}=${package}#${version} --save
+#+END_SRC

@@ -1,0 +1,27 @@
+* ulimit
+
+Get and set user limits.
+
+** Get the properties of all the user limits:
+
+#+BEGIN_SRC sh
+  ulimit -a
+#+END_SRC
+
+** Get hard limit for the number of simultaneously opened files:
+
+#+BEGIN_SRC sh
+  ulimit -H -n
+#+END_SRC
+
+** Get soft limit for the number of simultaneously opened files:
+
+#+BEGIN_SRC sh
+  ulimit -S -n
+#+END_SRC
+
+** Set max per-user process limit:
+
+#+BEGIN_SRC sh
+  ulimit -u 30
+#+END_SRC

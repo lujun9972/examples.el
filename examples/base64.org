@@ -1,0 +1,27 @@
+* base64
+
+Encode or decode file or standard input, to standard output.
+
+** Encode a file:
+
+#+BEGIN_SRC sh
+  base64 ${filename}
+#+END_SRC
+
+** Decode a file:
+
+#+BEGIN_SRC sh
+  base64 -d ${filename}
+#+END_SRC
+
+** Encode from stdin:
+
+#+BEGIN_SRC sh
+  ${somecommand} | base64
+#+END_SRC
+
+** Decode from stdin:
+
+#+BEGIN_SRC sh
+  ${somecommand} | base64 -d
+#+END_SRC

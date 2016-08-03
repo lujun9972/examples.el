@@ -1,0 +1,9 @@
+* zless
+
+View compressed files.
+
+** Page through a compressed archive with `less`:
+
+#+BEGIN_SRC sh
+  zless ${file.txt.gz}
+#+END_SRC

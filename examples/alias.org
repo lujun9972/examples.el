@@ -1,0 +1,34 @@
+* alias
+
+Creates an alias for a word when used.
+As the first word of a command.
+
+** Create a generic alias:
+
+#+BEGIN_SRC sh
+  alias ${word}="${command}"
+#+END_SRC
+
+** Remove an aliased command:
+
+#+BEGIN_SRC sh
+  unalias ${word}
+#+END_SRC
+
+** Full list of aliased words:
+
+#+BEGIN_SRC sh
+  alias -p
+#+END_SRC
+
+** Turn rm an interative command:
+
+#+BEGIN_SRC sh
+  alias ${rm}="${rm -i}"
+#+END_SRC
+
+** Override la as ls -a:
+
+#+BEGIN_SRC sh
+  alias ${la}="${ls -a}"
+#+END_SRC

@@ -1,0 +1,39 @@
+* meteor
+
+Full-stack javascript platform for building web applications.
+
+** Run a meteor project from its root directory in development mode:
+
+#+BEGIN_SRC sh
+  meteor
+#+END_SRC
+
+** Create a project under the given directory:
+
+#+BEGIN_SRC sh
+  meteor create ${path/to/directory}
+#+END_SRC
+
+** Display the list of packages the project is currently using:
+
+#+BEGIN_SRC sh
+  meteor list
+#+END_SRC
+
+** Add a package to the project:
+
+#+BEGIN_SRC sh
+  meteor add ${package_name}
+#+END_SRC
+
+** Remove a package from the project:
+
+#+BEGIN_SRC sh
+  meteor remove ${package_name}
+#+END_SRC
+
+** Create a production build of the project as a tarball under the given directory:
+
+#+BEGIN_SRC sh
+  meteor build ${path/to/directory}
+#+END_SRC

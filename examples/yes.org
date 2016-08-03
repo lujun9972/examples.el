@@ -1,0 +1,15 @@
+* yes
+
+Output something repeatedly.
+
+** Repeatedly output "message":
+
+#+BEGIN_SRC sh
+  yes ${message}
+#+END_SRC
+
+** Repeatedly output "y":
+
+#+BEGIN_SRC sh
+  yes
+#+END_SRC

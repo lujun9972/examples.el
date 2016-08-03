@@ -1,0 +1,39 @@
+* skicka
+
+Manage your Google Drive.
+
+** Upload a file/folder to Google Drive:
+
+#+BEGIN_SRC sh
+  skicka upload ${path/to/local} ${path/to/remote}
+#+END_SRC
+
+** Download a file/folder from Google Drive:
+
+#+BEGIN_SRC sh
+  skicka download ${path/to/remote} ${path/to/local}
+#+END_SRC
+
+** List files:
+
+#+BEGIN_SRC sh
+  skicka ls ${path/to/folder}
+#+END_SRC
+
+** Show amount of space used by children folders:
+
+#+BEGIN_SRC sh
+  skicka du ${path/to/parent/folder}
+#+END_SRC
+
+** Create a folder:
+
+#+BEGIN_SRC sh
+  skicka mkdir ${path/to/folder}
+#+END_SRC
+
+** Delete a file:
+
+#+BEGIN_SRC sh
+  skicka rm ${path/to/file}
+#+END_SRC

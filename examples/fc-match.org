@@ -1,0 +1,9 @@
+* fc-match
+
+Match available fonts.
+
+** Return a sorted list of best matching fonts:
+
+#+BEGIN_SRC sh
+  fc-match -s '${Font Name}'
+#+END_SRC

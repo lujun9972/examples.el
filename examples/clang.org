@@ -1,0 +1,21 @@
+* clang
+
+Compiler for C, C++, and Objective-C source files. Can be used as a drop-in replacement for GCC.
+
+** Compile a source code file into an executable binary:
+
+#+BEGIN_SRC sh
+  clang ${input_source.c} -o ${output_executable}
+#+END_SRC
+
+** Activate output of all errors and warnings:
+
+#+BEGIN_SRC sh
+  clang ${input_source.c} -Wall -o ${output_executable}
+#+END_SRC
+
+** Include libraries located at a different path than the source file:
+
+#+BEGIN_SRC sh
+  clang ${input_source.c} -o ${output_executable} -I${header_path} -L${library_path} -l${library_name}
+#+END_SRC

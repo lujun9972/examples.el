@@ -1,0 +1,27 @@
+* git rebase
+
+Apply local commits on top of another branch's history.
+
+** Rebase your local branch interactively with the latest changes in local master:
+
+#+BEGIN_SRC sh
+  git rebase -i master
+#+END_SRC
+
+** Rebase your local branch  interactively with the latest changes from upstream:
+
+#+BEGIN_SRC sh
+  git fetch origin; git rebase -i origin/master
+#+END_SRC
+
+** Handle an active rebase merge failure, after editing conflicting file(s):
+
+#+BEGIN_SRC sh
+  git rebase --continue
+#+END_SRC
+
+** Abort a rebase in-progress:
+
+#+BEGIN_SRC sh
+  git rebase --abort
+#+END_SRC

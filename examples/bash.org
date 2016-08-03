@@ -1,0 +1,28 @@
+* bash
+
+Bourne-Again SHell.
+`sh`-compatible command line interpreter.
+
+** Start interactive shell:
+
+#+BEGIN_SRC sh
+  bash
+#+END_SRC
+
+** Execute a command:
+
+#+BEGIN_SRC sh
+  bash -c ${command}
+#+END_SRC
+
+** Run commands from a file:
+
+#+BEGIN_SRC sh
+  bash ${file.sh}
+#+END_SRC
+
+** Run commands from STDIN:
+
+#+BEGIN_SRC sh
+  bash -s
+#+END_SRC

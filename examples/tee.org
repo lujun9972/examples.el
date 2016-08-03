@@ -1,0 +1,15 @@
+* tee
+
+Read from standard input and write to standard output and files.
+
+** Copy standard input to each FILE, and also to standard output:
+
+#+BEGIN_SRC sh
+  echo "example" | tee ${FILE}
+#+END_SRC
+
+** Append to the given FILEs, do not overwrite:
+
+#+BEGIN_SRC sh
+  echo "example" | tee -a ${FILE}
+#+END_SRC

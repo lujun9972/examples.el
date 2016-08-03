@@ -1,0 +1,16 @@
+* edit
+
+An alias to a `run-mailcap`'s action edit.
+Originally `run-mailcap` is used to process/edit mime-type/file.
+
+** Edit action can be used to view any file on default mailcap explorer:
+
+#+BEGIN_SRC sh
+  edit ${filename}
+#+END_SRC
+
+** With `run-mailcap`:
+
+#+BEGIN_SRC sh
+  run-mailcap --action=edit ${filename}
+#+END_SRC

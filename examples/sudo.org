@@ -1,0 +1,27 @@
+* sudo
+
+Execute a command as another user.
+
+** List of an unreadable directory:
+
+#+BEGIN_SRC sh
+  sudo ${ls} ${/usr/local/scrt}
+#+END_SRC
+
+** To edit a file as user www:
+
+#+BEGIN_SRC sh
+  sudo -u ${www} ${vi} ${/var/www/index.html}
+#+END_SRC
+
+** To shutdown the machine:
+
+#+BEGIN_SRC sh
+  sudo ${shutdown} -r +10 ${"Cya soon!"}
+#+END_SRC
+
+** To repeat the last command as sudo:
+
+#+BEGIN_SRC sh
+  sudo ${!!}
+#+END_SRC

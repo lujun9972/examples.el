@@ -1,0 +1,45 @@
+* gpg
+
+Gnu Privacy Guard.
+
+** Sign doc.txt without encryption (writes output to doc.txt.asc):
+
+#+BEGIN_SRC sh
+  gpg --clearsign ${doc.txt}
+#+END_SRC
+
+** Encrypt doc.txt for alice@example.com (output to doc.txt.gpg):
+
+#+BEGIN_SRC sh
+  gpg --encrypt --recipient ${alice@example.com} ${doc.txt}
+#+END_SRC
+
+** Encrypt doc.txt with only a passphrase (output to doc.txt.gpg):
+
+#+BEGIN_SRC sh
+  gpg --symmetric ${doc.txt}
+#+END_SRC
+
+** Decrypt doc.txt.gpg (output to STDOUT):
+
+#+BEGIN_SRC sh
+  gpg --decrypt ${doc.txt.gpg}
+#+END_SRC
+
+** Import a public key:
+
+#+BEGIN_SRC sh
+  gpg --import ${public.gpg}
+#+END_SRC
+
+** Export public key for alice@example.com (output to STDOUT):
+
+#+BEGIN_SRC sh
+  gpg --export --armor ${alice@example.com}
+#+END_SRC
+
+** Export private key for alice@example.com (output to STDOUT):
+
+#+BEGIN_SRC sh
+  gpg --export-secret-keys --armor ${alice@example.com}
+#+END_SRC

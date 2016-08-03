@@ -1,0 +1,15 @@
+* w3m
+
+A text-based web browser.
+
+** Open an URL:
+
+#+BEGIN_SRC sh
+  w3m ${http://example.com}
+#+END_SRC
+
+** Quit w3m:
+
+#+BEGIN_SRC sh
+  'q' then 'y'
+#+END_SRC

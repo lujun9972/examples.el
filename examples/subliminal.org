@@ -1,0 +1,9 @@
+* subliminal
+
+Python-based subtitle downloader.
+
+** Download English subtitles for a video:
+
+#+BEGIN_SRC sh
+  subliminal download -l ${en} ${video.ext}
+#+END_SRC

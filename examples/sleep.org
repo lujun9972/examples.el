@@ -1,0 +1,21 @@
+* sleep
+
+Delay for a specified amount of time.
+
+** Delay in seconds:
+
+#+BEGIN_SRC sh
+  sleep ${seconds}
+#+END_SRC
+
+** Delay in minutes:
+
+#+BEGIN_SRC sh
+  sleep ${minutes}m
+#+END_SRC
+
+** Delay in hours:
+
+#+BEGIN_SRC sh
+  sleep ${hours}h
+#+END_SRC

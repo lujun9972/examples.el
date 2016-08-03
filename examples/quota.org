@@ -1,0 +1,33 @@
+* quota
+
+Display users' disk space usage and allocated limits.
+
+** Show disk quotas for the current user:
+
+#+BEGIN_SRC sh
+  quota
+#+END_SRC
+
+** Verbose output (also display quotas on filesystems where no storage is allocated):
+
+#+BEGIN_SRC sh
+  quota -v
+#+END_SRC
+
+** Quiet output (only display quotas on filesystems where usage is over quota):
+
+#+BEGIN_SRC sh
+  quota -q
+#+END_SRC
+
+** Print quotas for the groups of which the current user is a member:
+
+#+BEGIN_SRC sh
+  quota -g
+#+END_SRC
+
+** Show disk quotas for another user (must be superuser to do this):
+
+#+BEGIN_SRC sh
+  sudo quota -u ${username}
+#+END_SRC

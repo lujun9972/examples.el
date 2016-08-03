@@ -1,0 +1,27 @@
+* file
+
+Determine file type.
+
+** Give a description of the type of the specified file.  Works fine for files with no file extension:
+
+#+BEGIN_SRC sh
+  file ${filename}
+#+END_SRC
+
+** Look inside a zipped file and determine the file type(s) inside:
+
+#+BEGIN_SRC sh
+  file -z ${foo.zip}
+#+END_SRC
+
+** Allow file to work with special or device files:
+
+#+BEGIN_SRC sh
+  file -s ${filename}
+#+END_SRC
+
+** Don't stop at first file type match; keep going until the end of the file:
+
+#+BEGIN_SRC sh
+  file -k ${filename}
+#+END_SRC

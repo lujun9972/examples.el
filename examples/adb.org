@@ -1,0 +1,27 @@
+* Android Debug Bridge
+
+Communicate with an Android emulator instance or connected Android devices.
+
+** Check whether the adb server process is running and start it:
+
+#+BEGIN_SRC sh
+  adb start-server
+#+END_SRC
+
+** Terminate the adb server process:
+
+#+BEGIN_SRC sh
+  adb kill-server
+#+END_SRC
+
+** Start a remote shell in the target emulator/device instance:
+
+#+BEGIN_SRC sh
+  adb shell
+#+END_SRC
+
+** Push an Android application to an emulator/device:
+
+#+BEGIN_SRC sh
+  adb install -r ${path/to/file.apk}
+#+END_SRC

@@ -1,0 +1,33 @@
+* paste
+
+Merge lines of files.
+
+** Join all the lines into a single line, using TAB as delimiter:
+
+#+BEGIN_SRC sh
+  paste -s ${file}
+#+END_SRC
+
+** Join all the lines into a single line, using the specified delimiter:
+
+#+BEGIN_SRC sh
+  paste -s -d ${delimiter} ${file}
+#+END_SRC
+
+** Merge two files side by side, each in its column, using TAB as delimiter:
+
+#+BEGIN_SRC sh
+  paste ${file1} ${file2}
+#+END_SRC
+
+** Merge two files side by side, each in its column, using the specified delimiter:
+
+#+BEGIN_SRC sh
+  paste -d ${delimiter} ${file1} ${file2}
+#+END_SRC
+
+** Merge two files, with lines added alternatively:
+
+#+BEGIN_SRC sh
+  paste -d '\n' ${file1} ${file2}
+#+END_SRC

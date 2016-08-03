@@ -1,0 +1,33 @@
+* php
+
+PHP Command Line Interface 'CLI'.
+
+** Parse and execute a file:
+
+#+BEGIN_SRC sh
+  php ${file}
+#+END_SRC
+
+** Check syntax (lint):
+
+#+BEGIN_SRC sh
+  php -l ${file}
+#+END_SRC
+
+** Run PHP interactively:
+
+#+BEGIN_SRC sh
+  php -a
+#+END_SRC
+
+** Run PHP code. Notes: a) Don't use <? ?> tags; b) Escape double quotes with backslash:
+
+#+BEGIN_SRC sh
+  php -r "${code}"
+#+END_SRC
+
+** Start a PHP built-in web server in the current directory:
+
+#+BEGIN_SRC sh
+  php -S ${host:port}
+#+END_SRC

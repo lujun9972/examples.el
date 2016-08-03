@@ -1,0 +1,33 @@
+* bashmarks
+
+Save and jump to commonly used directories using 1 character commands.
+
+** List available bookmarks:
+
+#+BEGIN_SRC sh
+  l
+#+END_SRC
+
+** Save the current folder as "bookmark_name":
+
+#+BEGIN_SRC sh
+  s ${bookmark_name}
+#+END_SRC
+
+** Go to a bookmarked folder:
+
+#+BEGIN_SRC sh
+  g ${bookmark_name}
+#+END_SRC
+
+** Print a bookmarked folder's contents:
+
+#+BEGIN_SRC sh
+  p ${bookmark_name}
+#+END_SRC
+
+** Delete a bookmark:
+
+#+BEGIN_SRC sh
+  d ${bookmark_name}
+#+END_SRC

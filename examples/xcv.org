@@ -1,0 +1,27 @@
+* xcv
+
+Cut, copy, and paste in the command-line.
+
+** Cut a file:
+
+#+BEGIN_SRC sh
+  xcv x ${input_file}
+#+END_SRC
+
+** Copy a file:
+
+#+BEGIN_SRC sh
+  xcv c ${input_file}
+#+END_SRC
+
+** Paste a file:
+
+#+BEGIN_SRC sh
+  xcv v ${output_file}
+#+END_SRC
+
+** List files available for pasting:
+
+#+BEGIN_SRC sh
+  xcv l
+#+END_SRC

@@ -1,0 +1,21 @@
+* host
+
+Lookup Domain Name Server.
+
+** Lookup A, AAAA, and MX records of a domain:
+
+#+BEGIN_SRC sh
+  host ${domain}
+#+END_SRC
+
+** Lookup a field (CNAME, TXT,...) of a domain:
+
+#+BEGIN_SRC sh
+  host -t ${field} ${domain}
+#+END_SRC
+
+** Reverse lookup an IP:
+
+#+BEGIN_SRC sh
+  host ${ip_address}
+#+END_SRC

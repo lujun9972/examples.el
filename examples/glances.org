@@ -1,0 +1,33 @@
+* glances
+
+A cross-platform system monitoring tool.
+
+** Run in terminal:
+
+#+BEGIN_SRC sh
+  glances
+#+END_SRC
+
+** Run in web server mode to show results in browser:
+
+#+BEGIN_SRC sh
+  glances -w
+#+END_SRC
+
+** Run in server mode to allow connections from other Glances clients:
+
+#+BEGIN_SRC sh
+  glances -s
+#+END_SRC
+
+** Connect to a Glances server:
+
+#+BEGIN_SRC sh
+  glances -c ${hostname}
+#+END_SRC
+
+** Require a password in (web) server mode:
+
+#+BEGIN_SRC sh
+  glances -s --password
+#+END_SRC

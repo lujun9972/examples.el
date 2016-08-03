@@ -1,0 +1,15 @@
+* salt-run
+
+Frontend for executing salt-runners on minions.
+
+** Show status of all minions:
+
+#+BEGIN_SRC sh
+  salt-run manage.status
+#+END_SRC
+
+** Show all minions which are disconnected:
+
+#+BEGIN_SRC sh
+  salt-run manage.up
+#+END_SRC

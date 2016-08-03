@@ -1,0 +1,15 @@
+* basename
+
+Returns non-directory portion of a pathname.
+
+** Show only the file name from a path:
+
+#+BEGIN_SRC sh
+  basename ${path/to/file}
+#+END_SRC
+
+** Show only the file name from a path, with a suffix removed:
+
+#+BEGIN_SRC sh
+  basename ${path/to/file} ${suffix}
+#+END_SRC

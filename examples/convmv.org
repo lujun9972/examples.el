@@ -1,0 +1,15 @@
+* convmv
+
+Convert filenames (NOT file content) from one encoding to another.
+
+** Test filename encoding conversion (don't actually change the filename):
+
+#+BEGIN_SRC sh
+  convmv -f ${from_encoding} -t ${to_encoding} ${input_file}
+#+END_SRC
+
+** Convert filename encoding and rename the file to the new enconding:
+
+#+BEGIN_SRC sh
+  convmv -f ${from_encoding} -t ${to_encoding} --notest ${input_file}
+#+END_SRC

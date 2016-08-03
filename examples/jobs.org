@@ -1,0 +1,39 @@
+* jobs
+
+BASH builtin for viewing information about processes spawned by the current shell.
+
+** View jobs spawned by the current shell:
+
+#+BEGIN_SRC sh
+  jobs
+#+END_SRC
+
+** List jobs and their process ids:
+
+#+BEGIN_SRC sh
+  jobs -l
+#+END_SRC
+
+** Display information about jobs with changed status:
+
+#+BEGIN_SRC sh
+  jobs -n
+#+END_SRC
+
+** Display process id of process group leader:
+
+#+BEGIN_SRC sh
+  jobs -p
+#+END_SRC
+
+** Display running processes:
+
+#+BEGIN_SRC sh
+  jobs -r
+#+END_SRC
+
+** Display stopped processes:
+
+#+BEGIN_SRC sh
+  jobs -s
+#+END_SRC

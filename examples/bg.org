@@ -1,0 +1,15 @@
+* bg
+
+Resumes suspended jobs and keeps them running in the background.
+
+** Resume most recently suspended background job running in the background:
+
+#+BEGIN_SRC sh
+  bg
+#+END_SRC
+
+** Resume a specific job running in the background:
+
+#+BEGIN_SRC sh
+  bg ${job_id}
+#+END_SRC

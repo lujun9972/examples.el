@@ -1,0 +1,15 @@
+* id
+
+Display current user and group identity.
+
+** Display the current user identity as a number:
+
+#+BEGIN_SRC sh
+  id -u
+#+END_SRC
+
+** Display the current group identity as a number:
+
+#+BEGIN_SRC sh
+  id -g
+#+END_SRC

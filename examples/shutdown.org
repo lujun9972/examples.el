@@ -1,0 +1,33 @@
+* shutdown
+
+Shutdown and reboot the system.
+
+** Power off (halt) immediately:
+
+#+BEGIN_SRC sh
+  shutdown -h now
+#+END_SRC
+
+** Reboot immediately:
+
+#+BEGIN_SRC sh
+  shutdown -r now
+#+END_SRC
+
+** Reboot in 5 minutes:
+
+#+BEGIN_SRC sh
+  shutdown -r +${5} &
+#+END_SRC
+
+** Shutdown at 1:00 pm (Uses 24h clock):
+
+#+BEGIN_SRC sh
+  shutdown -h 13:00
+#+END_SRC
+
+** Cancel a pending shutdown/reboot operation:
+
+#+BEGIN_SRC sh
+  shutdown -c
+#+END_SRC

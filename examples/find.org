@@ -1,0 +1,51 @@
+* find
+
+Find files under the given directory tree, recursively.
+
+** Find files by extension:
+
+#+BEGIN_SRC sh
+  find ${root_path} -name ${'*.py'}
+#+END_SRC
+
+** Find files matching path pattern:
+
+#+BEGIN_SRC sh
+  find ${root_path} -path ${'**/lib/**/*.py'}
+#+END_SRC
+
+** Run a command for each file, use {} within the command to access the filename:
+
+#+BEGIN_SRC sh
+  find ${root_path} -name ${'*.py'} -exec ${wc -l {} }\;
+#+END_SRC
+
+** Find files modified since a certain time:
+
+#+BEGIN_SRC sh
+  find ${root_path} -name ${'*.py'} -mtime ${-1d}
+#+END_SRC
+
+** Find files using case insensitive name matching, of a certain size:
+
+#+BEGIN_SRC sh
+  find ${root_path} -size +500k -size -10MB -iname ${'*.TaR.gZ'}
+#+END_SRC
+
+** Delete files by name, older than a certain number of days:
+
+#+BEGIN_SRC sh
+  find ${root_path} -name ${'*.py'} -mtime ${-180d} -delete
+#+END_SRC
+
+** Find empty files or directories:
+
+#+BEGIN_SRC sh
+  find ${root_path} -empty
+#+END_SRC
+
+** Find files matching more than one search criteria:
+
+#+BEGIN_SRC sh
+  find ${root_path} -name ${'*.py'} -or -name ${'*.r'}
+#+END_SRC

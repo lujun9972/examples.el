@@ -1,0 +1,33 @@
+* zypper
+
+SUSE & openSUSE package management utility.
+
+** Synchronize list of packages and versions available:
+
+#+BEGIN_SRC sh
+  zypper refresh
+#+END_SRC
+
+** Install a new package:
+
+#+BEGIN_SRC sh
+  zypper install ${package}
+#+END_SRC
+
+** Remove a package:
+
+#+BEGIN_SRC sh
+  zypper remove ${package}
+#+END_SRC
+
+** Upgrade installed packages to newest available versions:
+
+#+BEGIN_SRC sh
+  zypper update
+#+END_SRC
+
+** Search package via keyword:
+
+#+BEGIN_SRC sh
+  zypper search ${keyword}
+#+END_SRC

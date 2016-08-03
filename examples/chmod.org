@@ -1,0 +1,33 @@
+* chmod
+
+Change the access permissions of a file or directory.
+
+** Give the (u)ser who owns a file the right to e(x)ecute it:
+
+#+BEGIN_SRC sh
+  chmod u+x ${file}
+#+END_SRC
+
+** Give the user rights to (r)ead and (w)rite to a file/directory:
+
+#+BEGIN_SRC sh
+  chmod u+rw ${file}
+#+END_SRC
+
+** Remove executable rights from the (g)roup:
+
+#+BEGIN_SRC sh
+  chmod g-x ${file}
+#+END_SRC
+
+** Give (a)ll users rights to read and execute:
+
+#+BEGIN_SRC sh
+  chmod a+rx ${file}
+#+END_SRC
+
+** Give (o)thers (not in the file owner's group) the same rights as the group:
+
+#+BEGIN_SRC sh
+  chmod o=g ${file}
+#+END_SRC

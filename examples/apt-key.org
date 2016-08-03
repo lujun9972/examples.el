@@ -1,0 +1,27 @@
+* apt-key
+
+Key management utility for the APT Package Manager on Debian and Ubuntu.
+
+** List trusted keys:
+
+#+BEGIN_SRC sh
+  apt-key list
+#+END_SRC
+
+** Add a key to the trusted keystore:
+
+#+BEGIN_SRC sh
+  apt-key add ${public_key_file.asc}
+#+END_SRC
+
+** Delete a key from the trusted keystore:
+
+#+BEGIN_SRC sh
+  apt-key del ${key_id}
+#+END_SRC
+
+** Add a remote key to the trusted keystore:
+
+#+BEGIN_SRC sh
+  wget -qO - ${https://host.tld/filename.key} | apt-key add -
+#+END_SRC

@@ -1,0 +1,27 @@
+* cat
+
+Print and concatenate files.
+
+** Print the contents of a file to the standard output:
+
+#+BEGIN_SRC sh
+  cat ${file}
+#+END_SRC
+
+** Concatenate several files into the target file:
+
+#+BEGIN_SRC sh
+  cat ${file1} ${file2} > ${target_file}
+#+END_SRC
+
+** Append several files into the target file:
+
+#+BEGIN_SRC sh
+  cat ${file1} ${file2} >> ${target_file}
+#+END_SRC
+
+** Number all output lines:
+
+#+BEGIN_SRC sh
+  cat -n ${file}
+#+END_SRC

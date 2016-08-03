@@ -1,0 +1,39 @@
+* last
+
+View the last logged in users.
+
+** View last logins, their duration  and other information as read from /var/log/wtmp:
+
+#+BEGIN_SRC sh
+  last
+#+END_SRC
+
+** Specify how many of the last logins to show:
+
+#+BEGIN_SRC sh
+  last -n ${login_count}
+#+END_SRC
+
+** View full login times and dates:
+
+#+BEGIN_SRC sh
+  last -F
+#+END_SRC
+
+** View the last login by a specific user:
+
+#+BEGIN_SRC sh
+  last ${user_name}
+#+END_SRC
+
+** View the last reboot (last login of the pseudo user reboot):
+
+#+BEGIN_SRC sh
+  last reboot
+#+END_SRC
+
+** View the last shutdown (last login of the pseudo user shutdown):
+
+#+BEGIN_SRC sh
+  last shutdown
+#+END_SRC

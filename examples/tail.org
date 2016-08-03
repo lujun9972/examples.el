@@ -1,0 +1,27 @@
+* tail
+
+Display the last part of a file.
+
+** Show last 'num' lines in file:
+
+#+BEGIN_SRC sh
+  tail -n ${num} ${file}
+#+END_SRC
+
+** Show all file since line 'num':
+
+#+BEGIN_SRC sh
+  tail -n +${num} ${file}
+#+END_SRC
+
+** Show last 'num' bytes in file:
+
+#+BEGIN_SRC sh
+  tail -c ${num} ${file}
+#+END_SRC
+
+** Keep reading file until ctrl-c:
+
+#+BEGIN_SRC sh
+  tail -f ${file}
+#+END_SRC

@@ -1,0 +1,40 @@
+* inkscape
+
+An SVG (Scalable Vector Graphics) editing program.
+Use -z to not open the GUI and only process files in the console.
+
+** Open an SVG file in the Inkscape GUI:
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg}
+#+END_SRC
+
+** Export an SVG file into a bitmap with the default format (PNG) and the default resolution (90 DPI):
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg} -e ${filename.png}
+#+END_SRC
+
+** Export an SVG file into a bitmap of 600x400 pixels (aspect ratio distortion may occur):
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg} -e ${filename.png} -w ${600} -h ${400}
+#+END_SRC
+
+** Export a single object, given its ID, into a bitmap:
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg} -i ${id} -e ${object.png}
+#+END_SRC
+
+** Export an SVG document to PDF, converting all texts to paths:
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg} --export-pdf==${filename.pdf} --export-text-to-path
+#+END_SRC
+
+** Duplicate the object with id="path1555", rotate the duplicate 90 degrees, save the SVG, and quit:
+
+#+BEGIN_SRC sh
+  inkscape ${filename.svg} --select=path1555 --verb=EditDuplicate --verb=ObjectRotate90 --verb=FileSave --verb=FileClose
+#+END_SRC

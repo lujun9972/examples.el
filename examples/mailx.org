@@ -1,0 +1,39 @@
+* mailx
+
+Send and receive mail.
+
+** To send mail, the content is typed after the command and ended with Control-D:
+
+#+BEGIN_SRC sh
+  mailx -s "${subject}" ${to_addr}
+#+END_SRC
+
+** Send mail with short content:
+
+#+BEGIN_SRC sh
+  echo "${content}" | mailx -s "${subject}" ${to_addr}
+#+END_SRC
+
+** Send mail with content which written in a file:
+
+#+BEGIN_SRC sh
+  mailx -s "${subject}" ${to_addr} < ${content.txt}
+#+END_SRC
+
+** Send mail to a recipient and CC to another address:
+
+#+BEGIN_SRC sh
+  mailx -s "${subject}" -c ${cc_addr} ${to_addr}
+#+END_SRC
+
+** Send mail and set sender address:
+
+#+BEGIN_SRC sh
+  mailx -s "${subject}" -r ${from_addr} ${to_addr}
+#+END_SRC
+
+** Send mail with an attachment:
+
+#+BEGIN_SRC sh
+  mailx -a ${file} -s "${subject}" ${to_addr}
+#+END_SRC

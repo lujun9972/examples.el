@@ -1,0 +1,15 @@
+* df
+
+Gives an overview of the file system disk space usage.
+
+** Display all file systems and their disk usage:
+
+#+BEGIN_SRC sh
+  df
+#+END_SRC
+
+** Display all file systems and their disk usage in human readable form:
+
+#+BEGIN_SRC sh
+  df -h
+#+END_SRC

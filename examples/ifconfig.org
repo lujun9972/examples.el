@@ -1,0 +1,33 @@
+* ifconfig
+
+Ifconfig - Interface Configurator, used to configure network interfaces.
+
+** View network settings of an ethernet adapter:
+
+#+BEGIN_SRC sh
+  ifconfig eth0
+#+END_SRC
+
+** Display details of all interfaces, including disabled interfaces:
+
+#+BEGIN_SRC sh
+  ifconfig -a
+#+END_SRC
+
+** Disable eth0 interface:
+
+#+BEGIN_SRC sh
+  ifconfig eth0 down
+#+END_SRC
+
+** Enable eth0 interface:
+
+#+BEGIN_SRC sh
+  ifconfig eth0 up
+#+END_SRC
+
+** Assign IP address to eth0 interface:
+
+#+BEGIN_SRC sh
+  ifconfig eth0 ${ip_address}
+#+END_SRC

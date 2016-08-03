@@ -1,0 +1,27 @@
+* ffmpeg
+
+Video conversion tool.
+
+** Extract the sound from a video and save it as MP3:
+
+#+BEGIN_SRC sh
+  ffmpeg -i ${video_filename} -vn -ar 44100 -ac 2 -ab 192 -f mp3 ${sound.mp3}
+#+END_SRC
+
+** Convert frames from a video into individual numbered images:
+
+#+BEGIN_SRC sh
+  ffmpeg -i ${video_filename} ${image%d.png}
+#+END_SRC
+
+** Combine numbered images (image1.jpg, image2.jpg, etc) into a video:
+
+#+BEGIN_SRC sh
+  ffmpeg -f image2 -i ${image%d.jpg} ${video.mpg}
+#+END_SRC
+
+** Convert AVI video to MP4. AAC Audio @ 128kbit, Video @ 1250Kbit:
+
+#+BEGIN_SRC sh
+  ffmpeg -i ${in.avi} -acodec libfaac -ab 128k -vcodec mpeg4 -b 1250K ${out.mp4}
+#+END_SRC

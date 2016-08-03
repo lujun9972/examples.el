@@ -1,0 +1,9 @@
+* fc-pattern
+
+Shows information about a font matching a pattern.
+
+** Display default infomation about a font:
+
+#+BEGIN_SRC sh
+  fc-pattern -d '${Font Name}'
+#+END_SRC

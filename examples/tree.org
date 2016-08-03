@@ -1,0 +1,39 @@
+* tree
+
+Show the contents of the current directory as a tree.
+
+** Show files and directories with a depth of 'num' (where 1 means the current directory):
+
+#+BEGIN_SRC sh
+  tree -L ${num}
+#+END_SRC
+
+** Show directories only:
+
+#+BEGIN_SRC sh
+  tree -d
+#+END_SRC
+
+** Show hidden files too:
+
+#+BEGIN_SRC sh
+  tree -a
+#+END_SRC
+
+** Print human readable size of files:
+
+#+BEGIN_SRC sh
+  tree -h
+#+END_SRC
+
+** Print the full path for each file:
+
+#+BEGIN_SRC sh
+  tree -f
+#+END_SRC
+
+** Print the tree without lines and indentation. Useful when used with -f:
+
+#+BEGIN_SRC sh
+  tree -i
+#+END_SRC

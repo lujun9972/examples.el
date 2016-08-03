@@ -1,0 +1,27 @@
+* odps tunnel
+
+Data tunnel in ODPS (Open Data Processing Service).
+
+** Download table to local file:
+
+#+BEGIN_SRC sh
+  tunnel download ${table_name} ${file};
+#+END_SRC
+
+** Upload local file to a table partition:
+
+#+BEGIN_SRC sh
+  tunnel upload ${file} ${table_name}/${partition_spec};
+#+END_SRC
+
+** Upload table specifying field and record delimiters:
+
+#+BEGIN_SRC sh
+  tunnel upload ${file} ${table_name} -fd ${field_delim} -rd ${record_delim};
+#+END_SRC
+
+** Upload table using multiple threads:
+
+#+BEGIN_SRC sh
+  tunnel upload ${file} ${table_name} -threads ${num};
+#+END_SRC

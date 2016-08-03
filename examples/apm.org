@@ -1,0 +1,22 @@
+* apm
+
+Atom editor Package Manager.
+See `atom`.
+
+** Install packages from http://atom.io/packages and themes from http://atom.io/themes:
+
+#+BEGIN_SRC sh
+  apm install ${package_name}
+#+END_SRC
+
+** Remove packages/themes:
+
+#+BEGIN_SRC sh
+  apm remove ${package_name}
+#+END_SRC
+
+** Upgrade packages/themes:
+
+#+BEGIN_SRC sh
+  apm upgrade ${package_name}
+#+END_SRC

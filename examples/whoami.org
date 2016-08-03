@@ -1,0 +1,9 @@
+* whoami
+
+Show the username of the current user.
+
+** Display currently logged user name:
+
+#+BEGIN_SRC sh
+  whoami
+#+END_SRC

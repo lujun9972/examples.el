@@ -1,0 +1,21 @@
+* fsck
+
+Check the integrity of a filesystem or repair it. The filesystem should be unmounted at the time the command is run.
+
+** Check filesystem /dev/sda, reporting any damaged blocks:
+
+#+BEGIN_SRC sh
+  fsck ${/dev/sda}
+#+END_SRC
+
+** Check filesystem /dev/sda, reporting any damaged blocks and interactively letting the user choose to repair each one:
+
+#+BEGIN_SRC sh
+  fsck -r ${/dev/sda}
+#+END_SRC
+
+** Check filesystem /dev/sda, reporting any damaged blocks and automatically repairing them:
+
+#+BEGIN_SRC sh
+  fsck -a ${/dev/sda}
+#+END_SRC

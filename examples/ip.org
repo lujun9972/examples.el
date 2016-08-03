@@ -1,0 +1,33 @@
+* ip
+
+Show / manipulate routing, devices, policy routing and tunnels.
+
+** List interfaces with detailed info:
+
+#+BEGIN_SRC sh
+  ip a
+#+END_SRC
+
+** Display the routing table:
+
+#+BEGIN_SRC sh
+  ip r
+#+END_SRC
+
+** Make an interface up/down:
+
+#+BEGIN_SRC sh
+  ip link set ${interface} up/down
+#+END_SRC
+
+** Add/Delete an ip address to an interface:
+
+#+BEGIN_SRC sh
+  ip addr add/del ${ip}/${mask} dev ${interface}
+#+END_SRC
+
+** Add an default route:
+
+#+BEGIN_SRC sh
+  ip route add default via ${ip} dev ${interface}
+#+END_SRC

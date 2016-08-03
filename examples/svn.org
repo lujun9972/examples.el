@@ -1,0 +1,33 @@
+* svn
+
+Subversion command line client tool.
+
+** Check out a working copy from a repository:
+
+#+BEGIN_SRC sh
+  svn co ${url/to/repository}
+#+END_SRC
+
+** Bring changes from the repository into the working copy:
+
+#+BEGIN_SRC sh
+  svn up
+#+END_SRC
+
+** Put files and directories under version control, scheduling them for addition to repository. They will be added in next commit:
+
+#+BEGIN_SRC sh
+  svn add PATH...
+#+END_SRC
+
+** Send changes from your working copy to the repository:
+
+#+BEGIN_SRC sh
+  svn ci -m ${commit log message} ${[PATH...]}
+#+END_SRC
+
+** Show detailed help:
+
+#+BEGIN_SRC sh
+  svn help
+#+END_SRC

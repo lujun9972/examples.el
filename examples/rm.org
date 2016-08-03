@@ -1,0 +1,27 @@
+* rm
+
+Remove files or directories.
+
+** Remove files from arbitrary locations:
+
+#+BEGIN_SRC sh
+  rm ${/path/to/file} ${/otherpath/to/file2}
+#+END_SRC
+
+** Remove recursively a directory and all its subdirectories:
+
+#+BEGIN_SRC sh
+  rm -r ${/path/to/folder}
+#+END_SRC
+
+** Remove directory without prompt:
+
+#+BEGIN_SRC sh
+  rm -rf ${/path/to/folder}
+#+END_SRC
+
+** Prompt before every removal:
+
+#+BEGIN_SRC sh
+  rm -i ${\*}
+#+END_SRC

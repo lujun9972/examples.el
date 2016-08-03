@@ -1,0 +1,22 @@
+* pkill
+
+Signal process by name.
+Mostly used for stopping processes.
+
+** Kill all processes which match:
+
+#+BEGIN_SRC sh
+  pkill -9 ${process_name}
+#+END_SRC
+
+** Kill all processes which match their full command instead of just the process name:
+
+#+BEGIN_SRC sh
+  pkill -9 -f "${command_name}"
+#+END_SRC
+
+** Send SIGUSR1 signal to processes which match:
+
+#+BEGIN_SRC sh
+  pkill -USR1 ${process_name}
+#+END_SRC

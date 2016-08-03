@@ -1,0 +1,27 @@
+* git
+
+Distributed version control system.
+
+** Check the Git version:
+
+#+BEGIN_SRC sh
+  git --version
+#+END_SRC
+
+** Call general help:
+
+#+BEGIN_SRC sh
+  git --help
+#+END_SRC
+
+** Call help on a command:
+
+#+BEGIN_SRC sh
+  git help ${COMMAND}
+#+END_SRC
+
+** Execute Git command:
+
+#+BEGIN_SRC sh
+  git ${COMMAND}
+#+END_SRC

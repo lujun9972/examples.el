@@ -1,0 +1,39 @@
+* xz
+
+Compress or decompress .xz and .lzma files.
+
+** Compress a file:
+
+#+BEGIN_SRC sh
+  xz ${file}
+#+END_SRC
+
+** Decompress a file:
+
+#+BEGIN_SRC sh
+  xz -d ${file.xz}
+#+END_SRC
+
+** Decompress a file and write to stdout:
+
+#+BEGIN_SRC sh
+  xz -dc ${file.xz}
+#+END_SRC
+
+** Compress a file, but don't delete the original:
+
+#+BEGIN_SRC sh
+  xz -k ${file}
+#+END_SRC
+
+** Compress a file using the fastest compression:
+
+#+BEGIN_SRC sh
+  xz -0 ${file}
+#+END_SRC
+
+** Compress a file using the best compression:
+
+#+BEGIN_SRC sh
+  xz -9 ${file}
+#+END_SRC

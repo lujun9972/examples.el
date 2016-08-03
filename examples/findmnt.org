@@ -1,0 +1,33 @@
+* findmnt
+
+Find your filesystem.
+
+** List all mounted filesystems:
+
+#+BEGIN_SRC sh
+  findmnt
+#+END_SRC
+
+** Search for a device:
+
+#+BEGIN_SRC sh
+  findmnt ${/dev/sdb1}
+#+END_SRC
+
+** Search for a mountpoint:
+
+#+BEGIN_SRC sh
+  findmnt ${/}
+#+END_SRC
+
+** Find filesystems in specific type:
+
+#+BEGIN_SRC sh
+  findmnt -t ${ext4}
+#+END_SRC
+
+** Find filesystems with specific label:
+
+#+BEGIN_SRC sh
+  findmnt LABEL=${BigStorage}
+#+END_SRC

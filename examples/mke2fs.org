@@ -1,0 +1,21 @@
+* mke2fs
+
+Creates a Linux filesystem inside a partition.
+
+** Create an ext2 filesystem in partition 1 of device b (`sdb1`):
+
+#+BEGIN_SRC sh
+  mkfs.ext2 ${/dev/sdb1}
+#+END_SRC
+
+** Create an ext3 filesystem in partition 1 of device b (`sdb1`):
+
+#+BEGIN_SRC sh
+  mkfs.ext3 ${/dev/sdb1}
+#+END_SRC
+
+** Create an ext3 filesystem in partition 1 of device b (`sdb1`):
+
+#+BEGIN_SRC sh
+  mkfs.ext3 ${/dev/sdb1}
+#+END_SRC

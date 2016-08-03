@@ -1,0 +1,39 @@
+* git config
+
+Get and set repository or global options.
+
+** Print list of options for current repository:
+
+#+BEGIN_SRC sh
+  git config --list --local
+#+END_SRC
+
+** Print global list of options, set in ~/.gitconfig:
+
+#+BEGIN_SRC sh
+  git config --list --global
+#+END_SRC
+
+** Get full list of options:
+
+#+BEGIN_SRC sh
+  git config --list
+#+END_SRC
+
+** Get value of alias.ls option:
+
+#+BEGIN_SRC sh
+  git config alias.st
+#+END_SRC
+
+** Set option alias.ls=status in file ~/.gitconfig:
+
+#+BEGIN_SRC sh
+  git config --global alias.ls "status"
+#+END_SRC
+
+** Remove option alias.st from ~/.gitconfig:
+
+#+BEGIN_SRC sh
+  git config --global --unset alias.st
+#+END_SRC

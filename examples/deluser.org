@@ -1,0 +1,21 @@
+* deluser
+
+Remove a user account or remove a user from a group.
+
+** Remove a user:
+
+#+BEGIN_SRC sh
+  deluser ${name}
+#+END_SRC
+
+** Remove a user along with their home directory and mail spool:
+
+#+BEGIN_SRC sh
+  deluser -r ${name}
+#+END_SRC
+
+** Remove a user from a group:
+
+#+BEGIN_SRC sh
+  deluser ${name} ${group}
+#+END_SRC

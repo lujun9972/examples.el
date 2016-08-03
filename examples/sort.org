@@ -1,0 +1,33 @@
+* sort
+
+Sort lines of text files.
+
+** Sort a file in ascending order:
+
+#+BEGIN_SRC sh
+  sort ${filename}
+#+END_SRC
+
+** Sort a file in descending order:
+
+#+BEGIN_SRC sh
+  sort -r ${filename}
+#+END_SRC
+
+** Sort a file using numeric rather than alphabetic order:
+
+#+BEGIN_SRC sh
+  sort -n ${filename}
+#+END_SRC
+
+** Sort the passwd file by the 3rd field, numerically:
+
+#+BEGIN_SRC sh
+  sort -t: -k 3n /etc/passwd
+#+END_SRC
+
+** Sort human-readable numbers (in this case the 5th field of `ls -lh`):
+
+#+BEGIN_SRC sh
+  ls -lh | sort -h -k 5
+#+END_SRC

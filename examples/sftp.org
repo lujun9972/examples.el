@@ -1,0 +1,47 @@
+* sftp
+
+Secure File Transfer Program.
+Interactive program to copy files between hosts over SSH.
+For non-interactive file transfers, see `scp` or `rsync`.
+
+** Connect to a remote server and enter an interactive command mode:
+
+#+BEGIN_SRC sh
+  sftp ${remote_user}@${remote_host}
+#+END_SRC
+
+** Connect using an alternate port:
+
+#+BEGIN_SRC sh
+  sftp -P ${remote_port} ${remote_user}@${remote_host}
+#+END_SRC
+
+** Transfer remote file to the local system:
+
+#+BEGIN_SRC sh
+  get ${/path/remote_file}
+#+END_SRC
+
+** Transfer local file to the remote system:
+
+#+BEGIN_SRC sh
+  put ${/path/local_file}
+#+END_SRC
+
+** Transfer remote folder to the local system recursively (works with `put` too):
+
+#+BEGIN_SRC sh
+  get -R ${/path/remote_folder}
+#+END_SRC
+
+** Get list of files on local machine:
+
+#+BEGIN_SRC sh
+  lls
+#+END_SRC
+
+** Get list of files on remote machine:
+
+#+BEGIN_SRC sh
+  ls
+#+END_SRC

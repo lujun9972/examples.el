@@ -1,0 +1,33 @@
+* nginx
+
+Nginx web server.
+
+** Start server with default config:
+
+#+BEGIN_SRC sh
+  nginx
+#+END_SRC
+
+** Start server with custom config file:
+
+#+BEGIN_SRC sh
+  nginx -c ${config_file}
+#+END_SRC
+
+** Start server with a prefix for all relative paths in config file:
+
+#+BEGIN_SRC sh
+  nginx -c ${config_file} -p ${prefix/for/relative/paths}
+#+END_SRC
+
+** Test configuration without affecting the running server:
+
+#+BEGIN_SRC sh
+  nginx -t
+#+END_SRC
+
+** Reload configuration by sending a signal with no downtime:
+
+#+BEGIN_SRC sh
+  nginx -s reload
+#+END_SRC

@@ -1,0 +1,15 @@
+* readlink
+
+Follow symlinks and get symlink information.
+
+** Get the actual file to which the symlink points:
+
+#+BEGIN_SRC sh
+  readlink ${filename}
+#+END_SRC
+
+** Get the absolute path to a file:
+
+#+BEGIN_SRC sh
+  readlink -f ${filename}
+#+END_SRC

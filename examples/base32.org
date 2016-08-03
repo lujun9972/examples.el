@@ -1,0 +1,27 @@
+* base32
+
+Encode or decode file or standard input, to standard output.
+
+** Encode a file:
+
+#+BEGIN_SRC sh
+  base32 ${filename}
+#+END_SRC
+
+** Decode a file:
+
+#+BEGIN_SRC sh
+  base32 -d ${filename}
+#+END_SRC
+
+** Encode from stdin:
+
+#+BEGIN_SRC sh
+  ${somecommand} | base32
+#+END_SRC
+
+** Decode from stdin:
+
+#+BEGIN_SRC sh
+  ${somecommand} | base32 -d
+#+END_SRC

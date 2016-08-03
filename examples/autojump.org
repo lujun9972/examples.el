@@ -1,0 +1,28 @@
+* autojump
+
+Quickly jump among the directories you visit the most.
+Aliases like j or jc are provided for even less typing.
+
+** Jump to a directory that contains the given pattern:
+
+#+BEGIN_SRC sh
+  j ${pattern}
+#+END_SRC
+
+** Jump to a sub-directory (child) of the current directory that contains the given pattern:
+
+#+BEGIN_SRC sh
+  jc ${pattern}
+#+END_SRC
+
+** Remove non-existing directories from the autojump database:
+
+#+BEGIN_SRC sh
+  j --purge
+#+END_SRC
+
+** Show the entries in the autojump database:
+
+#+BEGIN_SRC sh
+  j -s
+#+END_SRC

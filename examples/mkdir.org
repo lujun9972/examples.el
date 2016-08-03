@@ -1,0 +1,15 @@
+* mkdir
+
+Creates a directory.
+
+** Create a directory in current folder or given path:
+
+#+BEGIN_SRC sh
+  mkdir ${directory}
+#+END_SRC
+
+** Create directories recursively (useful for creating nested dirs):
+
+#+BEGIN_SRC sh
+  mkdir -p ${path/to/directory}
+#+END_SRC

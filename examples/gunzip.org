@@ -1,0 +1,21 @@
+* gunzip
+
+Extract file(s) from a gzip (.gz) archive.
+
+** Extract a file from an archive, replacing the original file if it exists:
+
+#+BEGIN_SRC sh
+  gunzip ${archive.tar.gz}
+#+END_SRC
+
+** Extract a file to a target destination:
+
+#+BEGIN_SRC sh
+  gunzip -c ${archive.tar.gz} > ${archive.tar}
+#+END_SRC
+
+** List the contents of a compressed file:
+
+#+BEGIN_SRC sh
+  gunzip -l ${file.txt.gz}
+#+END_SRC

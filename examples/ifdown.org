@@ -1,0 +1,15 @@
+* ifdown
+
+Disable network interfaces.
+
+** Disable interface eth0:
+
+#+BEGIN_SRC sh
+  ifdown ${eth0}
+#+END_SRC
+
+** Disable all interfaces which are enabled:
+
+#+BEGIN_SRC sh
+  ifdown -a
+#+END_SRC

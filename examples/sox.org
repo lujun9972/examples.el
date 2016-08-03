@@ -1,0 +1,35 @@
+* sox
+
+SoX - Sound eXchange.
+Play, record and convert audio files.
+Audioformats are identified by extension.
+
+** Merge two audio files into one:
+
+#+BEGIN_SRC sh
+  sox -m ${input_audiofile1} ${input_audiofile2} ${output_audiofile}
+#+END_SRC
+
+** Trim an audio file to the specified times:
+
+#+BEGIN_SRC sh
+  sox ${input_audiofile} ${output_audiofile} trim ${start} ${end}
+#+END_SRC
+
+** Normalize an audio file (adjust volume to the maximum peak level, without clipping):
+
+#+BEGIN_SRC sh
+  sox --norm ${input_audiofile} ${output_audiofile}
+#+END_SRC
+
+** Reverse and save an audio file:
+
+#+BEGIN_SRC sh
+  sox ${input_audiofile} ${output_audiofile} reverse
+#+END_SRC
+
+** Print statistical data of an audio file:
+
+#+BEGIN_SRC sh
+  sox ${input_audiofile} -n stat
+#+END_SRC

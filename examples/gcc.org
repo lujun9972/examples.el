@@ -1,0 +1,33 @@
+* gcc
+
+Preprocesses and compiles C and C++ source files, then assembles and links them together.
+
+** Compile multiple source files into executable:
+
+#+BEGIN_SRC sh
+  gcc ${source1.c} ${source2.c} -o ${executable}
+#+END_SRC
+
+** Allow warnings, debug symbols in output:
+
+#+BEGIN_SRC sh
+  gcc ${source.c} -Wall -Og -o ${executable}
+#+END_SRC
+
+** Include libraries from a different path:
+
+#+BEGIN_SRC sh
+  gcc ${source.c} -o ${executable} -I${header_path} -L${library_path} -l${library_name}
+#+END_SRC
+
+** Compile source code into Assembler instructions:
+
+#+BEGIN_SRC sh
+  gcc -S ${source.c}
+#+END_SRC
+
+** Compile source code without linking:
+
+#+BEGIN_SRC sh
+  gcc -c ${source.c}
+#+END_SRC

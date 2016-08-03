@@ -1,0 +1,33 @@
+* comm
+
+Select or reject lines common to two files. Both files must be sorted.
+
+** Produce three tab-separated columns: lines only in first file, lines only in second file and common lines:
+
+#+BEGIN_SRC sh
+  comm ${file1} ${file2}
+#+END_SRC
+
+** Print only lines common to both files:
+
+#+BEGIN_SRC sh
+  comm -12 ${file1} ${file2}
+#+END_SRC
+
+** Print only lines common to both files, reading one file from stdin:
+
+#+BEGIN_SRC sh
+  cat ${file1} | comm -12 - ${file2}
+#+END_SRC
+
+** Get lines only found in first file, saving the result to a third file:
+
+#+BEGIN_SRC sh
+  comm -23 ${file1} ${file2} > ${file1_only}
+#+END_SRC
+
+** Print lines only found in second file, when the files aren't sorted:
+
+#+BEGIN_SRC sh
+  comm -13 <(sort ${file1}) <(sort ${file2})
+#+END_SRC

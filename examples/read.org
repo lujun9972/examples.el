@@ -1,0 +1,33 @@
+* read
+
+BASH builtin for retrieving data from standard input.
+
+** Store data that you type from the keyboard:
+
+#+BEGIN_SRC sh
+  read ${variable}
+#+END_SRC
+
+** Store each of the next lines you enter as values of an array:
+
+#+BEGIN_SRC sh
+  read -a ${array}
+#+END_SRC
+
+** Enable backspace and GNU readline hotkeys when entering input with read:
+
+#+BEGIN_SRC sh
+  read -e ${variable}
+#+END_SRC
+
+** Specify the number of maximum characters to be read:
+
+#+BEGIN_SRC sh
+  read -n ${character_count} ${variable}
+#+END_SRC
+
+** Use a specific character as a delimiter instead of a new line:
+
+#+BEGIN_SRC sh
+  read -d ${new_delimiter} ${variable}
+#+END_SRC

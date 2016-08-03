@@ -1,0 +1,33 @@
+* ar
+
+Create, modify, and extract from archives (.a .so .o).
+
+** Extract all members from an archive:
+
+#+BEGIN_SRC sh
+  ar -x ${libfoo.a}
+#+END_SRC
+
+** List the members of an archive:
+
+#+BEGIN_SRC sh
+  ar -t ${libfoo.a}
+#+END_SRC
+
+** Replace or add files to an archive:
+
+#+BEGIN_SRC sh
+  ar -r ${libfoo.a} ${foo.o} ${bar.o} ${baz.o}
+#+END_SRC
+
+** Insert an object file index (equivalent to using `ranlib`):
+
+#+BEGIN_SRC sh
+  ar -s ${libfoo.a}
+#+END_SRC
+
+** Create an archive with files and an accompanying object file index:
+
+#+BEGIN_SRC sh
+  ar -rs ${libfoo.a} ${foo.o} ${bar.o} ${baz.o}
+#+END_SRC

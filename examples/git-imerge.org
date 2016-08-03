@@ -1,0 +1,34 @@
+* git-imerge
+
+Perform a merge or rebase between two git branches incrementally.
+Conflicts between branches are tracked down to pairs of individual commits, to simplify conflict resolution.
+
+** Start imerge-based rebase (checkout the branch to be rebased, first):
+
+#+BEGIN_SRC sh
+  git imerge rebase ${branch_to_rebase_onto}
+#+END_SRC
+
+** Start imerge-based merge (checkout the branch to merge into, first):
+
+#+BEGIN_SRC sh
+  git imerge merge ${branch_to_be_merged}
+#+END_SRC
+
+** Show ASCII diagram of in-progress merge or rebase:
+
+#+BEGIN_SRC sh
+  git imerge diagram
+#+END_SRC
+
+** Continue imerge operation after resolving conflicts (`git add` the conflicted files, first):
+
+#+BEGIN_SRC sh
+  git imerge continue --no-edit
+#+END_SRC
+
+** Wrap up the imerge operation, after all conflicts are resolved:
+
+#+BEGIN_SRC sh
+  git imerge finish
+#+END_SRC

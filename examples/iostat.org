@@ -1,0 +1,39 @@
+* iostat
+
+Report statistics for devices and partitions.
+
+** Display a report of CPU and disk statistics since system startup:
+
+#+BEGIN_SRC sh
+  iostat
+#+END_SRC
+
+** Display a report of CPU and disk statistics with units converted to megabytes:
+
+#+BEGIN_SRC sh
+  iostat -m
+#+END_SRC
+
+** Display CPU statistics:
+
+#+BEGIN_SRC sh
+  iostat -c
+#+END_SRC
+
+** Display disk statistics with disk names (including LVM):
+
+#+BEGIN_SRC sh
+  iostat -N
+#+END_SRC
+
+** Display extended disk statistics with disk names for device "sda":
+
+#+BEGIN_SRC sh
+  iostat -xN ${sda}
+#+END_SRC
+
+** Display incremental reports of CPU and disk statistics every 2 seconds:
+
+#+BEGIN_SRC sh
+  iostat ${2}
+#+END_SRC

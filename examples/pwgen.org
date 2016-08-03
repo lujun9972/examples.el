@@ -1,0 +1,21 @@
+* pwgen
+
+Generate pronounceable passwords.
+
+** Generate random password with symbols:
+
+#+BEGIN_SRC sh
+  pwgen -y ${length}
+#+END_SRC
+
+** Generate hard-to-memorize passwords:
+
+#+BEGIN_SRC sh
+  pwgen -s ${length}
+#+END_SRC
+
+** Generate password with at least one capital letter in them:
+
+#+BEGIN_SRC sh
+  pwgen -c ${length}
+#+END_SRC

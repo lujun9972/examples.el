@@ -1,0 +1,34 @@
+* csvstat
+
+Print descriptive statistics for all columns in a CSV file.
+Included in csvkit.
+
+** Show all stats for all columns:
+
+#+BEGIN_SRC sh
+  csvstat ${data.csv}
+#+END_SRC
+
+** Show all stats for columns 2 and 4:
+
+#+BEGIN_SRC sh
+  csvstat -c ${2,4} ${data.csv}
+#+END_SRC
+
+** Show sums for all columns:
+
+#+BEGIN_SRC sh
+  csvstat --sum ${data.csv}
+#+END_SRC
+
+** Show the max value length for column 3:
+
+#+BEGIN_SRC sh
+  csvstat -c ${3} --len ${data.csv}
+#+END_SRC
+
+** Show the number of unique values in the "name" column:
+
+#+BEGIN_SRC sh
+  csvstat -c ${name} --unique ${data.csv}
+#+END_SRC

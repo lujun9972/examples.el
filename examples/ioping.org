@@ -1,0 +1,27 @@
+* ioping
+
+Monitor I/O latency in real time.
+
+** Show disk I/O latency using the default values and the current directory:
+
+#+BEGIN_SRC sh
+  ioping .
+#+END_SRC
+
+** Measure latency on /tmp using 10 requests of 1 megabyte each:
+
+#+BEGIN_SRC sh
+  ioping -c 10 -s 1M /tmp
+#+END_SRC
+
+** Measure disk seek rate on /dev/sda:
+
+#+BEGIN_SRC sh
+  ioping -R /dev/sda
+#+END_SRC
+
+** Measure disk sequential speed on /dev/sda:
+
+#+BEGIN_SRC sh
+  ioping -RL /dev/sda
+#+END_SRC

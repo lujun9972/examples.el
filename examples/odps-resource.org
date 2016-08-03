@@ -1,0 +1,39 @@
+* odps resource
+
+Manage resources in ODPS (Open Data Processing Service).
+
+** Show resources in the current project:
+
+#+BEGIN_SRC sh
+  list resources;
+#+END_SRC
+
+** Add file resource:
+
+#+BEGIN_SRC sh
+  add file ${file_name} as ${alias};
+#+END_SRC
+
+** Add archive resource:
+
+#+BEGIN_SRC sh
+  add archive ${archive.tar.gz} as ${alias};
+#+END_SRC
+
+** Add .jar resource:
+
+#+BEGIN_SRC sh
+  add jar ${package.jar};
+#+END_SRC
+
+** Add .py resource:
+
+#+BEGIN_SRC sh
+  add py ${script.py};
+#+END_SRC
+
+** Delete resource:
+
+#+BEGIN_SRC sh
+  drop resource ${resource_name};
+#+END_SRC

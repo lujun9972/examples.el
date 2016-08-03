@@ -1,0 +1,39 @@
+* fortune
+
+Print a random quotation (fortune-cookie style).
+
+** Print a quotation:
+
+#+BEGIN_SRC sh
+  fortune
+#+END_SRC
+
+** Print an offensive quotation:
+
+#+BEGIN_SRC sh
+  fortune -o
+#+END_SRC
+
+** Print a long quotation:
+
+#+BEGIN_SRC sh
+  fortune -l
+#+END_SRC
+
+** Print a short quotation:
+
+#+BEGIN_SRC sh
+  fortune -s
+#+END_SRC
+
+** List the available quotation database files:
+
+#+BEGIN_SRC sh
+  fortune -f
+#+END_SRC
+
+** Print a quotation from one of the database files listed by `fortune -f`:
+
+#+BEGIN_SRC sh
+  fortune ${filename}
+#+END_SRC

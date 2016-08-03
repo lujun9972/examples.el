@@ -1,0 +1,27 @@
+* slackcat
+
+Utility for passing files and command output to Slack.
+
+** Post a file to Slack:
+
+#+BEGIN_SRC sh
+  slackcat --channel ${channel_name} ${path/to/file}
+#+END_SRC
+
+** Post a file to Slack with a custom filename:
+
+#+BEGIN_SRC sh
+  slackcat --channel ${channel_name} --filename=${filename} ${path/to/file}
+#+END_SRC
+
+** Pipe command output to Slack as a text snippet:
+
+#+BEGIN_SRC sh
+  ${command} | slackcat --channel ${channel_name} --filename=${snippet_name}
+#+END_SRC
+
+** Stream command output to Slack continuously:
+
+#+BEGIN_SRC sh
+  ${command} | slackcat --channel ${channel_name} --stream
+#+END_SRC

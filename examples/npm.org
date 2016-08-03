@@ -1,0 +1,46 @@
+* npm
+
+JavaScript and Node.js package manager.
+Manage Node.js projects and their module dependencies.
+
+** Download and install a module globally:
+
+#+BEGIN_SRC sh
+  npm install -g ${module_name}
+#+END_SRC
+
+** Download all dependencies referenced in package.json:
+
+#+BEGIN_SRC sh
+  npm install
+#+END_SRC
+
+** Download a given dependency required for the application to run, and add it to the package.json:
+
+#+BEGIN_SRC sh
+  npm install ${module_name}@${version} --save
+#+END_SRC
+
+** Download a given dependency for development purposes, and add it to the package.json:
+
+#+BEGIN_SRC sh
+  npm install ${module_name}@${version} --save-dev
+#+END_SRC
+
+** Uninstall a module:
+
+#+BEGIN_SRC sh
+  npm uninstall ${module_name}
+#+END_SRC
+
+** List a tree of installed modules:
+
+#+BEGIN_SRC sh
+  npm list
+#+END_SRC
+
+** Interactively create a package.json file:
+
+#+BEGIN_SRC sh
+  npm init
+#+END_SRC

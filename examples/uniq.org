@@ -1,0 +1,34 @@
+* uniq
+
+Output the unique lines from the given input or file.
+Since it does not detect repeated lines unless they are adjacent, we need to sort them first.
+
+** Display each line once:
+
+#+BEGIN_SRC sh
+  sort ${file} | uniq
+#+END_SRC
+
+** Display only unique lines:
+
+#+BEGIN_SRC sh
+  sort ${file} | uniq -u
+#+END_SRC
+
+** Display only duplicate lines:
+
+#+BEGIN_SRC sh
+  sort ${file} | uniq -d
+#+END_SRC
+
+** Display number of occurences of each line along with that line:
+
+#+BEGIN_SRC sh
+  sort ${file} | uniq -c
+#+END_SRC
+
+** Display number of occurences of each line, sorted by the most frequent:
+
+#+BEGIN_SRC sh
+  sort ${file} | uniq -c | sort -nr
+#+END_SRC

@@ -1,0 +1,21 @@
+* ln
+
+Creates links to files and folders.
+
+** Create a symbolic link to a file (or folder):
+
+#+BEGIN_SRC sh
+  ln -s ${path/to/file} ${path/to/symlink}
+#+END_SRC
+
+** Overwrite an existing symbolic to point to a different file:
+
+#+BEGIN_SRC sh
+  ln -sf ${path/to/new_file} ${path/to/symlink}
+#+END_SRC
+
+** Create a hard link to a file:
+
+#+BEGIN_SRC sh
+  ln ${path/to/file} ${path/to/hardlink}
+#+END_SRC

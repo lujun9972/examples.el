@@ -1,0 +1,27 @@
+* unrar
+
+Extract RAR archives.
+
+** Extract files with original directory structure:
+
+#+BEGIN_SRC sh
+  unrar x ${compressed.rar}
+#+END_SRC
+
+** Extract files into current directory, losing directory structure in the archive:
+
+#+BEGIN_SRC sh
+  unrar e ${compressed.rar}
+#+END_SRC
+
+** Test integrity of each file inside the archive file:
+
+#+BEGIN_SRC sh
+  unrar t ${compressed.rar}
+#+END_SRC
+
+** List files inside the archive file without decompressing it:
+
+#+BEGIN_SRC sh
+  unrar l ${compressed.rar}
+#+END_SRC

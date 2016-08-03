@@ -1,0 +1,39 @@
+* ls
+
+List directory contents.
+
+** List files one per line:
+
+#+BEGIN_SRC sh
+  ls -1
+#+END_SRC
+
+** List all files, including hidden files:
+
+#+BEGIN_SRC sh
+  ls -a
+#+END_SRC
+
+** Long format list (permissions, ownership, size and modification date) of all files:
+
+#+BEGIN_SRC sh
+  ls -la
+#+END_SRC
+
+** Long format list with size displayed using human readable units (KB, MB, GB):
+
+#+BEGIN_SRC sh
+  ls -lh
+#+END_SRC
+
+** Long format list sorted by size (descending):
+
+#+BEGIN_SRC sh
+  ls -lS
+#+END_SRC
+
+** Long format list of all files, sorted by modification date (oldest first):
+
+#+BEGIN_SRC sh
+  ls -ltr
+#+END_SRC

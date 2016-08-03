@@ -1,0 +1,33 @@
+* unexpand
+
+Convert spaces to tabs.
+
+** Convert blanks in each file to tabs, writing to standard output:
+
+#+BEGIN_SRC sh
+  unexpand ${file}
+#+END_SRC
+
+** Convert blanks to tabs, reading from standard output:
+
+#+BEGIN_SRC sh
+  unexpand
+#+END_SRC
+
+** Convert all blanks, instead of just initial blanks:
+
+#+BEGIN_SRC sh
+  unexpand -a ${file}
+#+END_SRC
+
+** Convert only leading sequences of blanks (overrides -a):
+
+#+BEGIN_SRC sh
+  unexpand --first-only ${file}
+#+END_SRC
+
+** Have tabs a certain number of characters apart, not 8 (enables -a):
+
+#+BEGIN_SRC sh
+  unexpand -t ${number} ${file}
+#+END_SRC

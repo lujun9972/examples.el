@@ -1,0 +1,27 @@
+* Sass
+
+Converts SCSS or Sass files to CSS.
+
+** Output converted file to stdout:
+
+#+BEGIN_SRC sh
+  sass ${inputfile.scss|inputfile.sass}
+#+END_SRC
+
+** Immediately convert SCSS or Sass file to CSS to specified output file:
+
+#+BEGIN_SRC sh
+  sass ${inputfile.scss|inputfile.sass} ${outputfile.css}
+#+END_SRC
+
+** Watch SCSS or Sass file for changes and output or update CSS file with same filename:
+
+#+BEGIN_SRC sh
+  sass --watch ${inputfile.scss|inputfile.sass}
+#+END_SRC
+
+** Watch SCSS or Sass file for changes and output or update CSS file with specified filename:
+
+#+BEGIN_SRC sh
+  sass --watch ${inputfile.scss|inputfile.sass}:${outputfile.css}
+#+END_SRC

@@ -1,0 +1,33 @@
+* top
+
+Display dynamic real-time information about running processes.
+
+** Start top:
+
+#+BEGIN_SRC sh
+  top
+#+END_SRC
+
+** Do not show any idle or zombie processes:
+
+#+BEGIN_SRC sh
+  top -i
+#+END_SRC
+
+** Show only processes owned by given user:
+
+#+BEGIN_SRC sh
+  top -u ${user_name}
+#+END_SRC
+
+** Show only the processes with the given PID(s), passed as a comma-separated list. (Normally you wouldn't know PIDs off hand. This example picks the PIDs from the process name):
+
+#+BEGIN_SRC sh
+  top -p $(pgrep -d ',' ${process_name})
+#+END_SRC
+
+** Get help about interactive commands:
+
+#+BEGIN_SRC sh
+  ?
+#+END_SRC

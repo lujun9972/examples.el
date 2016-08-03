@@ -1,0 +1,27 @@
+* ufraw-batch
+
+Convert RAW files from cameras into standard image files.
+
+** Simply convert RAW files to jpg:
+
+#+BEGIN_SRC sh
+  ufraw-batch --out-type=jpg ${input_file(s)}
+#+END_SRC
+
+** Simply convert RAW files to png:
+
+#+BEGIN_SRC sh
+  ufraw-batch --out-type=png ${input_file(s)}
+#+END_SRC
+
+** Extract the preview image from the raw file:
+
+#+BEGIN_SRC sh
+  ufraw-batch --embedded-image ${input_file(s)}
+#+END_SRC
+
+** Save the file with size up to the given maximums MAX1 and MAX2:
+
+#+BEGIN_SRC sh
+  ufraw-batch --size=MAX1,MAX2 ${input_file(s)}
+#+END_SRC

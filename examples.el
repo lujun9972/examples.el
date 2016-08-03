@@ -42,6 +42,17 @@ The cdr of element is the src-block language list"
                         (null (cdr x)))
                       headline-and-blocks)))))
 
+(defvar examples-headline-and-src-blocks-hashtable (make-hash-table :test #'equal))
+
+(defun examples-get-headline-and-src-blocks-memorize (languages &rest example-org-files)
+  ""
+  (let ((hash-key (cons languages example-org-files)))
+    (if (member hash-key (hash-table-keys examples-headline-and-src-blocks-hashtable))
+        (gethash hash-key examples-headline-and-src-blocks-hashtable)
+      (let ((result (apply #'examples-get-headline-and-src-blocks languages example-org-files)))
+        (puthash hash-key result examples-headline-and-src-blocks-hashtable)
+        result))))
+
 (defun examples-get-src-blocks (element languages)
   (org-element-map element 'src-block
     (lambda (src-block)
@@ -61,7 +72,7 @@ The cdr of element is the src-block language list"
   (unless yas-minor-mode
     (yas-minor-mode 1))
   (let* ((languages (examples-get-response-languages-by-major-mode major-mode))
-         (headline-and-blocks (apply #'examples-get-headline-and-src-blocks languages example-org-files))
+         (headline-and-blocks (apply #'examples-get-headline-and-src-blocks-memorize languages example-org-files))
          (headlines (mapcar #'car headline-and-blocks))
          (headline (completing-read "example:" headlines))
          (src-blocks (cdr (assoc-string headline headline-and-blocks)))

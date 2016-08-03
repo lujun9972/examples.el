@@ -61,7 +61,7 @@ The cdr of element is the src-block language list"
   (unless yas-minor-mode
     (yas-minor-mode 1))
   (let* ((languages (examples-get-response-languages-by-major-mode major-mode))
-         (headline-and-blocks (examples-get-headline-and-src-blocks languages))
+         (headline-and-blocks (apply #'examples-get-headline-and-src-blocks languages example-org-files))
          (headlines (mapcar #'car headline-and-blocks))
          (headline (completing-read "example:" headlines))
          (src-blocks (cdr (assoc-string headline headline-and-blocks)))

@@ -21,7 +21,8 @@ The cdr of element is the src-block language list"
   "Default example files"
   :group 'examples)
 
-(defun examples-get-response-languages-by-major-mode (major-mode)
+(defun examples-get-corresponding-languages-by-major-mode (major-mode)
+  “Get languages responsed by MAJOR-MODE”
   (if (assoc major-mode examples-mode-lang-alist)
       (cdr (assoc major-mode examples-mode-lang-alist))
     (list (replace-regexp-in-string "-mode$" "" (symbol-name major-mode)))))
@@ -71,7 +72,7 @@ The cdr of element is the src-block language list"
   (interactive)
   (unless yas-minor-mode
     (yas-minor-mode 1))
-  (let* ((languages (examples-get-response-languages-by-major-mode major-mode))
+  (let* ((languages (examples-get-corresponding-languages-by-major-mode major-mode))
          (headline-and-blocks (apply #'examples-get-headline-and-src-blocks-memorize languages example-org-files))
          (headlines (mapcar #'car headline-and-blocks))
          (headline (completing-read "example:" headlines))

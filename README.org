@@ -7,36 +7,38 @@
 * Do By Examples
 [[examples.gif]]
 
-* 设计理念
-有一些不常用的操作经常会忘掉用什么命令来写，我一般会将这些生癖的操作记录在org文件中。
+* The Idea
+There are always some commands that we use frequently, but not frequently enough to remember. Usually I record them into org files.
 
-所以当我忘记一个操作怎么写时要经历下面几个步骤
-1. 找到记录这个操作的org文件
-2. 用Emacs打开这个文件，按照说明找出对应的src-block
-3. 将src-block中的代码复制出来，再根据实际境况进行修改
+So, When I forget a command, I should go through the following steps:
+1. Found the org file
+2. Open the org file and find out the corresponding src-block
+3. Copy the code in the src-block, and then modify it according to the actual situation
 
-然而，这个过程实在太麻烦了有没有？？？
+That's too much steps!!
 
-所以我就写了这个 =examples= package。
+That's way I write this =examples= package.
 
-其思路是将org文件中的headline看作为案例说明，将headline下的src-block作为代码模板。
+The idea is to treat headlines as examples and the codes in src-blocks as command templates.
 
-具体来说 =examples= 会做下面几件事情
-1. 会列出各个org文件中的案例给用户进行选择。
-2. 用户选择案例后 =examples= 会搜索该headline下面的src-block. 
-3. 若headline下只有一个src-block，则直接将该src-block作为模板（用yasnippet进行扩展）插入，否则让用户选择哪个src-block后再插入。
+Specifically, =examples= will do following things
+1. List all the examples in org files to user for selection.
+2. Once user selected an example, =examples= will search corresponding src-blocks. 
+3. If there is only one src-block then the code will be expanded by yasnippet and inserted into current buffer, otherwise tell the user to select which src-block before expanding and inserting.
 
-* 使用方法
-1. 设置 =examples-default-org-files= 变量
+* Usage
+1. setting =examples-default-org-files= 
 
-   该变量为 =examples= 指出了从哪些org文件中搜索案例。 默认是 =PATH-TO-EXAMPLES/examples/= 目录下的所有的org文件
+   The varialbe specified org files stored examples. 
 
-2. （可选）设置 =exampls-mode-lang-alist=
+   The default value is all the org files in =PATH-TO-EXAMPLES/examples/= directory
+
+2. （Optional）setting =exampls-mode-lang-alist=
    
-   该变量设置了当前major-mode于src-block language之间的对应关系
+   This varialbe specified the correspondence between currect major-mode and the src-block language
 
-   这主要是用来减少src-block的选择量，毕竟如果你在eshell操作下不太可能会用到C++的代码吧。
+   It is mainly used to reduce the amount of src-block selection. after all, if you're in eshell, It is less likely to use C ++ code.
 
-   默认搜索的是与当前major-mode同名的src-block。 但若major-mode（去掉后面的mode后缀）与src-block的language说明无法一样,则需要配置该参数了。
+   Defautly, =examples= only search those src-blocks which language is the same as current major-mode(removed the mode suffix).
 
-3. 运行 =M-x examples=
+3. execute =M-x examples=

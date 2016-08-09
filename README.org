@@ -30,12 +30,12 @@ Specifically, =examples= will do following things
 1. setting =examples-default-org-files= 
 
    The varialbe specified org files stored examples. 
-
+   
    The default value is all the org files in =PATH-TO-EXAMPLES/examples/= directory
 
 2. （Optional）setting =exampls-mode-lang-alist=
    
-   This varialbe specified the correspondence between currect major-mode and the src-block language
+   This varialbe specified the correspondence between currect major-mode and the src-block language.
 
    It is mainly used to reduce the amount of src-block selection. after all, if you're in eshell, It is less likely to use C ++ code.
 

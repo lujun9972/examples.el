@@ -22,13 +22,15 @@ The cdr of element is the src-block language list"
   :group 'examples)
 
 (defun examples-get-corresponding-languages-by-major-mode (major-mode)
-  “Get languages responsed by MAJOR-MODE”
+  "Get corresponding languages by MAJOR-MODE"
   (if (assoc major-mode examples-mode-lang-alist)
       (cdr (assoc major-mode examples-mode-lang-alist))
     (list (replace-regexp-in-string "-mode$" "" (symbol-name major-mode)))))
 
 (defun examples-get-headline-and-src-blocks (languages &rest example-org-files)
-  ""
+  "Search in EXAMPLE-ORG_FILES and get a list of (headline . src-blocks) accourding to LANGUAGES.
+
+The default value of EXAMPLE-OG-FILES is specified by `examples-default-org-files'"
   (let ((example-org-files (or example-org-files examples-default-org-files)))
     (with-temp-buffer
       (mapc (lambda (file)
@@ -46,7 +48,7 @@ The cdr of element is the src-block language list"
 (defvar examples-headline-and-src-blocks-hashtable (make-hash-table :test #'equal))
 
 (defun examples-get-headline-and-src-blocks-memorize (languages &rest example-org-files)
-  ""
+  "Same as `examples-get-headline-and-src-blocks' but with memorize."
   (let ((hash-key (cons languages example-org-files)))
     (if (member hash-key (hash-table-keys examples-headline-and-src-blocks-hashtable))
         (gethash hash-key examples-headline-and-src-blocks-hashtable)
@@ -55,6 +57,7 @@ The cdr of element is the src-block language list"
         result))))
 
 (defun examples-get-src-blocks (element languages)
+  "Get src-blocks which language is in LANGUAGES in ELEMENT"
   (org-element-map element 'src-block
     (lambda (src-block)
       (let ((src-language (org-element-property :language src-block))
@@ -67,8 +70,9 @@ The cdr of element is the src-block language list"
             (buffer-substring-no-properties (point-min) (- (point-max) 1)) ;; minus 1 to trim the last <RET>
             ))))))
 
+;;;###autoload
 (defun examples (&rest example-org-files)
-  ""
+  "Do by examples which stored in EXMPLE-ORG-FILES"
   (interactive)
   (unless yas-minor-mode
     (yas-minor-mode 1))

@@ -10,14 +10,14 @@
 * The Idea
 There are always some commands that we use frequently, but not frequently enough to remember. Usually I record them into org files.
 
-So, When I forget a command, I should go through the following steps:
+So, If I forget a command, I should go through the following steps:
 1. Found the org file
 2. Open the org file and find out the corresponding src-block
 3. Copy the code in the src-block, and then modify it according to the actual situation
 
 That's too much steps!!
 
-That's way I write this =examples= package.
+That's why I write this =examples= package.
 
 The idea is to treat headlines as examples and the codes in src-blocks as command templates.
 
